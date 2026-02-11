@@ -1,0 +1,20 @@
+# USERS:
+	id          integer primary key autoincrement
+	name        text
+	surname
+
+# BOOKS:
+	isbn        integer primary key
+	titolo      text
+	autore_id   foreign key > AUTORI
+	n_dispo     int
+
+# LOANS:
+	user_id		> USERS
+	book_id		> BOOKS
+	loan_date	
+	return_date	null
+
+# AUTHORS:
+	id          integer primary key autoincrement
+	name        text

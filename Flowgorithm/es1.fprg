@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es1"/>
+        <attribute name="authors" value="samuele.querio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-01-12 11:33:40 "/>
+        <attribute name="created" value="c2FtdWVsZS5xdWVyaW87QkwtQTAzTi0xNzsyMDI2LTAxLTEyOyIxMTowNDo0MSAiOzMyMTM="/>
+        <attribute name="edited" value="c2FtdWVsZS5xdWVyaW87QkwtQTAzTi0xNzsyMDI2LTAxLTEyOyIxMTozMzo0MCAiOzE7MzMyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Un menu che chiede quali operazioni si desidera eseguire:&#13;&#10;Addizione&#13;&#10;Sottrazione&#13;&#10;Moltiplicazione&#13;&#10;Divisione&#13;&#10;Prevedere una funzione specifica per ogni operazione, che prende in input 2 valori e restituisce il risultato dell'operazione&#13;&#10;Prevedere un main che mostri il menu, gestisca l'operazione richiesta dall'utente, stampi il risultato &#13;&#10;"/>
+            <call expression="PrintMenu"/>
+            <declare name="select" type="Integer" array="False" size=""/>
+            <input variable="select"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci un numero&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;inserisci un secondo numero&quot;" newline="True"/>
+            <input variable="b"/>
+            <declare name="r" type="Real" array="False" size=""/>
+            <declare name="error" type="Boolean" array="False" size=""/>
+            <assign variable="error" expression="False"/>
+            <if expression="select == 1">
+                <then>
+                    <output expression="&quot;Selezionata addizione&quot;" newline="True"/>
+                    <assign variable="r" expression="Addizione(a,b)"/>
+                </then>
+                <else>
+                    <if expression="select == 2">
+                        <then>
+                            <assign variable="r" expression="Sottrazione(a,b)"/>
+                        </then>
+                        <else>
+                            <if expression="select == 3">
+                                <then>
+                                    <assign variable="r" expression="Moltiplicazione(a,b)"/>
+                                </then>
+                                <else>
+                                    <if expression="select == 4">
+                                        <then>
+                                            <if expression="b != 0">
+                                                <then>
+                                                    <assign variable="r" expression="Divisione(a,b)"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="error" expression="True"/>
+                                                    <output expression="&quot;impossibile dividere per 0&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Opzione errata&quot;" newline="True"/>
+                                            <assign variable="error" expression="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="!error">
+                <then>
+                    <output expression="&quot;Il risultato &#232;: &quot; &amp; r" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="Addizione" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="a + b"/>
+        </body>
+    </function>
+    <function name="Divisione" type="Real" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="a / b"/>
+        </body>
+    </function>
+    <function name="Moltiplicazione" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="a * b"/>
+        </body>
+    </function>
+    <function name="PrintMenu" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Seleziona un opzione inserendo il numero corrispondente:&quot;" newline="True"/>
+            <output expression="&quot;1 - Addizione&quot;" newline="True"/>
+            <output expression="&quot;2 - Sottrazione&quot;" newline="True"/>
+            <output expression="&quot;3 - Moltiplicazione&quot;" newline="True"/>
+            <output expression="&quot;4 - Divisione&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Sottrazione" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="a - b"/>
+        </body>
+    </function>
+</flowgorithm>

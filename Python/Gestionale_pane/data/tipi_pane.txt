@@ -1,0 +1,5 @@
+BGT,baguette,0.65
+SCT,schiacciatina,0.8
+PPZ,pane-pizza,0.91
+CBT,ciabatta,0.5
+MCT,michetta,0.42

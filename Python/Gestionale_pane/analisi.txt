@@ -1,0 +1,55 @@
+richieste:
+- 3 file persisteni: tipi_pane.txt, cassa.txt, transazioni.txt
+- 5 file python:
+	• main.py
+    • pane.py
+    • cassa.py
+    • transazioni.py
+    • io_utils.py (per le operazioni di I/O, opzionale)
+
+- inserire nuovo tipo di pane
+	codice
+	descrizione
+	prezzo
+Note: errore se esite già, crea file se non esiste
+	visualizzare tutti i tipi di pane (codice, desc. prezzo €)
+	cercare pane per stringa dentro la descrizione
+	modifica prezzo
+
+- gestione cassa
+	leggere saldo
+	aggiunta soldi in cassa
+	aggiorna saldo dopo transazione
+	creazione file
+
+- gestione transazioni
+	ogni transazione:
+		per ogni pane:
+			codice pane, quantità
+	totale transazione
+	data e ora
+	
+- stampa scontrino
+	• codice del pane
+    • descrizione
+    • quantità
+    • subtotale
+    • totale finale
+
+- statistiche sulle vendite  
+	• numero totale di transazioni
+    • quantità totale venduta per ciascun tipo di pane
+    • ricavo totale
+
+STRUTTURA FILES:
+tipi_pane.txt
+	ogni riga un tipo di pane
+	codice_univoco , descrizione , prezzo_unitario
+
+cassa.txt
+	saldo_attuale
+	
+transazioni.txt
+	>data , ora , totale_transazione
+		codice_pane, quantità, subtotale
+		...

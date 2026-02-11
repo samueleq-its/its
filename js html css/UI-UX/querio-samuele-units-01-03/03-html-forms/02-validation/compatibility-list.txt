@@ -1,0 +1,8 @@
+required: 100%
+hidden: 100%
+disabled: 100%
+type="email": 100%
+tel: 100% (does nothing)
+pattern: 100%
+min / max: 100%
+maxlength: 100%

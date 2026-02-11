@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="stats1"/>
+        <attribute name="authors" value="samuele.querio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-01-12 12:36:42 "/>
+        <attribute name="created" value="c2FtdWVsZS5xdWVyaW87QkwtQTAzTi0xNzsyMDI2LTAxLTEyOyIxMTozNDoxNiAiOzMyMTg="/>
+        <attribute name="edited" value="c2FtdWVsZS5xdWVyaW87QkwtQTAzTi0xNzsyMDI2LTAxLTEyOyIxMjozNjo0MiAiOzM7MzMzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;inserisci il tuo nome&quot;" newline="True"/>
+            <input variable="nome"/>
+            <declare name="eta" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci quanti anni pensi che abbia il professore&quot;" newline="True"/>
+            <input variable="eta"/>
+            <declare name="altezza" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci quanto pensi che sia alto il professore&quot;" newline="True"/>
+            <input variable="altezza"/>
+            <declare name="isSposato" type="Boolean" array="False" size=""/>
+            <output expression="&quot;credi che il prof sia sposato?&quot;" newline="True"/>
+            <input variable="isSposato"/>
+            <declare name="materie" type="String" array="True" size="10"/>
+            <declare name="materia" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="materia" expression="&quot;AAA&quot;"/>
+            <assign variable="i" expression="0"/>
+            <output expression="&quot;inserisci quali materie pensi che insegni il prof&quot;" newline="True"/>
+            <output expression="&quot;invio per terminare l'inserimento&quot;" newline="True"/>
+            <while expression="materia != &quot;&quot; &amp;&amp; i &lt; 10">
+                <input variable="materia"/>
+                <if expression="materia != &quot;&quot;">
+                    <then>
+                        <assign variable="materie[i]" expression="materia"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <open expression="&quot;flow stats.txt&quot;" mode="write"/>
+            <write expression="nome"/>
+            <write expression="eta"/>
+            <write expression="altezza"/>
+            <write expression="isSposato"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="j" start="0" end="i - 1" direction="inc" step="1">
+                <write expression="materie[j]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

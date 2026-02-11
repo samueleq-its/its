@@ -1,0 +1,2 @@
+la cache permette di salvare del contentuto (es: uno file di stile CSS) nel browser cosi che non sia necessario riscaricarlo ogni volta che viene richiesta da una pagina
+?v=1.0 indica la versione del file e permette al browser di verificare se l'eventuale copia che ha gia salvato nella cache sia ancora valida o sia necessario riscaricarla a seguito di un aggiornamento della risorsa

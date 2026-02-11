@@ -1,0 +1,11 @@
+isbn,titolo,autore,quantita
+4827,Il nome della rosa,Umberto Eco,7
+1934,La solitudine dei numeri primi,Paolo Giordano,5
+7602,Sostiene Pereira,Antonio Tabucchi,1
+5489,Io non ho paura,Niccolò Ammaniti,9
+9016,L'amica geniale,Elena Ferrante,6
+3348,Se questo è un uomo,Primo Levi,4
+6721,Il barone rampante,Italo Calvino,8
+2895,La strada,Cormac McCarthy,2
+8173,Gomorra,Roberto Saviano,10
+4059,Il deserto dei Tartari,Dino Buzzati,1

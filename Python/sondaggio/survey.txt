@@ -1,0 +1,4 @@
+['Samuele', 40, 1.75, 1, ['fondamenti di programmazione', 'python']]
+['Ugo', 35, 1.80, 0, ['fondamenti di programmazione', 'storia']]
+['Samuele', 72, 1.7, 0, ['java']]
+['Matteo', 39, 1.8, 1, ['java', 'matematica', 'storia', 'arte']]
