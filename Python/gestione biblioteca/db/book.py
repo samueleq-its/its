@@ -1,58 +1,69 @@
-import sqlite3
+from db_handler import DB_Handler
 
 class Book():
-    def __init__(self, isbn, title, author, availability) -> None:
+
+    def __init__(self,isbn:int,title:str,author:str,availability:int) -> None:
         self.isbn = isbn
         self.title = title
         self.author = author
         self.availability = availability
 
-    # def load_books():
-    #     books = list()
-    #     conn = sqlite3.connect("library.sqlite")
-    #     cur = conn.cursor()
-    #     cur.execute("SELECT isbn, title, author, availability FROM books")
-    #     rows = cur.fetchall()
-    #     for row in rows:
-    #         book = Book(row[0],row[1],row[2],row[3])
-    #         books.append(book)
+    @classmethod
+    def get_books(cls) -> list[Book]|None:
+        crs = DB_Handler.get_cursor()
+        crs.execute("SELECT isbn, title, author, availability FROM books")
+        results = crs.fetchall()
+        if results == None:
+            return None
+        books = list()
+        for result in results:
+            books.append(
+                Book(result[0],
+                     result[1],
+                     result[2],
+                     result[3]))
+        return books
 
-    def save_books(self):
-        conn = sqlite3.connect("library.sqlite")
-        cur = conn.cursor()
+    @classmethod
+    def search_book(cls, isbn:int) -> Book|None:
+        crs = DB_Handler.get_cursor()
+        crs.execute(
+            "SELECT isbn, title, author, availability FROM books WHERE isbn = ?", (isbn,))
+        result = crs.fetchone()
+        if result == None:
+            return None
+        return Book(result[0],
+                     result[1],
+                     result[2],
+                     result[3])
+    
+    @classmethod
+    def add_book(cls, isbn:int, title:str, author:str, availability:int) -> bool:
+        book = Book(isbn,title,author,availability)
+        return book.save()
 
-        try:
-            cur.execute(
+    def save(self) -> bool:
+        #check if ISBN already present
+        if self.search_book(self.isbn):
+            print("ERRORE: ISBN già presente")
+            return False
+        #insert into DB
+        crs = DB_Handler.get_cursor()
+        crs.execute(
                 "INSERT INTO books(isbn,title,author, availability) "
                 " VALUES(?,?,?,?)", (
                 self.isbn, self.title, self.author, self.availability)
             )
-            conn.commit()
-            conn.close()
-        except:
-            print("ERRORE: impossibile salvare il libro, verifica ISBN")
+        DB_Handler.commit()
+        return True
 
-    def get_books(self):
-        books = list()
-        conn = sqlite3.connect("library.sqlite")
-        cur = conn.cursor()
+    def to_list(self):
+        return [self.isbn,self.title,self.title,self.availability]
 
-        query = "SELECT isbn, title, author, availability FROM books"
-        if self.isbn:
-            query += "WHERE isbn = ?"
-            cur.execute(query, self.isbn)
-            book_data = cur.fetchone()
-            books.append(book_data)
-        else:
-            cur.execute(query)
-            book_data = cur.fetchall()
-            for book in book_data:
-                books.append(book)
-
-        conn.close()
-
-        if len(books) > 0:
-            return books
-        else:
-            print("ERRORE: libro non trovato")
-            return None
+    def to_string(self):
+        book_string = (
+            f"ISBN:{self.isbn}, TITOLO:{self.title}, "
+            f"AUTORE:{self.author}, DISPONIBILTA':{self.availability}"
+            )
+        return book_string
+    

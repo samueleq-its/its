@@ -1,38 +1,57 @@
-import sqlite3
+from db_handler import DB_Handler
 
 class User():
 
-    def __init__(self, id:int, name:str, surname:str) -> None:
+    def __init__(self,id:int,name:str,surname:str,) -> None:
         self.id = id
         self.name = name
         self.surname = surname
-    
-    @staticmethod
-    def search_user(conn:sqlite3.Connection, id:int) -> User|None: #|None  = None, name:str|None = None, surname:str|None = None):
-        cur = conn.cursor()
-        cur.execute("SELECT id,name,surname FROM users WHERE id = 1")
-        result = cur.fetchone()
-        print(result)
-        return User(result[0],result[1],result[2]) if result else None
 
-    @staticmethod
-    def get_users(conn:sqlite3.Connection) -> list[User]:
-        cur = conn.cursor()
-        cur.execute("SELECT id,name,surname FROM users")
-        results = cur.fetchall()
+    @classmethod
+    def get_users(cls) -> list[User]|None:
+        crs = DB_Handler.get_cursor()
+        crs.execute("SELECT id, name, surname FROM users")
+        results = crs.fetchall()
+        if results == None:
+            return None
         users = list()
         for result in results:
-            user = User(result[1],result[2],result[3])
-            users.append(user)
+            users.append(
+                User(result[0],
+                     result[1],
+                     result[2]))
         return users
 
-    @staticmethod
-    def save_user(conn:sqlite3.Connection, name:str, surname:str):
-        cur = conn.cursor()
-        cur.execute("INSERT INTO users (name,surname) VALUES (?,?)", (name, surname))
-        conn.commit()
+    @classmethod
+    def search_user(cls, id:int) -> User|None:
+        crs = DB_Handler.get_cursor()
+        crs.execute(
+            "SELECT id, name, surname FROM users WHERE id = ?", (id,))
+        result = crs.fetchone()
+        if result == None:
+            return None
+        return User(result[0],
+                     result[1],
+                     result[2])
 
+    @classmethod
+    def add_user(cls, name:str, surname:str):
+        #insert into DB
+        crs = DB_Handler.get_cursor()
+        crs.execute(
+                "INSERT INTO users(name, surname) "
+                " VALUES(?,?)", (
+                name, surname)
+            )
+        DB_Handler.commit()
+        return True
 
-if __name__ == "__main__":
-    conn = sqlite3.connect("library.sqlite")
-    print(User.search_user(conn, 1))
+    def to_list(self)-> list:
+        return [self.id,self.name,self.surname]
+
+    def to_string(self):
+        user_string = (
+            f"ID:{self.id}, NOME:{self.name}, "
+            f"COGNOME:{self.surname}"
+            )
+        return user_string
