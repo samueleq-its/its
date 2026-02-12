@@ -1,6 +1,0 @@
-id,nome,cognome
-1,Samuele,Querio
-2,Manuel,Frola
-3,Mattia,Viada
-4,Filippo,Emanuele
-5,Ernesto,Sparalesto
