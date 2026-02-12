@@ -27,7 +27,7 @@ cur.execute('''CREATE TABLE loans (
     id integer primary key autoincrement,
     user_id integer,
     book_isbn text,
-    load_date date
+    loan_date date,
     return_date date,
     foreign key (user_id) references users(id),
     foreign key (book_isbn) references books(isbn)

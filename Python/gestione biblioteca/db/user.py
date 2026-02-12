@@ -7,8 +7,8 @@ class User():
         self.name = name
         self.surname = surname
 
-    @classmethod
-    def get_users(cls) -> list[User]|None:
+    @staticmethod
+    def get_users() -> list[User]|None:
         crs = DB_Handler.get_cursor()
         crs.execute("SELECT id, name, surname FROM users")
         results = crs.fetchall()
@@ -18,12 +18,12 @@ class User():
         for result in results:
             users.append(
                 User(result[0],
-                     result[1],
-                     result[2]))
+                    result[1],
+                    result[2]))
         return users
 
-    @classmethod
-    def search_user(cls, id:int) -> User|None:
+    @staticmethod
+    def search_user(id:int) -> User|None:
         crs = DB_Handler.get_cursor()
         crs.execute(
             "SELECT id, name, surname FROM users WHERE id = ?", (id,))
@@ -31,11 +31,11 @@ class User():
         if result == None:
             return None
         return User(result[0],
-                     result[1],
-                     result[2])
+                    result[1],
+                    result[2])
 
-    @classmethod
-    def add_user(cls, name:str, surname:str):
+    @staticmethod
+    def add_user(name:str, surname:str):
         #insert into DB
         crs = DB_Handler.get_cursor()
         crs.execute(

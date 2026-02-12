@@ -8,8 +8,8 @@ class Book():
         self.author = author
         self.availability = availability
 
-    @classmethod
-    def get_books(cls) -> list[Book]|None:
+    @staticmethod
+    def get_books() -> list[Book]|None:
         crs = DB_Handler.get_cursor()
         crs.execute("SELECT isbn, title, author, availability FROM books")
         results = crs.fetchall()
@@ -19,13 +19,13 @@ class Book():
         for result in results:
             books.append(
                 Book(result[0],
-                     result[1],
-                     result[2],
-                     result[3]))
+                    result[1],
+                    result[2],
+                    result[3]))
         return books
 
-    @classmethod
-    def search_book(cls, isbn:int) -> Book|None:
+    @staticmethod
+    def search_book(isbn:int) -> Book|None:
         crs = DB_Handler.get_cursor()
         crs.execute(
             "SELECT isbn, title, author, availability FROM books WHERE isbn = ?", (isbn,))
@@ -33,19 +33,23 @@ class Book():
         if result == None:
             return None
         return Book(result[0],
-                     result[1],
-                     result[2],
-                     result[3])
-    
-    @classmethod
-    def add_book(cls, isbn:int, title:str, author:str, availability:int) -> bool:
+                    result[1],
+                    result[2],
+                    result[3])
+
+    @staticmethod
+    def add_book(isbn:int, title:str, author:str, availability:int) -> bool:
         book = Book(isbn,title,author,availability)
         return book.save()
+
+    @staticmethod
+    def update_availability(isbn, change):
+        #TODO
+        pass
 
     def save(self) -> bool:
         #check if ISBN already present
         if self.search_book(self.isbn):
-            print("ERRORE: ISBN già presente")
             return False
         #insert into DB
         crs = DB_Handler.get_cursor()
