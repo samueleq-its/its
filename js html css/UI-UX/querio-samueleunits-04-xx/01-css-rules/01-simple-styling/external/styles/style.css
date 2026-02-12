@@ -1,0 +1,17 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 5vw;
+}
+
+#article1 {
+    background-color: aqua;
+}
+
+ol li {
+    font-family: 'Courier New', Courier, monospace;
+}

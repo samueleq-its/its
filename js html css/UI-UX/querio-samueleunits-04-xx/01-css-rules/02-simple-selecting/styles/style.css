@@ -1,0 +1,21 @@
+/*element selector*/
+h1 {
+    color: red;
+    text-align: center;
+}
+
+/*relational selector*/
+ol li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*id selector*/
+#article1 {
+    background-color: aqua;
+}
+
+/*class selector*/
+.underlined {
+    text-decoration: underline;
+    font-size: 1.5vw;
+}
