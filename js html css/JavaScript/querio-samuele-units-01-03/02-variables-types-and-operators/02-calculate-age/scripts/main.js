@@ -1,3 +1,9 @@
+/**
+ * @file: main.js
+ * @author: Samuele
+ * calculates your age in a given year and prints it to console
+ */
+
 let dateOfBirth = 1996;
 let futureYear = 2030;
 
