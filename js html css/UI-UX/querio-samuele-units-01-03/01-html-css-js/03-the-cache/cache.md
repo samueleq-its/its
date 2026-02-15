@@ -1,0 +1,4 @@
+### 3. The Cache
+la cache permette di salvare del contentuto (es: uno file di stile CSS) nel browser cosi che non sia necessario riscaricare quella risolra ogni volta che viene richiesta da una pagina  
+la stringa '?v=1.0' posta al fondo del URL della risolra serve per effettuare il 'cache busting' cioè forzare il browser a scaricare nuovamente una risorsa invece di riutilizzare quella presente nella sua cache, solitamente in seguito a modifiche della risorsa che non apparirebbero altrimenti sul browser  
+di per se il valore dopo il '?' non ha significato, serve solo per poter modificare l'URL senza dover ad esempio modificare il nome della risorsa
