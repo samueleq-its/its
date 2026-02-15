@@ -1,6 +1,6 @@
 /**
  * @file: main.js
- * @author: Samuele
+ * @author: samuele.querio@edu-its.it
  * Purpose of file
  *
  * Detailed explanation of what the file does
