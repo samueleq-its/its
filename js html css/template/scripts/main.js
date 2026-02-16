@@ -9,6 +9,6 @@
 
 /**
  * function description
- * @param {type} paramName - description
+ * @param {type} paramName description
  * @returns {type} description
  */
