@@ -18,5 +18,5 @@ function fixStart(string){
 }
 
 console.log(fixStart("babble"));
-console.log(fixStart("return "));
+console.log(fixStart("return"));
 console.log(fixStart("supercalifragilisticexpialidocious"));
