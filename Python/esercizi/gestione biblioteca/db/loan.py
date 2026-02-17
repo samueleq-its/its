@@ -1,4 +1,5 @@
 from db_handler import DB_Handler
+from book import Book
 
 class Loan():
     def __init__(self,id,user_id,book_id,loan_date,return_date) -> None:
@@ -53,6 +54,10 @@ class Loan():
 
     @classmethod
     def add_loan(cls, user_id:int, book_isbn:int, loan_date:str) -> bool:
+        #TODO: check if book exist?
+        #check if the book is available
+        if Book.search_book(book_isbn).availability < 1:
+            return False
         #check if user has already loaned the book without returning it
         if cls.search_loans(user_id=user_id,book_isbn=book_isbn,returned=False):
             return False
@@ -63,7 +68,8 @@ class Loan():
                 " VALUES(?,?,?)", 
                 (user_id, book_isbn, loan_date,)
             )
-        #TODO: update books availability
+        Book.update_availability(book_isbn,-1)
+
         DB_Handler.commit()
         return True
 

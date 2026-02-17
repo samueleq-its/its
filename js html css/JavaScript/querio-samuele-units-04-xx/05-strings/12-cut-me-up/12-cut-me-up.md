@@ -13,6 +13,7 @@ a.splice(5,4) 	// return: ""
 ```
 
 ### substring()
-
+[substring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
 
 ### substr()
+[substr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr)

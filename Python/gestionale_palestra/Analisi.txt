@@ -1,0 +1,118 @@
+OBBIETTIVO:
+    anagrafica clienti
+    stato abbonamento clienti
+    corsi disponibili
+    iscrizioni ai corsi
+
+RICHIESTE:
+    CLIENTI:
+        aggiunta nuovo cliente richiede aggiunta abbonamento
+        possibilità modifica abbonamento (abbonato <=> non abbonato)    
+        inserimento, aggiornamento, cancellazione, visualizzazione
+    CORSI:
+        inserimento, modifica n. posti, cancellazione, visualizzazione
+    ISCRIZIONE CORSI:
+        possibile iscriversi solo se abbonati
+        max num. posti disponibili
+        no doppie iscrizioni stesso cliente stesso corso
+
+db sqlite inizializzato da python (dump.py)
+separazione tra oggetti, repository, interfaccia
+
+
+DB CLIENTI:
+    id: key
+    nome, cognome: text
+    abbonato: bool
+
+DB CORSI:
+    id: key
+    nome: text univoco
+    posti_disponibili: int
+
+DB ISCRIZIONI:
+    id_corso: f. key
+    id_cliente: f.key
+    
+    id_corso + id_cliente key
+
+STRUTTURA:
+ogni sezione ha il proprio script:
+main menu (main.py)
+    menu cliente (clienti.py)
+    menu corsi  (corsi.py)
+    menu iscrizioni (iscrizioni.py)
+
+oggetti separati nel proprio script
+cliente.py
+corso.py
+iscrizione.py
+
+CLIENTE:
+    STATICO:
+    aggiunta:
+        nome, cognome
+            verifica combinazione gia disponibile?
+        abbonamento = True
+
+    lettura:
+        ritorna lista oggetti clienti con id, nome, cognome, stato abbonamento
+
+    ricerca (per id):
+        ritorna oggetto cliente con id, nome, cognome, stato abbonamento
+
+    OGGETTO:
+    modifica:
+        imposta abbonamento True / False
+
+    cancellazione:
+        rimuove il record
+
+CORSO:
+    STATICO:
+    aggiunta:
+        nome corso
+            verifica che non sia già presente
+        n. posti
+
+    lettura:
+        ritorna lista oggetti corso con id, nome, n disponibili
+
+    ricerca (per id):
+        ritorna oggetto corso con id, nome, n disponibili
+
+    OGGETTO:
+    modifica:
+        imposta posti disponibili
+
+    cancellazione:
+        rimuove il record
+
+ISCRIZIONE:
+    STATICO:
+        aggiunti iscrizione:
+            oggetto utente
+                verifica abbonamento attivo
+            oggetto corso
+                verifica posti disponibili
+            verifica doppia iscrizione al corso
+            oggetto corso
+                modifica:
+                    posti disponibili - 1
+
+    lettura:
+        ritorna lista corso > lista utenti iscritti
+
+    ricerca (corso):
+        ritorna iscritti al corso
+    ricerca (cliente):
+        ritorna corsi a cui è iscritto il cliente
+    ricerca (corso + cliente):
+        ritorna oggetto iscrizione
+
+    OGGETTO:
+        cancellazione:
+            rimuove il record
+            oggetto corso
+                modifica:
+                    posti disponibili + 1
