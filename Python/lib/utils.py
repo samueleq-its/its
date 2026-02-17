@@ -7,11 +7,10 @@ def print_pause(message:str):
 	:param message: message to display
 	:type message: str
 	'''
-	print(message)
+	print(message + "\n")
 	os.system("pause")
 
 errore = print_pause
-
 def question(message:str, yes_str:str = "y", no_str:str = "n") -> bool:
 	'''
 	prints a yes / no questions and returns a True/False value
@@ -28,10 +27,21 @@ def question(message:str, yes_str:str = "y", no_str:str = "n") -> bool:
 			return False
 		#else
 		print_pause(f"wrong value, please type ${yes_str} or ${no_str}")
+	
+def domanda(message:str):
+	while True:
+		scelta = input(message).lower()
+		match scelta:
+			case "n":
+				return False
+			case "s":
+				return True
+			case _:
+				errore("valore errato, inserisci 's' o 'n'")
+
 
 #estensione di input(), verifica inserimento corretto del prezzo da tastiera
 #return: prezzo
-
 def input_prezzo(messaggio):
 	while True:
 		try:
@@ -44,7 +54,7 @@ def input_prezzo(messaggio):
 			continue
 		return prezzo
 		
-def input_quantita(messaggio):
+def input_int(messaggio):
 	while True:
 		try:
 			quantita = int(input(messaggio).strip())
@@ -58,7 +68,7 @@ def input_quantita(messaggio):
 		
 #verifica l'inserimento di testo senza caratteri proibiti ( ,)
 def input_text(messaggio):
-	proibiti = [","]
+	proibiti = [""]
 	is_proibito = True
 	while is_proibito:
 		text = input(messaggio)
@@ -78,18 +88,24 @@ def list_to_string(l):
 	line = line.rstrip(",")
 	return line
 
+
+# [
+#	{ "d": "descrizione", "fn": funzione }
+#	...
+# ]
+
 def crea_menu(funzioni_menu):
 	for n in range(len(funzioni_menu)):
-		print(str(n+1) + ". " + funzioni_menu[n]["descrizione"])
-	print("0. Esci")
+		print(str(n+1) + ". " + funzioni_menu[n]["d"])
+	print("0. Indietro/esci")
 	while True:
 		try:
-				choice = int(input("inserisci il numero corrispondente alla funzione scelta: "))
+			choice = int(input("inserisci il numero corrispondente alla funzione scelta: "))
 		except:
 			errore("valore errato")
 			continue
 		if choice == 0:
 			return None
 		if choice <= len(funzioni_menu):
-			return funzioni_menu[choice-1]["funzione"]
+			return funzioni_menu[choice-1]["fn"]
 		errore("opzione non disponibile")

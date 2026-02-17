@@ -68,7 +68,7 @@ def input_int(messaggio):
 		
 #verifica l'inserimento di testo senza caratteri proibiti ( ,)
 def input_text(messaggio):
-	proibiti = [","]
+	proibiti = [""]
 	is_proibito = True
 	while is_proibito:
 		text = input(messaggio)

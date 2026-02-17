@@ -67,7 +67,6 @@ class Subscription():
         DB_Handler.commit()
         crs.close()
 
-    #TODO: remake with objects instead
     def to_string(self):
         course = Course.find(self.id_course)
         client = Client.find(self.id_client)
