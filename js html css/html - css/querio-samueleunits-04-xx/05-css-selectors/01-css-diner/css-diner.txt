@@ -1,0 +1,40 @@
+1
+    plate - seleziona tutti gli elementi plate
+2
+    bento - seleziona tutti gli elementi bento e non quelli plate
+3
+    #fancy - seleziona l'elemento con attributo id="fancy"
+4
+    plate apple - seleziona gli elementi apple all'interno di un elemento plate
+5
+    #fancy pickle - seleziona gli elementi pickle all'interno di un elemento con attributo id="fancy"
+6
+    .small - seleziona tutti gli elementi con attributo class="small"
+7
+    orange.small - seleziona solo gli elementi orange con classe small
+8
+    bento orange.small - seleziona gli elementi orange con classe small all'interno di un elemento bento
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
