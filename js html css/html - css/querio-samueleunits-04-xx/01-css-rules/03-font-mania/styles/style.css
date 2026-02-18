@@ -1,0 +1,23 @@
+a:not(ol *, p *) {
+    color: red;
+}
+
+a {
+    color: blue;
+}
+
+ol a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p a {
+    font-family: 'Trade Winds';
+}
+
+a:link {
+    text-decoration: underline;
+}
+a:hover{
+    background-color: grey;
+}
+
