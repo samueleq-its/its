@@ -15,5 +15,4 @@ let sliceResult = list.slice(-3,5)      // sliceResult: ["c", "d", "e"], list: [
 let spliceResult = list.splice(-3,3)    // spliceResult: ["c", "d", "e"], list: ["a","b"]
 
 spliceResult = list.splice(2,0,"C", "D", "E")   // spliceResult: [], list: ["a", "b", "C", "D", "E"]
-
 ```
