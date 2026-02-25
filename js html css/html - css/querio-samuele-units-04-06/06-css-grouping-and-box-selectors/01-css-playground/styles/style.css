@@ -1,0 +1,22 @@
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+
+#lorem {
+    font-weight: bold;
+    color: darkslateblue;
+    background-color: honeydew;
+}
+.style1{
+    border: 1px solid black;
+    padding: 0px 5px;
+    background-color: yellowgreen;
+}
+.style2{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: gainsboro;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+
