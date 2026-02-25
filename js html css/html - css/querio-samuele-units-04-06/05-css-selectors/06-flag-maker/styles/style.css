@@ -1,0 +1,55 @@
+body {
+    background-color: cornsilk;
+}
+
+td {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+/* italian flag on table 1*/
+table#flag1 td {
+    background-color: white;
+}
+
+table#flag1 td:nth-last-child(n+7) {
+    background-color: green;
+}
+
+table#flag1 td:nth-child(n+7) {
+    background-color: red;
+}
+
+/* us flag on table 1 when hovering mouse */
+table#flag1:hover td {
+    background-color: white;
+}
+
+table#flag1:hover tr:nth-last-child(2n-1) td {
+    background-color: red;
+}
+
+table#flag1:hover tr:nth-child(-n+4) td:nth-child(-n+4) {
+    background-color: blue;
+}
+
+table#flag1:hover tr:nth-child(-2n+4) td:nth-child(-2n+4)::after,
+table#flag1:hover tr:nth-child(-2n+3) td:nth-child(-2n+3)::after {
+    content: "*";
+    color: white;
+}
+
+/* swiss flag on table 2 */
+table#flag2 td {
+    background-color: red;
+}
+
+table#flag2 tr:not(:first-child):not(:last-child) td:not(:nth-child(-n+3)):not(:nth-last-child(-n+3)),
+table#flag2 tr:not(:nth-child(-n+3)):not(:nth-last-child(-n+3)) td:not(:first-child):not(:last-child) {
+    background-color: white;
+}

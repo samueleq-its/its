@@ -1,0 +1,17 @@
+td {
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    }
+tr:nth-child(2n) td:nth-child(2n) {
+    background-color: orange;
+}
+tr:nth-child(2n-1) td:nth-child(2n-1) {
+    background-color: orange;
+}
+tr:nth-child(2n) td:nth-child(2n-1) {
+    background-color: black;
+}
+tr:nth-child(2n-1) td:nth-child(2n) {
+    background-color: black;
+}
