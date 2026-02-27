@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=java
 
 ### Java ###
+/java/.metadata
 # Compiled class file
 *.class
 
