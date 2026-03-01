@@ -1,22 +1,85 @@
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+/* sets box-sizing to border-box and every child of html to inherit it */
+html {
+    box-sizing: border-box;
+}
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
+/* moves entire page 5px to the right */
+body {
+    margin-left: 5px;
+}
+
+/* aquamarine header with Impact style font, round background color */
+header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    background-color: aquamarine;
+    padding: 20px 0px 40px;
+    border: 0 transparent black;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+    padding: 20px 0;
+}
+
+/* aside on the right side of the page */
+aside {
+    margin-left: 75%;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+/* grey footer with black border on top */
+footer {
+    margin-top: 50px;
+    border-top: 5px solid black;
+    padding-bottom: 50px;
+    background-color: grey;
+}
+
+/* span styling */
 #lorem {
     font-weight: bold;
     color: darkslateblue;
     background-color: honeydew;
 }
-.style1{
+
+.style1 {
     border: 1px solid black;
     padding: 0px 5px;
     background-color: yellowgreen;
 }
-.style2{
+
+.style2 {
     font-family: 'Courier New', Courier, monospace;
     background-color: gainsboro;
     padding: 0 5px;
     margin: 0 5px;
 }
 
+#img_gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+img {
+    max-height: 200px;
+    max-width: 100%;
+    margin: 0 10px;
+}
