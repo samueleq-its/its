@@ -18,7 +18,7 @@ let items = ["Sirius", "Canopus", "Rigil Kentaurus", "Arcturus", "Vega", "Capell
 //with setInterval
 console.log("With setInterval");
 
-
+//WARNING: both start toghter
 
 // with setTimeout
 console.log("With setTimeout");
