@@ -40,11 +40,11 @@ function validateCreditCard(creditCardNumber) {
 	if (formattedNumber.length != 16) {
 		// invalid length
 		isValid = false;
-		error = "Invalid length         ";
+		error = "Invalid length";
 	} else if (/[^0-9]/.test(formattedNumber)) { //checks if there are non-digit characters
 		// invalid characters
 		isValid = false;
-		error = "Invalid characters     ";
+		error = "Invalid characters";
 	} else if (!RegExp(`[^${formattedNumber[0]}]`).test(formattedNumber)) { //checks if there are characters different from the first one
 		// all digits are the same
 		isValid = false;
@@ -52,10 +52,12 @@ function validateCreditCard(creditCardNumber) {
 	} else if (formattedNumber.charAt(formattedNumber.length - 1) % 2 != 0) { //checks if the last digit is even
 		// last digit is not even
 		isValid = false;
-		error = "Last digit not even    ";
-	} else if (!isSumGreaterThan16(formattedNumber)) {
+		error = "Last digit not even";
+	} else if (!isSumGreaterThan16(formattedNumber)) { 
 		// sum of digits is not greater than 16
-		error = "Sum is lower than 16   ";
+		// could be done with if (formattedNumber.reduce((acc,val)=>acc+val) > 16) {...}
+		isValid = false;
+		error = "Sum is lower than 16";
 	}
 	return isValid ? { valid: true, number: creditCardNumber } : { valid: false, number: creditCardNumber, error: error };
 }
@@ -65,6 +67,7 @@ function validateCreditCard(creditCardNumber) {
  * @param {object} validation the validation result object returned by the validateCreditCard function
  */
 function printValidation(validation) {
+	const stringLenght = 23;
 	let output = (
 		`===================================\n` +
 		`= number : ${validation.number}    =\n` +
@@ -73,14 +76,14 @@ function printValidation(validation) {
 			`= valid : true                    =\n` :
 			// if not valid
 			`= valid : false                   =\n` +
-			`= error : ${validation.error} =\n`
+			`= error : ${validation.error.padEnd(stringLenght)} =\n`
 		) +
 		`===================================\n`
 	);
 	console.log(output);
 }
 
-printValidation(validateCreditCard("9999-9999-8888-0000"));
+printValidation(validateCreditCard('9999-9999-8888-0000'));
 printValidation(validateCreditCard('4444-4444-4444-4444'));
 printValidation(validateCreditCard('6666-6666-6666-1666'));
 printValidation(validateCreditCard('a923-3211-9c01-1112'));
