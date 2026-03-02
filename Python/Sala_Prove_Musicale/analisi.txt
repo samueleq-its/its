@@ -1,0 +1,63 @@
+clienti, sale prove, slot disponibili
+DB:
+    CLIENTI:
+        id
+        nome_gruppo
+        nome_contatto
+        phone
+        email
+
+    STANZE:
+        code string primary key
+        description
+
+    PRENOTAZIONI:
+        id
+        id_cliente for.key, check esistente
+        id_sala for.key, check esistente
+        data
+        ora
+
+RICHIESTE:
+    CLIENTI:
+        aggiunta, modifica
+    STANZE:
+        aggiunta, modifica
+    PRENOTAZIONI:
+        aggiunta, eliminazione
+        orari:
+            slot 1h
+            9.00 - 18.00
+            no prenotare stessa sala stessa orari
+            no prenoatar stessa ora stesso cliente
+            si prenotare stesso cliente slot consecutivi
+
+OPERAZIONI:
+    CLIENTI:
+        aggiunta:
+            richiesta nome_gruppo, nome_contatto, contatti
+        ricerca :
+            tutti o per ID
+        modifica per ID < da ricerca
+            cambio dati ( no id), update DB
+    
+    STANZE:
+        aggiunta:
+            richiesta dati
+        modifica:
+            ???
+        ricerca tutti / per id
+    
+    PRENOTAZIONI:
+        aggiunta:
+            da input id cliente e codice stanza, data, ora inizio, n. ore
+            recupera oggetto cliente
+            recupera oggetto stanza
+            verifica se cliente ha altre prenotazioni in quella data /ora
+            verifica se stanza ha prenotazioni in quella data / ora
+            salvataggio su DB
+        lettura
+        ricerca
+        eliminazione
+
+
