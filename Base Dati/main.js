@@ -1,4 +1,4 @@
-for (game of GAMES) {
+for (game of GAMES.toSorted((a,b) => b.year - a.year)) {
     console.dir(game);
     const RIGA = document.createElement('tr');
     const TD1 = document.createElement('td');
