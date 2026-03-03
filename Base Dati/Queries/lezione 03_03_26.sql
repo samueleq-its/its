@@ -67,4 +67,6 @@ select * from studenti
 order by rand()
 limit 1;
 
-
+update games 
+set genre="shootemup"
+where genre like "shoot 'em up_";
