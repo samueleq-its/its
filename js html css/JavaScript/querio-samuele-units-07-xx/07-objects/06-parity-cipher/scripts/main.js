@@ -6,17 +6,16 @@
  */
 
 const cipher = [
-	{ char: "e", rank: 8 }, { char: " ", rank: 10 }, { char: "s", rank: 12 },
-	{ char: "o", rank: 14 }, { char: "l", rank: 16 }, { char: "e", rank: 18 },
-	{ char: " ", rank: 20 }, { char: "f", rank: 22 }, { char: "a", rank: 24 },
-	{ char: "m", rank: 26 }, { char: "i", rank: 1 }, { char: "u", rank: 2 },
-	{ char: "t", rank: 3 }, { char: "t", rank: 4 }, { char: "l", rank: 5 },
-	{ char: "a", rank: 7 }, { char: "n", rank: 9 }, { char: "m", rank: 11 },
-	{ char: "a", rank: 13 }, { char: "t", rank: 15 }, { char: "i", rank: 17 },
-	{ char: "o", rank: 19 }, { char: "n", rank: 21 }, { char: "a", rank: 0 },
-	{ char: "c", rank: 6 }, { char: "h", rank: 23 }, { char: "i", rank: 25 },
-	{ char: "d", rank: 27 }, { char: "r", rank: 29 }
-];
+	{ char: "t", rank: 6 }, { char: "f", rank: 7 }, { char: "t", rank: 19 },
+	{ char: "c", rank: 2 }, { char: "n", rank: 25 }, { char: "h", rank: 14 },
+	{ char: "a", rank: 17 }, { char: "a", rank: 0 }, { char: "e", rank: 24 },
+	{ char: " ", rank: 1 }, { char: "i", rank: 3 }, { char: "s", rank: 12 },
+	{ char: "o", rank: 23 }, { char: "e", rank: 8 }, { char: "u", rank: 18 },
+	{ char: " ", rank: 10 }, { char: "l", rank: 20 }, { char: "l", rank: 9 },
+	{ char: "r", rank: 26 }, { char: "a", rank: 11 }, { char: "m", rank: 15 },
+	{ char: "n", rank: 5 }, { char: "d", rank: 22 }, { char: "i", rank: 21 },
+	{ char: "m", rank: 13 }, { char: "u", rank: 4 }, { char: "o", rank: 16 }
+	];
 
 /**
  * decipher the an array of objects by sorting the characters based on their rank, with even ranks before odd ones
@@ -38,11 +37,7 @@ function decipher(cipher) {
 			return previous.rank - next.rank;
 		}
 	);
-	let deciphered = "";
-	for (let item of ordered) {
-		deciphered += item.char;
-	}
-	return deciphered;
+	return ordered.map((x) => x.char).join("");
 }
 
 console.log(decipher(cipher));
