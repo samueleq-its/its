@@ -1,3 +1,32 @@
+html{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 img {
     max-height: 200px;
+}
+
+body {
+    margin: 5px;
+}
+
+#headlines {
+    padding: 0 5px;
+    border-top: 20px solid rgb(107, 49, 49);
+    border-bottom: 20px solid rgb(107, 49, 49);
+    background-color: rgb(87, 121, 218);
+}
+#headlines span{
+    font-weight: bold;
+}
+
+#science, #technology {
+    padding: 0 10px;
+    margin: 5% 2% 5%;
+    border: 1px solid black;
+}
+
+footer {
+    padding: 0 5px;
+    border: 1px solid black;
 }
