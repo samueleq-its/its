@@ -1,6 +1,14 @@
-html{
+html {
     font-family: 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 
 img {
     max-height: 200px;
@@ -16,11 +24,13 @@ body {
     border-bottom: 20px solid rgb(107, 49, 49);
     background-color: rgb(87, 121, 218);
 }
-#headlines span{
+
+#headlines span {
     font-weight: bold;
 }
 
-#science, #technology {
+#science,
+#technology {
     padding: 0 10px;
     margin: 5% 2% 5%;
     border: 1px solid black;

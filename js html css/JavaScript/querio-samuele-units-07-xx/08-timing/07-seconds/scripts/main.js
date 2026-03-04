@@ -1,25 +1,24 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * prints to console the seconds passed today and the seconds until tomorrow
  */
+
 
 /**
- * function description
- * @param {type} paramName description
- * @returns {type} description
+ * @returns {number} seconds passed today 
  */
-
 function getSecondsToday() {
     let date = new Date();
-    console.log(date.);
+    return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
 }
 
+/**
+ * @returns {number} seconds until tomorrow
+ */
 function getSecondsToTomorrow() {
-
+    return 86400 - getSecondsToday();
 }
 
-getSecondsToday();
+console.log("Seconds passed today:", getSecondsToday());
+console.log("Seconds until tomorrow:", getSecondsToTomorrow());
