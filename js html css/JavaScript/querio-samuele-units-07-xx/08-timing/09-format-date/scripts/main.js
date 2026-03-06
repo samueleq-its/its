@@ -1,13 +1,14 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * print to console a date in a human readable format, depending on how much time has passed
+ * since the date
  */
 
 /**
+ * prints to console a date in a human readable format, depending on how much time has passed
+ * since the date
+ * prints either "right now", "x sec. ago", "x min. ago" or "DD.MM.YY HH:mm"
  * 
  * @param {Date} date 
  */
