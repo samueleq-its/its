@@ -13,34 +13,20 @@
  * @param {null} [repetitions=null] how many times to repeat the execution, if null repeats indefinetly
  * @param  {...any} args arguments to be passed to fn
  */
-function mySetInterval(fn, repeatTime=1000, repetitions=null, ...args) {
-    /**
-     * Recursive function that will execute fn and then call itself after repeatTime milliseconds, until repetitions reaches 0
-     * @param {Function} fn 
-     * @param {number} repeatTime 
-     * @param {number} repetitions 
-     * @param  {...any} args 
-     */
-    function repeater(fn, repeatTime, repetitions, ...args) {
+function mySetInterval(fn, repeatTime = 1000, repetitions = null, ...args) {
+    if (repetitions == null || repetitions > 0) {
         fn(...args);
-        if (repetitions == null || repetitions > 1){
-            setTimeout(
-                repeater,
-                repeatTime,
-                fn, repeatTime, repetitions==null ? null : repetitions-1, ...args
-            );
-        }
+        setTimeout(
+            mySetInterval,
+            repeatTime,
+            fn, repeatTime, (repetitions == null ? null : repetitions - 1), ...args
+        );
     }
-
-    setTimeout(
-        repeater(fn, repeatTime, repetitions, ...args)
-    );
 }
-
 
 let i = 0;
 mySetInterval(
-    () => {console.log(i);i++;},1000,15
+    () => { console.log(i); i++; }, 1000, 15
 )
 
 
