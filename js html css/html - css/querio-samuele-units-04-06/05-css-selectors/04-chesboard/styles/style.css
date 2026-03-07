@@ -1,3 +1,8 @@
+/* style.css
+ * exercise to demonstrate positional selectors
+ * draws a chessboard pattern using nth-child selectors
+ */
+
 td {
     background-color: grey;
     width: 20px;

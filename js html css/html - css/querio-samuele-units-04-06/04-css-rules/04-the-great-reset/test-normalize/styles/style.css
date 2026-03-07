@@ -1,43 +1,109 @@
-:root{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* style.css
+ * exercise to demonstrate the differences between normalize and reset CSS approaches
+ */
+:root {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
+
 body {
-    padding-top: 1em;
-    padding-left: 1em;
+    margin: 0;
+    padding: 1em;
+    line-height: 1.4;
 }
+
+/* Keep vertical spacing consistent across normalize/reset bases */
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+table,
+form,
+fieldset {
+    margin: 0 0 1em;
+}
+
 h1 {
     font-size: 3em;
-    font-weight: bolder;
-    margin-bottom: 20px;
+    font-weight: 800;
 }
 
 h2 {
     font-size: 2.2em;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 700;
 }
+
 h3 {
     font-size: 1.4em;
-    margin-bottom: 10px;
 }
+
 p {
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
 }
+
+/* Rebuild list appearance explicitly */
+ul,
+ol {
+    padding-left: 0;
+}
+
 ul li {
-       list-style: none;
-   }
+    list-style: none;
+    margin-bottom: 0.3em;
+}
+
 ul li::before {
-       content: "★ ";
-       margin-right: 0.5em;
-   }
-ol, ol li {
-    list-style-type: upper-roman;
-    list-style-position: inside;
-    padding-left: 0.5em;
+    content: "★ ";
+    margin-right: 0.5em;
 }
-table, th, td {
-   border: 1px solid; 
+
+ol {
+    list-style: upper-roman inside;
 }
+
+ol li {
+    margin-bottom: 0.3em;
+}
+
+/* Keep media and table rendering stable */
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+th,
+td {
+    padding: 0.4em 0.6em;
+}
+
+/* Force the same form look in both test pages */
+fieldset {
+    border: 1px solid;
+    padding: 0.75em;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
 a:hover {
     background-color: aqua;
 }

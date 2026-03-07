@@ -105,7 +105,11 @@ button {
     font: inherit;
 }
 
+a{
+    color: blue;
+    text-decoration: underline;
+}
+
 a:hover {
     background-color: aqua;
 }
-

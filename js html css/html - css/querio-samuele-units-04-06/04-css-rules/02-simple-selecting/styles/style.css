@@ -1,3 +1,8 @@
+/**
+* style.css
+* example of type, relational, id and class selectors
+*/
+
 /*element selector*/
 h1 {
     color: red;

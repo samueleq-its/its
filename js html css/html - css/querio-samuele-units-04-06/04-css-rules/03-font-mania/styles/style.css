@@ -1,3 +1,7 @@
+/* style.css
+*  example of setting different colors, fonts and text decorations to links in different contexts
+*/
+
 a:not(ol *, p *) {
     color: red;
 }

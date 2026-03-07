@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>4.The great reset - destyle</title>
+	<meta name="author" content="samuele.querio@edu-its.it">
+	<meta name="description" content="boilerplate">
+
+	<!--Open Graph for Social Card-->
+	<meta property="og:title" content="insert title">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.example.com/">
+	<meta property="og:description" content="insert description">
+	<meta property="og:image" content="image.png">
+
+	<!--css and scripts-->
+	<link rel="stylesheet" href="./styles/destyle.css?v=1.0">
+	<link rel="stylesheet" href="./styles/style.css?v=1.0">
+</head>
+
+<body>
+	<header>
+		<h1>4.The great reset - destyle</h1>
+		<nav>
+			<h2>Page Index</h2>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#lists">Lists</a></li>
+				<li><a href="#table">Table</a></li>
+				<li><a href="#form">Form</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
+			<h2>Introduction</h2>
+			<p>This is a placeholder paragraph</p>
+			<h3>Sample Subtitle</h3>
+			<p>A second paragraph</p>
+		</section>
+
+		<section id="gallery">
+			<h2>Gallery</h2>
+			<p>Examples of <a href="https://en.wikipedia.org/wiki/Digital_image" target="_blank">digital images</a>:</p>
+			<img src="../assets/img/Broken_City.jpg" alt="Local sample image" width="300">
+			<img src="../assets/img/thumb-1920-584341.jpg" alt="Local sample image" width="300">
+		</section>
+
+		<section id="lists">
+			<h2>Lists</h2>
+			<ul>
+				<li>Unordered element 1</li>
+				<li>Unordered element 2</li>
+				<li>Unordered element 3</li>
+			</ul>
+			<ol>
+				<li>First ordered element</li>
+				<li>Second ordered element</li>
+				<li>Third ordered element</li>
+			</ol>
+		</section>
+
+		<section id="table">
+			<h2>Table</h2>
+			<p>Example of <a href="https://en.wikipedia.org/wiki/Table_(HTML)" target="_blank">HTML table</a> with product data:</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Bread</td>
+						<td>10</td>
+						<td>€1.50</td>
+					</tr>
+					<tr>
+						<td>Milk</td>
+						<td>2</td>
+						<td>€0.95</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="form">
+			<h2>Sample Form</h2>
+			<form action="#" method="post">
+				<label>Name:<br>
+					<input type="text" name="name" placeholder="John Doe">
+				</label>
+				<br>
+				<label>Email:<br>
+					<input type="email" name="email" placeholder="email@example.com">
+				</label>
+				<br>
+				<label>Password:<br>
+					<input type="password" name="password">
+				</label>
+				<br>
+				<fieldset>
+					<legend>Preferences</legend>
+					<label><input type="radio" name="option" value="a"> Option A</label>
+					<label><input type="radio" name="option" value="b"> Option B</label>
+					<br>
+					<label><input type="checkbox" name="subscribe"> Subscribe to newsletter</label>
+				</fieldset>
+				<br>
+				<label>Category:<br>
+					<select name="category">
+						<option value="1">General</option>
+						<option value="2">Advanced</option>
+					</select>
+				</label>
+				<br>
+				<label>Message:<br>
+					<textarea name="message" rows="4" cols="40" placeholder="Write here..."></textarea>
+				</label>
+				<br>
+				<input type="submit" value="Submit">
+			</form>
+		</section>
+
+	</main>
+</body>
+
+</html>
