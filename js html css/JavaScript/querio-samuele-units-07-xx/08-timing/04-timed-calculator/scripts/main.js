@@ -50,18 +50,20 @@ function areaOfCircle(radius) {
     return result;
 }
 
+const timing = 3000;
+
 // set of functions to have a delay of 3 second between the operations
 function halfNumDelay(n) {
     let half = halfNumber(n);
-    setTimeout(sqrNumDelay, 3000, half);
+    setTimeout(sqrNumDelay, timing, half);
 }
 function sqrNumDelay(n) {
     let squared = squareNumber(n);
-    setTimeout(areaCircleDelay, 3000, squared);
+    setTimeout(areaCircleDelay, timing, squared);
 }
 function areaCircleDelay(n) {
     let area = areaOfCircle(n);
-    setTimeout(percentOf, 3000, area, n);
+    setTimeout(percentOf, timing, area, n);
 }
 
 /**
@@ -71,10 +73,6 @@ function areaCircleDelay(n) {
  */
 function calculator(num) {
     halfNumDelay(num);
-    //let halved = halfNumber(num);
-    //let squared = squareNumber(halved);
-    //let area = areaOfCircle(squared);
-    //percentOf(area, squared);
 }
 
 calculator(1);
