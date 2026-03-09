@@ -16,16 +16,16 @@ html {
 }
 
 /* base frog */
-div[class*="frog"],
-div[class*="frog"]::after,
-div[class*="frog"]::before {
+div.frog,
+div.frog::after,
+div.frog::before {
     display: inline-block;
     border: 1px solid black;
     align-content: center;
     text-align: center;
 }
 
-div[class*="frog"] {
+div.frog {
     position: relative;
     width: 250px;
     height: 100px;
@@ -34,8 +34,8 @@ div[class*="frog"] {
     padding-bottom: 50px;
 }
 
-div[class*="frog"]::after,
-div[class*="frog"]::before {
+div.frog::after,
+div.frog::before {
     position: absolute;
     top: -30%;
     width: 25%;
@@ -44,65 +44,65 @@ div[class*="frog"]::before {
     content: "O";
 }
 
-div[class*="frog"]::after {
+div.frog::after {
     right: -14%;
 }
 
-div[class*="frog"]::before {
+div.frog::before {
     left: -14%;
 }
 
 /* black eyes on hover */
-div[class*="frog"]:hover::after,
-div[class*="frog"]:hover::before {
+div.frog:hover::after,
+div.frog:hover::before {
     background-color: black;
     color: white;
 }
 
 /* small frog */
-div[class*="small"] {
+div.small {
     width: 125px;
     height: 50px;
     padding: 10px 0 0;
 }
 
-div[class*="small"]::after,
-div[class*="small"]::before {
+div.small::after,
+div.small::before {
     background-color: rgb(34, 121, 34);
     color: white;
 }
 
 
 /* type1 frog (green) */
-div[class*="type1"] {
+div.type1  {
     background-color: rgb(61, 184, 61);
 }
 
 /* type1 big */
-div[class*="type1 big"]::after,
-div[class*="type1 big"]::before {
+div.type1.big::after,
+div.type1.big::before {
     background-color: rgb(175, 228, 175);
 }
 
 /* type1 small */
-div[class*="type1 small"]::after,
-div[class*="type1 small"]::before {
+div.type1.small::after,
+div.type1.small::before {
     background-color: rgb(34, 121, 34);
 }
 
 /* type2 frog (orange) */
-div[class*="type2"] {
+div.type2  {
     background-color: orangered;
 }
 
 /* type2 big */
-div[class*="type2 big"]::after,
-div[class*="type2 big"]::before {
+div.type2.big::after,
+div.type2.big::before {
     background-color: rgb(255, 147, 108);
 }
 
 /* type2 small */
-div[class*="type2 small"]::after,
-div[class*="type2 small"]::before {
+div.type2.small::after,
+div.type2.small::before {
     background-color: rgb(179, 48, 0);
 }
