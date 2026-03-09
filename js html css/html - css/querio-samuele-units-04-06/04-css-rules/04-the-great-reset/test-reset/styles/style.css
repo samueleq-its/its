@@ -74,6 +74,7 @@ img {
     height: auto;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
+    border-radius: 100%;
 }
 
 table {
