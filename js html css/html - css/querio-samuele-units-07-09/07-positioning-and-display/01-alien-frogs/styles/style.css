@@ -1,7 +1,8 @@
 /**
 * style.css
 *
-* description
+* styles a div with class "frog" to look like a frog,
+* and then creates variations of the frog by using additional classes
 */
 
 /* sets box sizing as default with inheritance */
