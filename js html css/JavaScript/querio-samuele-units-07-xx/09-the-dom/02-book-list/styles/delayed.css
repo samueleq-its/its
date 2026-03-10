@@ -15,7 +15,10 @@ html {
 	box-sizing: inherit;
 }
 
-img {
-	height: 200px;
-	 display: block;
+li.read {
+	background-color: blue !important;
+}
+
+li.unread {
+	background-color: grey !important;
 }

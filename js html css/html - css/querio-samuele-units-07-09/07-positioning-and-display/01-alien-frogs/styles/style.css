@@ -54,12 +54,6 @@ div.frog::before {
     left: -14%;
 }
 
-/* black eyes on hover */
-div.frog:hover::after,
-div.frog:hover::before {
-    background-color: black;
-    color: white;
-}
 
 /* small frog */
 div.small {
@@ -76,7 +70,7 @@ div.small::before {
 
 
 /* type1 frog (green) */
-div.type1  {
+div.type1 {
     background-color: rgb(61, 184, 61);
 }
 
@@ -93,7 +87,7 @@ div.type1.small::before {
 }
 
 /* type2 frog (orange) */
-div.type2  {
+div.type2 {
     background-color: orangered;
 }
 
@@ -107,4 +101,11 @@ div.type2.big::before {
 div.type2.small::after,
 div.type2.small::before {
     background-color: rgb(179, 48, 0);
+}
+
+/* black eyes on hover */
+div.frog:hover::after,
+div.frog:hover::before {
+    background-color: black;
+    color: white;
 }

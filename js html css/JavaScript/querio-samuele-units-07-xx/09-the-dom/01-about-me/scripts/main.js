@@ -20,7 +20,7 @@ Array.from(liElements).forEach(li => li.className = "list-item");
 
 let picture = document.createElement("img");
 picture.src = "./assets/img/profile.jpg";
-picture.style.height = "200px" // image is too big
+picture.style.height = "200px"; // image is too big
 document.body.append(picture);
 
 // <link rel="stylesheet" href="style.css">
