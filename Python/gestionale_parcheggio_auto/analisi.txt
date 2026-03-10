@@ -23,7 +23,6 @@ ASSEGNAZIONI > POSTI_AUTO
     ogni dipendente può avere al massimo un solo posto auto
     ogni posto auto può essere assegnato ad un solo dipendente
 
-
 DIPENDENTI
     AGGIUNTA: richiede inserimento nome cognome, id assegnato in automatico da DB
     RICERCA: per id, stampa oggetto 'dipendente'

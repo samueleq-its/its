@@ -1,5 +1,6 @@
 import gest_posti_auto
 import gest_dipendenti
+from db_handler import DB_Handler
 
 #from db_handler import DB_Handler
 
@@ -51,6 +52,7 @@ def main():
 			case 7:
 				gest_posti_auto.elimina()
 			case 0:
+				DB_Handler.close()
 				return
 			case _:
 				print("opzione errata")
