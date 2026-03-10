@@ -35,6 +35,7 @@ div.frog {
     padding-bottom: 50px;
 }
 
+/* frog eyes */
 div.frog::after,
 div.frog::before {
     position: absolute;
@@ -79,13 +80,13 @@ div.type1  {
     background-color: rgb(61, 184, 61);
 }
 
-/* type1 big */
+/* type1 big eyes*/
 div.type1.big::after,
 div.type1.big::before {
     background-color: rgb(175, 228, 175);
 }
 
-/* type1 small */
+/* type1 small eyes*/
 div.type1.small::after,
 div.type1.small::before {
     background-color: rgb(34, 121, 34);
@@ -96,13 +97,13 @@ div.type2  {
     background-color: orangered;
 }
 
-/* type2 big */
+/* type2 big eyes*/
 div.type2.big::after,
 div.type2.big::before {
     background-color: rgb(255, 147, 108);
 }
 
-/* type2 small */
+/* type2 small eyes */
 div.type2.small::after,
 div.type2.small::before {
     background-color: rgb(179, 48, 0);
