@@ -74,9 +74,9 @@ div.type1 {
     background-color: rgb(61, 184, 61);
 }
 
-/* type1 big eyes*/
-div.type1.big::after,
-div.type1.big::before {
+/* type1 eyes*/
+div.type1::after,
+div.type1::before {
     background-color: rgb(175, 228, 175);
 }
 
@@ -91,9 +91,9 @@ div.type2 {
     background-color: orangered;
 }
 
-/* type2 big eyes*/
-div.type2.big::after,
-div.type2.big::before {
+/* type2 eyes*/
+div.type2::after,
+div.type2::before {
     background-color: rgb(255, 147, 108);
 }
 

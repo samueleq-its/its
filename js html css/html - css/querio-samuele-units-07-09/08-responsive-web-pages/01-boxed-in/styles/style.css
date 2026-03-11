@@ -1,0 +1,50 @@
+/**
+* style.css
+*
+* description
+*/
+
+/* sets box sizing as default with inheritance */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+#img {
+	display: block;
+	border: 1px solid black;
+	height: 200px;
+	width: 100%;
+	background-image: url("../assets/img/img.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
+
+
+
+@media screen and (max-width: 480px) {
+	/* styles */
+	
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	/* styles */
+	
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	/* styles */
+	
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+	/* styles */
+	
+}
+@media screen and (min-width: 1201px) {
+	/* styles */
+	
+}
