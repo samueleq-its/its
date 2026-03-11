@@ -7,12 +7,6 @@
  * on multiple lines
  */
 
-/**
- * function description
- * @param {type} paramName description
- * @returns {type} description
- */
-
 let books = [
 	{
 		title: "The Great Gatsby",
