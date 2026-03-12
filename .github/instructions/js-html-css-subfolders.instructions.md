@@ -52,3 +52,26 @@ applyTo: "js html css/**/*"
 - Update the `meta` description tag with an appropriate description for the specific exercise.
 - Update the Open Graph section (`og:title`, `og:description`, `og:url`, and any other relevant OG fields) to match the exercise.
 - The `og:url` value must follow the Live Server URL format for the exercise path (example: `http://127.0.0.1:5500/js%20html%20css/template/index.html`).
+
+## readme.md Authoring Rules
+
+When asked to produce or complete a `readme.md` for an exercise, follow the structure below:
+
+```md
+# [ExerciseNumber].[ExerciseName]
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+[paste the original exercise requirements verbatim]
+
+## Approach to solution
+[leave this section empty unless the user explicitly asks you to write it]
+```
+
+### Rules for each section
+
+- **Title**: `# N.Exercise Name` — use the exercise number and human-readable name (e.g. `# 3.DOM Detective`).
+- **Author**: always `samuele.querio@edu-its.it`.
+- **Requirements**: copy the original exercise bullet points exactly, preserving nesting.
+- **Approach to solution**: unless the user explicitly asks for a completed solution write-up, leave this section empty so it can be completed by the student.
