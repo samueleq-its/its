@@ -35,7 +35,7 @@ let recipes = [
  */
 function printRecipe(recipe) {
     console.log("Title:", recipe.title);
-    console.log("Servins:", recipe.serving);
+    console.log("Servings:", recipe.serving);
     console.log("Ingredients:", recipe.ingredients);
 }
 

@@ -11,7 +11,7 @@
  */
 function cashRegister(shoppingCart) {
     let total = 0;
-    items = Object.keys(shoppingCart);
+    let items = Object.keys(shoppingCart);
     for (let i = 0; i < items.length; i++) {
         total += parseFloat(shoppingCart[items[i]]);
     }

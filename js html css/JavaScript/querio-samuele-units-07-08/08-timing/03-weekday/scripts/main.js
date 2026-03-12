@@ -8,8 +8,8 @@
  * returns the weekday of the date passed as parameter in the language specified as parameter
  * invokes getWeekDayEN or getWeekDayIT depending on the value of the language parameter
  * @param {Date} date date for which to get the weekday
- * @param {str} language language code, either 'en' for english or 'it' for italian
- * @returns {type} weekday in the specified language
+ * @param {string} language language code, either 'en' for english or 'it' for italian
+ * @returns {string} weekday in the specified language
  */
 
 function getWeekDay(date, language){
@@ -20,12 +20,15 @@ function getWeekDay(date, language){
 /**
  * returns the weekday of the date passed as parameter in english
  * @param {Date} date date for which to get the weekday
- * @returns {type} weekday in english, either "MO", "TU", "WE", "TH", "FR", "SA" or "SU"
+ * @returns {string} weekday in english, either "MO", "TU", "WE", "TH", "FR", "SA" or "SU"
  */
 
 function getWeekDayEN(date) {
     let day = "";
     switch (date.getDay()) {
+        case 0:
+            day = "SU";
+            break;
         case 1:
             day = "MO";
             break;
@@ -44,9 +47,6 @@ function getWeekDayEN(date) {
         case 6:
             day = "SA";
             break;
-        case 7:
-            day = "SU";
-            break;    
         default:
             break;
     }
@@ -56,12 +56,15 @@ function getWeekDayEN(date) {
 /**
  * returns the weekday of the date passed as parameter in italian
  * @param {Date} date date for which to get the weekday
- * @returns {type} weekday in italian, either "LU", "MA", "ME", "GI", "VE", "SA" or "DO"
+ * @returns {string} weekday in italian, either "LU", "MA", "ME", "GI", "VE", "SA" or "DO"
  */
 
 function getWeekDayIT(date) {
     let day = "";
     switch (date.getDay()) {
+        case 0:
+            day = "DO";
+            break;
         case 1:
             day = "LU";
             break;
@@ -80,9 +83,6 @@ function getWeekDayIT(date) {
         case 6:
             day = "SA";
             break;
-        case 7:
-            day = "DO";
-            break;    
         default:
             break;
     }
