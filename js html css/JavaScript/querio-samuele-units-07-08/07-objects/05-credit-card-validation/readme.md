@@ -1,4 +1,10 @@
 # 5.Credit card validation
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 - Write a function called “validateCreditCard” that checks credit card
 numbers according to the following rules:
     - Number must be 16 digits, all of them must be numbers

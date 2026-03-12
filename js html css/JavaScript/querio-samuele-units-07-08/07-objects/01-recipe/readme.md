@@ -1,4 +1,10 @@
 # 1.Recipe
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 - Create an object to hold information on your favorite recipe. It should have
 properties for title (a string), servings (a number), and ingredients (an
 array of strings).

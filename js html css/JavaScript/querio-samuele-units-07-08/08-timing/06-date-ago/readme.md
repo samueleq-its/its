@@ -1,4 +1,10 @@
 # 6.Date ago
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 - Create a function getDateAgo(date, days) that returns the day of the month
 n days ago from the given date
 - For instance, if today is the 20th, then getDateAgo(new Date(), 1) should be

@@ -1,4 +1,10 @@
 # 2.Reading list
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 - Create an array of objects, where each object describes a book and has
 properties for the title (a string), author (a string), and alreadyRead (a
 boolean indicating if you read it yet).

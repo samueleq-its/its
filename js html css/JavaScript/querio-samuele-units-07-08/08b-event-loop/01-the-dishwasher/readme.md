@@ -1,4 +1,10 @@
 # 1.The dishwasher
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 Create a simulation of a dishwasher system using two stacks of dishes
 - one stack represents dirty dishes, and the other represents clean dishes
 - the dirty stack has a random number of plates 10 - 50

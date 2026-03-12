@@ -1,4 +1,10 @@
-# 9. Format date
+# 9.Format date
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 Write a function formatDate(date) that accepts a date and outputs it as follows:
 - If less than a second has passed since the date, output "right now"
 - If less than a minute has passed since the date, output "n sec. ago"

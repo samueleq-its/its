@@ -1,4 +1,10 @@
 # 6.Parity Cipher
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 Write a function to reconstruct a hidden sentence by sorting a scrambled array of objects
 
 **Rule 1 (Parity)**

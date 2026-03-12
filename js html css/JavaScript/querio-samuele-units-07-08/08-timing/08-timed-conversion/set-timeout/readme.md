@@ -1,4 +1,10 @@
 # 8.Timed conversion
+
+## Author
+samuele.querio@edu-its.it
+
+## Requirements
+
 - We will modify ‘Temperature conversion’ exercise from the lesson about
 functions
 - Call celsiusToFahrenheit on temperatures from 0 to 100 so that one
