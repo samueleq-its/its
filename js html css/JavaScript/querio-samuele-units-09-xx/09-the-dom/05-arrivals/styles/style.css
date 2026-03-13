@@ -35,3 +35,11 @@ table {
     width: 90%;
     margin: 5%;
 }
+
+tbody tr:nth-of-type(odd) {
+    background-color: #eee;
+}
+
+tbody tr.delayed {
+    color: red;
+}
