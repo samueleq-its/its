@@ -7,6 +7,8 @@ applyTo: "js html css/**/*"
 
 - Apply these instructions only to files inside subfolders of `js html css`.
 - Treat this area as learning exercises: keep solutions simple, clear, and beginner-friendly.
+- Unless expressly specified by the user, do not solve exercises.
+- By default, limit work to creating folders/files and basic exercise scaffolding only.
 - Prefer minimal, focused edits that preserve existing exercise structure.
 - Do not introduce extra frameworks or dependencies unless explicitly requested.
 - Prefer VS Code workbench operations (file reads/edits/search tools) over terminal automation for code and content updates.
