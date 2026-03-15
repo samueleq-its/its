@@ -1,0 +1,49 @@
+/**
+* style.css
+*
+* set the styles for two columns of dishes, one dirty and one clean
+*/
+
+/* sets box sizing as default with inheritance */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: antiquewhite;
+}
+
+/* sets up two columns for the dish stacks */
+#dirty-container,
+#clean-container {
+	display: inline-block;
+	min-width: 100px;
+	position: absolute;
+	bottom: 10%;
+	right: 25vw;
+}
+
+#dirty-container {
+	left: 25vw;
+}
+
+/* plate dimensions and styling */
+.dirty-plate,
+.clean-plate {
+	height: 1.5vh;
+	width: 25vh;
+	border: 1px solid black;
+	border-radius: 100%;
+	background-color: white;
+}
+
+.dirty-plate{
+background-color: burlywood;
+}
+

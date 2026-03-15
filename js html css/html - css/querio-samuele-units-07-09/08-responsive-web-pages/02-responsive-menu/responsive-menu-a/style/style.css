@@ -1,0 +1,25 @@
+/**
+* style.css
+*
+* Starter styles for responsive-menu-a (max-width approach)
+*/
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 1rem;
+}
+
+/* TODO: Add max-width breakpoints only for responsive behavior. */
+@media (max-width: 900px) {
+	nav ul {
+		flex-direction: column;
+	}
+}
