@@ -5,16 +5,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>3.Full responsive page</title>
+	<title>3.Full responsive page - City Weekend Guide</title>
 	<meta name="author" content="samuele.querio@edu-its.it">
-	<meta name="description" content="Scaffold for the full responsive page exercise.">
+	<meta name="description"
+		content="A fully responsive semantic page with fixed header and menu, sidebar updates, and two main content columns.">
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
 
 	<!--Open Graph for Social Card-->
-	<meta property="og:title" content="3.Full responsive page">
+	<meta property="og:title" content="3.Full responsive page - City Weekend Guide">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://127.0.0.1:5500/js%20html%20css/html%20-%20css/querio-samuele-units-07-09/08-responsive-web-pages/03-full-responsive-page/index.html">
-	<meta property="og:description" content="Scaffold for a semantic and fully responsive multi-section page.">
+	<meta property="og:url"
+		content="http://127.0.0.1:5500/js%20html%20css/html%20-%20css/querio-samuele-units-07-09/08-responsive-web-pages/03-full-responsive-page/index.html">
+	<meta property="og:description"
+		content="A semantic and fully responsive city guide page with sticky navigation, sidebar highlights, and readable content-first sections.">
 	<meta property="og:image" content="image.png">
 
 	<!--css and scripts-->
@@ -24,7 +27,87 @@
 </head>
 
 <body>
-	<h1>3.Full responsive page</h1>
+	<!--top-->
+	<header>
+		<div id="title">
+			<h1>3.Full responsive page</h1>
+		</div>
+		<a href="javascript:void(0);" id="menu-btn" class="button" onclick="displayMenu()">Menu</a>
+		<div id="top-menu">
+			<a class="button" href="#">Docs</a>
+			<a class="button" href="#">Learn</a>
+			<a class="button" href="#">JavaScript</a>
+			<a class="button" href="#">CSS</a>
+			<a class="button" href="#">Community</a>
+		</div>
+	</header>
+
+
+	<aside>
+		<!--latest news-->
+		<h2>Latest updates</h2>
+		<article>
+			<h3>15 Mar 2026 - HTML Popover API gets broader browser support</h3>
+			<p>The popover attribute is now easier to use for tooltips and lightweight dialogs, with updated guidance for
+				accessibility and keyboard behavior.</p>
+		</article>
+		<article>
+			<h3>12 Mar 2026 - JavaScript import attributes stable in modern builds</h3>
+			<p>Import attributes can now be used confidently in many production setups, especially for JSON modules and
+				stricter asset typing.</p>
+		</article>
+		<article>
+			<h3>09 Mar 2026 - CSS subgrid documentation refreshed</h3>
+			<p>New layout examples show how subgrid improves alignment across cards, forms, and editorial pages without
+				extra wrappers.</p>
+		</article>
+		<article>
+			<h3>05 Mar 2026 - ECMAScript proposal notes for iterator helpers</h3>
+			<p>Iterator helper methods continue to mature, giving developers cleaner ways to map, filter, and take values
+				lazily.</p>
+		</article>
+		<article>
+			<h3>01 Mar 2026 - CSS color functions and relative color syntax updates</h3>
+			<p>Color workflows are becoming more consistent with clearer references for color-mix and relative channel
+				adjustments.</p>
+		</article>
+	</aside>
+	<main>
+		<section class="featured">
+			<!--popular articles-->
+			<h2>Popular articles</h2>
+			<article>
+				<h3>Guide: Debugging CSS layout issues with DevTools</h3>
+				<p>Learn a repeatable process to inspect box models, stacking contexts, and overflow problems before changing
+					your stylesheet blindly.</p>
+			</article>
+			<article>
+				<h3>Tutorial: Fetch API patterns for robust data loading</h3>
+				<p>This article covers request cancellation, error handling, and progressive loading so your interface remains
+					responsive on unstable networks.</p>
+			</article>
+		</section>
+
+		<section class="featured">
+			<!--underrated articles-->
+			<h2>Underrated features</h2>
+			<article>
+				<h3>JavaScript: structuredClone for safe deep copies</h3>
+				<p>structuredClone is often ignored but can replace fragile JSON-based cloning when you need accurate copies of
+					nested data structures.</p>
+			</article>
+			<article>
+				<h3>CSS: :has() for parent-aware component states</h3>
+				<p>The :has() selector lets containers react to child state, making interactive UI patterns possible with much
+					less JavaScript.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<p>City Docs Mockup - Documentation content for modern web development teams.</p>
+		<p><a class="button" href="#top">Back to top</a></p>
+	</footer>
 </body>
 
 </html>

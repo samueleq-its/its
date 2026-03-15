@@ -4,27 +4,41 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>2.Responsive menu A</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>2.Responsive menu</title>
 	<meta name="author" content="samuele.querio@edu-its.it">
-	<meta name="description" content="Scaffold for responsive menu A using max-width media queries.">
-	<link rel="stylesheet" href="./style/style.css">
+	<meta name="description" content="2.Responsive menu variant built with max-width media queries only">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+
+	<!--Open Graph for Social Card-->
+	<meta property="og:title" content="2.Responsive menu">
+	<meta property="og:type" content="website">
+	<meta property="og:url"
+		content="http://127.0.0.1:5500/js%20html%20css/html%20-%20css/querio-samuele-units-07-09/08-responsive-web-pages/02-responsive-menu/responsive-menu-a/index.html">
+	<meta property="og:description" content="2.Responsive menu variant built with min-width media queries only">
+	<meta property="og:image" content="image.png">
+
+	<!--css and scripts-->
+	<link rel="stylesheet" href="./styles/normalize.css">
+	<link rel="stylesheet" href="./styles/style.css?v=1.0">
+	<script defer src="./scripts/main.js?v=1.0"></script>
 </head>
 
 <body>
-	<header>
-		<h1>2.Responsive menu A</h1>
-		<nav aria-label="Main navigation">
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#courses">Courses</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="#help">Help</a></li>
-			</ul>
-		</nav>
-	</header>
+	<nav>
+		<!-- the menu button, shown only on narrow screens, that shows the menu when clicked -->
+		<a href="javascript:void(0);" id="menu-btn" onclick="displayMenu()">Menu</a>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Contact</a>
+		<a href="#">Portfolio</a>
+		<a href="#">Testimonials</a>
+		<a href="#">Blog</a>
+	</nav>
+	<h1>2.Responsive menu</h1>
+
+
 </body>
 
 </html>

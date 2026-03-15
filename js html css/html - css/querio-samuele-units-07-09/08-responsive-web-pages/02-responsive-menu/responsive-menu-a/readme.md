@@ -1,4 +1,4 @@
-# 2.Responsive menu A
+# 2.Responsive menu
 ## Author
 samuele.querio@edu-its.it
 
@@ -9,3 +9,5 @@ samuele.querio@edu-its.it
 - Ensure the menus are semantic, responsive, and include at least 7 items
 
 ## Approach to solution
+
+starts with a full-sized menu, which gets smaller on smaller screens and gets replaced by with a button to show/hide the menu on mobile-sized screens

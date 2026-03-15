@@ -1,7 +1,7 @@
 /**
 * style.css
 *
-* description
+* changes background image of the container depending on screen width with media queries
 */
 
 /* sets box sizing as default with inheritance */
@@ -15,36 +15,47 @@ html {
 	box-sizing: inherit;
 }
 
+body {
+	background-color: rgb(calc(255 * 1px),0,0);
+}
+
+/* common declarations for the image container */
 #img {
 	display: block;
-	border: 1px solid black;
 	height: 200px;
-	width: 100%;
-	background-image: url("../assets/img/img.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	background-position: center;
 }
-	
 
-
-
+/* changes background image depending on screen width */
 @media screen and (max-width: 480px) {
-	/* styles */
+	#img {
+		background-image: url("../assets/img/img.png");
+	}
 	
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-	/* styles */
+	#img {
+		background-image: url("../assets/img/img-481.png");
+	}
 	
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-	/* styles */
+	#img {
+		background-image: url("../assets/img/img-769.png");
+	}
 	
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-	/* styles */
+	#img {
+		background-image: url("../assets/img/img-1025.png");
+	}
 	
 }
 @media screen and (min-width: 1201px) {
-	/* styles */
+	#img {
+		background-image: url("../assets/img/img-1201.png");
+	}
 	
 }

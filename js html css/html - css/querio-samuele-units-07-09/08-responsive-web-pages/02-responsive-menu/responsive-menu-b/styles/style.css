@@ -1,0 +1,90 @@
+/**
+* style.css
+*
+* Creates a responsive menu with a mobile-first approach.
+* Uses only min-width media queries.
+*/
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	min-height: 77px;
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+}
+
+nav a {
+	display: inline-block;
+	min-width: 150px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	background-color: #5e5e5e;
+	color: #fff;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+nav a:hover {
+	background-color: #bdbdbd;
+}
+
+/* Mobile default: button visible, links hidden until menu is opened. */
+#menu-btn {
+	display: inline-block;
+	min-width: unset;
+	padding: 10px 15px;
+	margin: 5px;
+	border-radius: unset;
+}
+
+nav a:not(#menu-btn) {
+	display: none;
+}
+
+nav.menu-open a:not(#menu-btn) {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	border-radius: 0;
+}
+
+nav.menu-open a#menu-btn {
+	width: 100%;
+	background-color: #bdbdbd;
+}
+
+/* Tablet and desktop: full horizontal menu and no toggle button. */
+@media screen and (min-width: 851px) {
+	#menu-btn {
+		display: none;
+	}
+
+	nav a:not(#menu-btn) {
+		display: inline-block;
+		min-width: 100px;
+	}
+}
+
+/* Larger screens: restore bigger nav link sizing. */
+@media screen and (min-width: 1201px) {
+	nav a:not(#menu-btn) {
+		min-width: 150px;
+		font-size: 1.5em;
+	}
+}

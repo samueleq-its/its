@@ -1,0 +1,91 @@
+/**
+* style.css
+*
+* creates a responsive menu that changes to a button when the screen is too narrow, and shows the menu when the button is clicked
+* utilizes only max-width media queries
+*/
+
+/* sets box sizing as default with inheritance */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+
+/* display nav bar at the top of the screen */
+nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	min-height: 77px;
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+}
+
+/* style nav page links */
+nav a {
+	display: inline-block;
+	min-width: 150px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: #5e5e5e;
+	color: white;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+/* hover highlight */
+nav a:hover {
+	background-color: #bdbdbd;
+}
+
+/* hide menu button when screen is wide enough and sets it's style */
+#menu-btn {
+	display: none;
+	min-width: unset;
+	padding: 10px 15px;
+	margin: unset;
+	border-radius: unset;
+}
+
+@media screen and (max-width: 1200px) {
+	nav a {
+		width: unset;
+		min-width: 100px;
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#menu-btn {
+		display: inline-block;
+	}
+
+	nav a:not(#menu-btn) {
+		display: none;
+	}
+
+	nav.menu-open a:not(#menu-btn) {
+		display: inline-block;
+		width:100%;
+		margin: unset;
+		border-radius: unset;
+	}
+	nav.menu-open a#menu-btn {
+		width: 100%;
+		background-color: #bdbdbd;
+		
+	}
+
+
+}

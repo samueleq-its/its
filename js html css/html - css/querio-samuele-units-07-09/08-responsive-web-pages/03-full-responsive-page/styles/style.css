@@ -14,3 +14,181 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+
+/* visual debug colors for each semantic element */
+
+nav {
+	border: 1px solid rgb(255, 193, 7);
+	background-color: rgba(255, 193, 7, 0.5);
+}
+
+main {
+	border: 1px solid rgb(40, 167, 69);
+	background-color: rgba(40, 167, 69, 0.5);
+}
+
+section {
+	border: 1px solid rgb(23, 162, 184);
+	background-color: rgba(23, 162, 184, 0.5);
+}
+
+article {
+	border: 1px solid rgb(0, 123, 255);
+	background-color: rgba(0, 123, 255, 0.5);
+}
+
+aside {
+	border: 1px solid rgb(111, 66, 193);
+	background-color: rgba(111, 66, 193, 0.5);
+}
+
+footer {
+	border: 1px solid rgb(108, 117, 125);
+	background-color: rgba(108, 117, 125, 0.5);
+}
+
+/* END visual debug colors for each semantic element */
+
+html {
+	font-size: 14px;
+	font-family: monospace;
+}
+
+/* colors */
+
+body {
+	background-color: #34383a;
+}
+
+#top-menu,
+header {
+	background-color: #18191b;
+}
+
+#title {
+	color: white;
+}
+
+.button {
+	background-color: rgb(70, 70, 70);
+	color: white;
+}
+
+/* styles buttons */
+.button {
+	text-decoration: none;
+	font-size: 25px;
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 1px;
+}
+
+/* link highlight on hover */
+.button:hover {
+	background-color: rgb(175, 175, 175);
+}
+
+/* links to other pages hidden by default */
+#top-menu a {
+	display: none;
+}
+
+/* header (title and nav menu) remain at the top of the screen, title and menu side by side*/
+header {
+	position: sticky;
+	top: 0;
+	padding: 5px;
+}
+
+#title h1 {
+	font-size: 15px;
+}
+
+#title,
+nav {
+	display: inline-block;
+}
+
+#top-menu,
+#menu-btn {
+	position: absolute;
+	right: 10px;
+}
+
+/* on mobile screens */
+@media screen and (max-width: 769px) {
+
+	/* display menu voices on when the Menu button is pressed */
+	#top-menu.menu-open a {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+/* on larger displays */
+@media screen and (min-width: 770px) {
+
+	/* always shows menus and hides menu button */
+	#top-menu a {
+		display: inline-block;
+		min-width: 80px;
+		text-align: center;
+	}
+
+	#menu-btn {
+		display: none;
+	}
+
+	#top-menu {
+		display: inline-block;
+	}
+
+
+	/* shows articles in 2 columns */
+	.featured {
+		padding: 5px;
+	}
+
+	.featured article {
+		vertical-align: top;
+		display: inline-block;
+		width: 48%;
+		margin: 0 3% 16px 0;
+	}
+
+	.featured article:nth-of-type(2n) {
+		margin-right: 0;
+	}
+
+}
+
+/* on full sized displays */
+@media screen and (min-width: 1400px) {
+
+	/* latest updates and featured articles side by side */
+	aside {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+		margin: 0 0.5%;
+	}
+
+	main {
+		display: inline-block;
+		width: 64%;
+		vertical-align: top;
+	}
+
+	.featured {
+		width: 100%;
+	}
+
+	.featured article {
+		width: 100%;
+	}
+
+	aside,
+	main {
+		height: 85vh;
+	}
+}
