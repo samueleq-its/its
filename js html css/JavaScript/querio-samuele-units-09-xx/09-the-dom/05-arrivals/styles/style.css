@@ -20,6 +20,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* table styling */
 tr {
     border: 1px solid black;
 }
@@ -29,7 +30,7 @@ table {
     width: 95%;
     margin: 2.5%;
 }
-
+/* alternating row colors */
 tbody tr:nth-of-type(odd) {
     background-color: #dfdfe6;
 }
@@ -44,10 +45,10 @@ tbody tr.delayed {
 
 th {
     font-weight: bold;
-    color: rgb(36, 36, 255);
-    font-size: la;
+    color: rgb(0, 68, 156);
+    font-size: large;
 }
-
+/* title and header styling */
 header {
     background-color: #0750d6;
     padding: 10px 10px;

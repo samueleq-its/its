@@ -13,3 +13,11 @@
  * @returns {type} description
  */
 
+document.getElementById('list').addEventListener('click', event => {
+    const target = event.target;
+    // if clicked element is a button
+    if (target.tagName === 'BUTTON') {
+    const parent = target.parentElement;
+    parent.classList.toggle('highlighted'); // mark as highlighted
+    }
+    });

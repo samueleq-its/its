@@ -9,6 +9,7 @@
 
 const UPDATE_RATE = 10000;
 const LANDED_REMOVAL_TIME = 60000;
+const DISPLAYED_FLIGHTS = 10;
 
 let arrivalsList = [
     {
@@ -364,47 +365,49 @@ let arrivalsList = [
 ];
 
 /**
- * Updates the arrivals table with the latest flight information
+ * Updates the arrivals table with the latest flight information,
+ * displaying only the first DISPLAYED_FLIGHTS (10) flights in the arrivalsList
+ * and marking delayed flights with a different class
  * @param {arrivalsList} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
  * @param {HTMLElement} arrivalsTable the tbody element where the table rows will be inserted
  */
 function updateTable(arrivalsList, arrivalsTable) {
     let updatedRows = Array();
     //create list of updated table rows
-    for (let flight of arrivalsList) {
+    for (let i = 0; i < Math.min(arrivalsList.length, DISPLAYED_FLIGHTS); i++) {
         let row = document.createElement("tr");
         //Date: DD-MM
         let dateTd = document.createElement("td");
         dateTd.append(
-            `${String(flight.time.getDate()).padStart(2, "0")}-` +
-            `${String(flight.time.getMonth() + 1).padStart(2, "0")}`
+            `${String(arrivalsList[i].time.getDate()).padStart(2, "0")}-` +
+            `${String(arrivalsList[i].time.getMonth() + 1).padStart(2, "0")}`
         );
         row.append(dateTd);
         //Time hh:mm
         let timeTd = document.createElement("td");
         timeTd.append(
-            `${String(flight.time.getHours()).padStart(2, "0")}:` +
-            `${String(flight.time.getMinutes()).padStart(2, "0")}`
+            `${String(arrivalsList[i].time.getHours()).padStart(2, "0")}:` +
+            `${String(arrivalsList[i].time.getMinutes()).padStart(2, "0")}`
         );
         row.append(timeTd);
         //Origin
         let originTd = document.createElement("td");
-        originTd.append(flight.origin);
+        originTd.append(arrivalsList[i].origin);
         row.append(originTd);
         //Status
         let statusTd = document.createElement("td");
-        statusTd.append(flight.flightStatus);
+        statusTd.append(arrivalsList[i].flightStatus);
         row.append(statusTd);
         //Flight number
         let flightTd = document.createElement("td");
-        flightTd.append(flight.flightNum);
+        flightTd.append(arrivalsList[i].flightNum);
         row.append(flightTd);
         //Airplane number
         let airplaneTd = document.createElement("td");
-        airplaneTd.append(flight.plane);
+        airplaneTd.append(arrivalsList[i].plane);
         row.append(airplaneTd);
         //class = delayed (if delayed)
-        if (flight.flightStatus == "DELAYED") {
+        if (arrivalsList[i].flightStatus == "DELAYED") {
             row.className = "delayed";
         }
         //add to new rows
@@ -419,16 +422,15 @@ function updateTable(arrivalsList, arrivalsTable) {
  * removes flight that have landed more than LANDED_REMOVAL_TIME ago (60s)
  * @param {arrivalsList} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
  */
-function updateFlights(arrivalsList) {    
-    for (let i = (arrivalsList.length-1); i >= 0; i--) {
-        if (Date.now() - arrivalsList[i].time > LANDED_REMOVAL_TIME){
-            arrivalsList.splice(i,1);
+function updateFlights(arrivalsList) {
+    for (let i = (arrivalsList.length - 1); i >= 0; i--) {
+        if (Date.now() - arrivalsList[i].time > LANDED_REMOVAL_TIME) {
+            arrivalsList.splice(i, 1);
         }
         if (arrivalsList[i].time < Date.now()) {
             arrivalsList[i].flightStatus = "LANDED";
         }
     }
-    
 }
 
 /**

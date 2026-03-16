@@ -14,3 +14,5 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+.highlighted {background-color: orange;}

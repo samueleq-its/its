@@ -26,11 +26,11 @@ body {
 	min-width: 100px;
 	position: absolute;
 	bottom: 10%;
-	right: 25vw;
+	right: 50px;
 }
 
 #dirty-container {
-	left: 25vw;
+	left: 50px;
 }
 
 /* plate dimensions and styling */
