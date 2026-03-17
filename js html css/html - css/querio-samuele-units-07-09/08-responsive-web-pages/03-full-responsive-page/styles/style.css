@@ -116,7 +116,7 @@ nav {
 }
 
 /* on mobile screens */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 780px) {
 
 	/* display menu voices on when the Menu button is pressed */
 	#top-menu.menu-open a {
@@ -126,7 +126,7 @@ nav {
 }
 
 /* on larger displays */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 781px) {
 
 	/* always shows menus and hides menu button */
 	#top-menu a {

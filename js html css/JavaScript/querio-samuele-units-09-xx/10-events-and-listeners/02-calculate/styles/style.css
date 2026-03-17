@@ -1,7 +1,6 @@
 /**
 * style.css
-*
-* description
+* basic styling for a calculator
 */
 
 /* sets box sizing as default with inheritance */
@@ -15,20 +14,45 @@ html {
 	box-sizing: inherit;
 }
 
+/* styling for container of inputs and result */
 div {
-	position: relative;
 	border: 1px solid black;
+	background-color: rgb(196, 196, 196);
+	position: relative;
 	padding: 10px;
 	margin: 10px;
-	width: 300px;
+	width: 350px;
+	min-height: 40px;
 }
+
+/* button on the right side of div*/
 button {
 	position: absolute;
 	right: 10px;
 }
 
+/* text aligned to the right, 1 input/label per row */
 label {
 	text-align: right;
 	display: inline-block;
-	width: 200px;
+	width: 250px;
+	margin-bottom: 20px;
+}
+
+/* spacing between text and input field */
+input {
+	margin-left: 5px;
+}
+
+label::first-letter{
+	border: 1px solid black;
+	padding: 1px;
+	margin: 1px;
+	font-weight: bold;
+	background-color: rgb(255, 255, 0);
+}
+
+p {
+	font-size: 0.8em;
+	color: rgb(88, 88, 88);
 }
