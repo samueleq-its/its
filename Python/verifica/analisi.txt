@@ -1,0 +1,85 @@
+GESTIONALE PRENOTAZIONE AULE STUDIO
+
+VINCOLI:
+nomi sorgenti in italiano (es studenti.py)
+nomi funzioni in inglese (es get_students())
+commenti in italiano
+dump crea anche un aula dummy con 5 posti in meno di quanti dichiarati
+
+    PRENOTAZIONI
+        FUNZIONI:
+        prenotazione
+            massimo 1 per studente
+            fino a esaurimento posti aula
+        eliminazione
+            libera un posto
+
+STRUTTURA DB
+    STUDENTI:
+    id int Primary key auto_increment
+    nome str not NULL
+    cognome str not NULL
+
+    AULE STUDIO:
+    codice string primary key
+    posti_disponibili int not NULL
+
+    PRENOTAZIONI
+    id int primary key auto_increment
+    codice_aula str foreign key
+    id_studente int foreign key
+
+LOGICA:
+ogni tabella del DB avrà una classe col nome al singolare (es tabella studenti viene mappata in una classe Studente dentro studente.py
+
+    MAIN.PY
+    gestione menu principale
+
+    GEST_STUDENTI.PY
+    gestione logica studenti
+        add():
+            aggiunge 1 studente, nome e cognome non possono essere vuoti
+        find():
+            trova e ritorna 1 studente per id
+        find_helper():
+            richiede da terminale l'inserimento dell'id, verifica che l'input sia di tipo corretto e stampa il risultato
+        get_all():
+            ritorna una lista di studenti
+
+    GEST_AULE.PY
+    gestione logica aule
+        add():
+            aggiunge una nuova aula al DB, deve imporre unicità codice identificativo
+        change_available_seats():
+            permette di impostare un nuovo numero di posti disponibili (limitato automaticamente dalle prenotazioni già effettuate)
+        delete():
+            rimuove l'aula e ogni prenotazione effettuata, mostra avviso se ci sono prenotazioni
+        find():
+            trova e ritorna un aula per codice
+        find_helper():
+            richiede da terminale l'inserimento dell'codice, verifica che l'input sia di tipo corretto e stampa il risultato, richiese se modificare il numero di posti disponibili
+        get_all():
+            ritorna una lista di aule
+
+    GEST_PRENOTAZIONI.PY
+    gestione logica prenotazioni
+        add():
+            aggiunge una nuova prenotazione, deve verificare che lo studente non abbia già altre prenotazioni e che l'aula abbia abbastanza posti
+            deve gestire eccezione aula Dummy
+        delete():
+            rimuove la prenotazione, liberando un posto nell'aula
+        delete_all_by_aula():
+            rimuove la prenotazioni associate ad un aula
+        find():
+            trova e ritorna una prenotazione per id o per id studente
+        find_helper():
+            richiede da terminale la scelta tra ricerca per id, per studente o per aula, gestisce l'inserimento dell'id, verifica che l'input sia di tipo corretto e stampa il risultato
+        find_by_aula():
+            trova e ritorna una prenotazione per codice aula
+        get_all():
+            ritorna una lista di prenotazioni
+
+
+SPIEGAZIONI:
+le funzioni in DB_Handler sono tutte class method per poter utilizzare un unica connessione senza dover passare la connessione aperta ad ogni funzione che ne farebbe uso
+classmethod rende un metodo statico (può essere invocato senza istanziare un oggetto e permette di chiamare gli altri metodi della classe con 'cls')
