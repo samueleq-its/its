@@ -1,0 +1,64 @@
+@use "sass:color";
+
+@mixin box-color($border-color) {
+    $background-color: color.scale($border-color, $alpha: -50%);
+    border: 2px solid $border-color;
+    background-color: $background-color;
+}
+
+@mixin boh2($outer-color, $inner-color) {
+    @include box-color($outer-color);
+    max-width: 1600px;
+
+    article {
+        display: inline-block;
+        width: 46%;
+        margin: 0.5%;
+        padding: 20px 1%;
+        
+        &:first-child{
+            @include box-color($inner-color);
+        }
+        &:last-child{
+            $opposite-color: color.invert($inner-color);
+            @include box-color($opposite-color);
+        }
+    }
+}
+
+@mixin doc-wide ($font-size, $page-color, $outer-color, $inner-color) {
+    font-family: monospace;
+    font-size: $font-size;
+    padding: 20px;
+    @include box-color($page-color);
+
+    section {
+        padding: 20px;
+        &:first-child {
+            @include boh2($outer-color, $inner-color);
+        }
+
+        &:last-child {
+            $opposite-outer-color: color.invert($outer-color);
+            $opposite-inner-color: color.invert($inner-color);
+            @include boh2($opposite-outer-color, $opposite-inner-color);
+        }
+    }
+}
+
+/* defaults to border-box with inheritance */
+html {
+    box-sizing: border-box;
+}
+
+* {
+
+    ::before,
+    ::after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    @include doc-wide(1.5em, rgb(72, 102, 101), blue, green, );
+}

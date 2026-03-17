@@ -1,0 +1,58 @@
+/* defaults to border-box with inheritance */
+html {
+  box-sizing: border-box;
+}
+
+* ::before,
+* ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.5em;
+  padding: 20px;
+  border: 2px solid rgb(72, 102, 101);
+  background-color: rgba(72, 102, 101, 0.5);
+}
+body section {
+  padding: 20px;
+}
+body section:first-child {
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.5);
+  max-width: 1600px;
+}
+body section:first-child article {
+  display: inline-block;
+  width: 46%;
+  margin: 0.5%;
+  padding: 20px 1%;
+}
+body section:first-child article:first-child {
+  border: 2px solid green;
+  background-color: rgba(0, 128, 0, 0.5);
+}
+body section:first-child article:last-child {
+  border: 2px solid #ff7fff;
+  background-color: rgba(255, 127, 255, 0.5);
+}
+body section:last-child {
+  border: 2px solid yellow;
+  background-color: rgba(255, 255, 0, 0.5);
+  max-width: 1600px;
+}
+body section:last-child article {
+  display: inline-block;
+  width: 46%;
+  margin: 0.5%;
+  padding: 20px 1%;
+}
+body section:last-child article:first-child {
+  border: 2px solid #ff7fff;
+  background-color: rgba(255, 127, 255, 0.5);
+}
+body section:last-child article:last-child {
+  border: 2px solid green;
+  background-color: rgba(0, 128, 0, 0.5);
+}/*# sourceMappingURL=style.css.map */
