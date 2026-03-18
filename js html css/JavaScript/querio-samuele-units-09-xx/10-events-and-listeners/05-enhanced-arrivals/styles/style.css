@@ -1,0 +1,85 @@
+/**
+* style.css
+*
+* Basic scaffold styles for the 5.Arrivals exercise
+*/
+
+/* sets box sizing as default with inheritance */
+html {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* table styling */
+tr {
+    border: 1px solid black;
+}
+
+table {
+    /*border: 1px solid black;*/
+    width: 95%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+/* alternating row colors */
+tbody tr:nth-of-type(odd) {
+    background-color: #dfdfe6;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #d1d1d8;
+}
+
+tbody tr.delayed {
+    color: red;
+}
+
+th {
+    font-weight: bold;
+    color: rgb(0, 68, 156);
+    font-size: large;
+}
+/* title and header styling */
+header {
+    background-color: #0750d6;
+    padding: 10px 10px;
+}
+
+main div {
+    background-color: #0750d6;
+    color: white;
+    padding: 10px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    border-collapse: collapse;
+}
+
+footer {
+    padding: 20px 10px 20px;
+    text-align: right;
+}
+
+.extra-info {
+    display: none;
+}
+
+.extra-info.expanded {
+    display: block;
+}
+
+tbody tr:hover {
+    background-color: #c1c1c8;
+}
