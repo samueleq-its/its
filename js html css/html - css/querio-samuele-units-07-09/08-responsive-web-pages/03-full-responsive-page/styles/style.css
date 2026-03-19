@@ -42,20 +42,18 @@ aside {
 	background-color: rgba(111, 66, 193, 0.5);
 }
 
+article,
+h2 {
+	padding-left: 5px;
+}
+
 footer {
 	border: 1px solid rgb(108, 117, 125);
 	background-color: rgba(108, 117, 125, 0.5);
 }
-
 /* END visual debug colors for each semantic element */
 
-html {
-	font-size: 14px;
-	font-family: monospace;
-}
-
 /* colors */
-
 body {
 	background-color: #34383a;
 }
@@ -72,6 +70,11 @@ header {
 .button {
 	background-color: rgb(70, 70, 70);
 	color: white;
+}
+
+html {
+	font-size: 14px;
+	font-family: monospace;
 }
 
 /* styles buttons */
@@ -148,7 +151,7 @@ nav {
 	.featured {
 		padding: 5px;
 	}
-
+	
 	.featured article {
 		vertical-align: top;
 		display: inline-block;
@@ -159,7 +162,6 @@ nav {
 	.featured article:nth-of-type(2n) {
 		margin-right: 0;
 	}
-
 }
 
 /* on full sized displays */

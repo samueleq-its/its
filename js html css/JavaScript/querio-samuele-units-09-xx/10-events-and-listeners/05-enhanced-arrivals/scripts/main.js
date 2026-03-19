@@ -10,6 +10,7 @@
 const UPDATE_RATE = 10000;
 const LANDED_REMOVAL_TIME = 60000;
 const DISPLAYED_FLIGHTS = 10;
+let expandedFlight; // the row that with the open accordion for extr info
 
 let arrivalsList = [
 	{
@@ -367,7 +368,7 @@ let arrivalsList = [
 /**
  * Updates the arrivals table with the latest flight information,
  * displaying only the first DISPLAYED_FLIGHTS (10) flights in the arrivalsList
- * and marking delayed flights with a different class
+ * marks every row with the flight number as id and class delayed for delayed flights
  * @param {arrivalsList} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
  * @param {HTMLElement} arrivalsTable the tbody element where the table rows will be inserted
  */
@@ -399,21 +400,28 @@ function updateTable(arrivalsList, arrivalsTable) {
 		statusTd.append(arrivalsList[i].flightStatus);
 		row.append(statusTd);
 		//Flight number
-		let flightTd = document.createElement("td");
+		let flightTd = document.createElement("td"); 
 		flightTd.append(arrivalsList[i].flightNum);
 		row.append(flightTd);
-		//Airplane number
-		let airplaneTd = document.createElement("td");
-		airplaneTd.append(arrivalsList[i].plane);
-		//add class extra-info
-		airplaneTd.className += "extra-info";
-		row.append(airplaneTd);
 		//class = delayed (if delayed)
 		if (arrivalsList[i].flightStatus == "DELAYED") {
-			row.className = "delayed";
+			row.classList.add("delayed");
 		}
+		//element id is flight number
+		row.classList.add(arrivalsList[i].flightNum);
 		//add to new rows
 		updatedRows.push(row);
+
+		// create extra info row
+		let extraRow = document.createElement("tr");
+		let extraTd = document.createElement("td");
+		extraTd.append(`plane number: ${arrivalsList[i].plane}`);
+		//add class extra-info
+		extraTd.className += "extra-info";
+		extraRow.append(extraTd);
+		
+		updatedRows.push(row, extraRow);
+
 	}
 	//replaces previous table
 	arrivalsTable.replaceChildren(...updatedRows);
@@ -435,8 +443,38 @@ function updateFlights(arrivalsList) {
 	}
 }
 
+
+
 /**
- * 
+ * REWRITE
+ * expands the indicated row, if the row is already expanded closes it, 
+ * if there's another expanded row closes it 
+ * @param {string} flightNum 
+ */
+function accordionHandler(flightNum) {
+	let clickedRow = document.getElementById(flightNum);
+	if (!clickedRow) return; // if the row no longer exists (eliminated during table update)
+	if (clickedRow.classList.contains("expanded")) {  
+		// if the row was already open
+		clickedRow.classList.remove("expanded");
+		expandedFlight = null;
+	} else {
+		// if the row was closed
+		let expandedRow = document.getElementById(expandedFlight);
+		// if the previusly open row is found
+		if (expandedRow) {
+			expandedRow.classList.remove("expanded");
+		}
+		clickedRow.classList.add("expanded");
+		expandedFlight = flightNum;
+	}
+}
+
+
+
+/**
+ * adds a listener to every row in the table that calls the accordionHandler function
+ * when the row is clicked, allowing to expand and collapse the extra info column
  */
 function addListeners() {
 	let rowsList = document.querySelectorAll("tbody tr");
@@ -448,11 +486,9 @@ function addListeners() {
 		row.addEventListener(
 			"click",
 			(event) => {
-				console.log(event.currentarget);
-				//WIP
+				accordionHandler(event.currentTarget.id);
 			}
 		);
-
 	}
 }
 
@@ -468,6 +504,9 @@ function update(arrivalsList, arrivalsTable) {
 	updateFlights(arrivalsList);
 	updateTable(arrivalsList, arrivalsTable);
 	addListeners();
+	// if a row was expanded keep it so
+	if (expandedFlight) {accordionHandler(expandedFlight);}
+	
 }
 
 //initial table update

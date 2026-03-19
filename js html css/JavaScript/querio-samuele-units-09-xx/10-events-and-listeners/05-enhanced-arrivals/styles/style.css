@@ -31,6 +31,7 @@ table {
     max-width: 1000px;
     margin: 20px auto;
 }
+
 /* alternating row colors */
 tbody tr:nth-of-type(odd) {
     background-color: #dfdfe6;
@@ -40,16 +41,19 @@ tbody tr:nth-of-type(even) {
     background-color: #d1d1d8;
 }
 
+/* delayed flights appears red */
 tbody tr.delayed {
     color: red;
 }
 
+/* table columns title styling */
 th {
     font-weight: bold;
     color: rgb(0, 68, 156);
     font-size: large;
 }
-/* title and header styling */
+
+/* page title and header styling */
 header {
     background-color: #0750d6;
     padding: 10px 10px;
@@ -67,19 +71,25 @@ h2 {
     border-collapse: collapse;
 }
 
+/* footer styling */
 footer {
     padding: 20px 10px 20px;
     text-align: right;
 }
 
+/* row highlighting on mouse hover */
+tbody tr:hover {
+    background-color: #c1c1c8;
+}
+
+/* extra info accordion styling  and reactivity*/
 .extra-info {
     display: none;
 }
 
-.extra-info.expanded {
+.expanded .extra-info {
     display: block;
+    
 }
 
-tbody tr:hover {
-    background-color: #c1c1c8;
-}
+
