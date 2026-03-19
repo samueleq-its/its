@@ -15,3 +15,7 @@ cat image. Keep it in the middle for 10 seconds, and then replace the img with t
 image and have it continue the walk as in variant 2
 
 ## Approach to solution
+
+the first function moves the image to the right and when it moves past the right edge of the screen it moves back to the left edge.  
+The second function also moves the image to the right but when it touches the right edge of the screen it mirrors the image and starts moving back to the left  
+the third function moves to the side of the screen, changes image and waits for 10 seconds before changing the image back and starting to move again using the second function.
