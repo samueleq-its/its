@@ -408,24 +408,27 @@ function updateTable(arrivalsList, arrivalsTable) {
 			row.classList.add("delayed");
 		}
 		//element id is flight number
-		row.classList.add(arrivalsList[i].flightNum);
+		row.id = arrivalsList[i].flightNum;
 		//add to new rows
 		updatedRows.push(row);
 
 		// create extra info row
-		let extraRow = document.createElement("tr");
+		//let extraRow = document.createElement("tr");
 		let extraTd = document.createElement("td");
 		extraTd.append(`plane number: ${arrivalsList[i].plane}`);
-		//add class extra-info
+		//add id extra-info
 		extraTd.className += "extra-info";
-		extraRow.append(extraTd);
+		//extraRow.append(extraTd);
+		row.append(extraTd);
 		
-		updatedRows.push(row, extraRow);
+		updatedRows.push(row);
 
 	}
 	//replaces previous table
 	arrivalsTable.replaceChildren(...updatedRows);
 }
+
+
 
 /**
  * updates flight that have landed
