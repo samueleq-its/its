@@ -14,3 +14,15 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+
+body {
+	font-family: 'Trebuchet MS', sans-serif;
+	margin: 10px;
+}
+
+div {
+	border: 1px solid black;
+	min-height: 100px;
+	padding: 5px;
+	width: 500px;
+}
