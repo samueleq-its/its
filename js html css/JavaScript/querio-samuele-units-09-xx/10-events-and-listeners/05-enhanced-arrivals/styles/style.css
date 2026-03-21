@@ -33,12 +33,22 @@ table {
 }
 
 /* alternating row colors */
+/*
 tbody tr:nth-of-type(odd) {
     background-color: #dfdfe6;
 }
 
 tbody tr:nth-of-type(even) {
     background-color: #d1d1d8;
+}
+*/
+
+tbody tr:not(.accordion):nth-of-type(4n + 1) {
+    background-color: #c8caca;
+}
+
+tbody tr:not(.accordion):nth-of-type(4n + 3) {
+    background-color: #dce1e6;
 }
 
 /* delayed flights appears red */
@@ -79,15 +89,24 @@ footer {
 
 /* row highlighting on mouse hover */
 tbody tr:hover {
-    background-color: #c1c1c8;
+    background-color: #ececec;
 }
 
-/* extra info accordion styling  and reactivity*/
-.extra-info {
+/* accordion reactivity and styling */
+tbody tr:not(.accordion) {
+    cursor: pointer;
+}
+
+tr.accordion {
     display: none;
 }
 
-.expanded .extra-info {
-    display: block;
-    
+tr.accordion.expanded {
+    display: table-row;
 }
+
+/* TODO: 
+- fix alternating row colors
+
+
+*/
