@@ -1,9 +1,10 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * simulates a game of hangman
+ * Game of Hangman
  *
- * calling guessLetter() you can attempt to guess a letter until either all letters have been found or all lives are lost
+ * displays a game of hangman, picking from a list of words
+ * allowing the user to guess letters until they win or lose
  */
 
 let lives = 6;
@@ -26,10 +27,15 @@ let wordsList = [
 	"triangle",
 	"waterfall"
 ];
-let targetLetters;
+let targetLetters; // array of the letters of the word to guess
+// array of the letters discovered by the user, initialized with "_" and updated with the correct guesses
 let discoveredLetters;
+// array of the letters guessed by the user, used to prevent repeated guesses and for display purposes
 let guessedLetters = [];
 
+/**
+ * Sets up a new game by selecting a random word and initializing the game state.
+ */
 function setUpGame() {
 	let i = Math.ceil(Math.random() * wordsList.length);
 	let targetWord = wordsList[i];
@@ -38,9 +44,11 @@ function setUpGame() {
 }
 
 /**
- * 
- * @param {string} letter 
- * @returns 
+ * Checks if the guessed letter is in the target word, updates the game state accordingly
+ * returns a message indicating the result of the guess.
+ * @param {string} letter letter guessed by the user
+ * @returns {string} a string indicating the result of the guess 
+ * ("Correct!", "Wrong!", "You've Won!", "You've Lost!")
  */
 function guessLetter(letter) {
 	let guessed = false;
@@ -58,11 +66,9 @@ function guessLetter(letter) {
 		lives--;
 		score += MALUS;
 	}
-
 	if (!discoveredLetters.includes("_")) { // win
 		gameOver = true;
 		return "You've Won!";
-
 	} else if (lives <= 0) { // loss
 		gameOver = true;
 		return "You've Lost!";
@@ -71,7 +77,8 @@ function guessLetter(letter) {
 }
 
 /**
- * 
+ * updates the details section of the page with the current game state
+ * (discovered letters, guessed letters, and score)
  */
 function displayDetails() {
 
@@ -90,9 +97,8 @@ function displayDetails() {
 }
 
 /**
- * 
- * @param {string} inputLetter 
- * @returns 
+ * Progresses the game state based on the user's input letter
+ * @param {string} inputLetter letter guessed by the user, taken from the input field
  */
 function wordGuesser(inputLetter) {
 	if (gameOver) {
@@ -120,6 +126,7 @@ function wordGuesser(inputLetter) {
 setUpGame();
 displayDetails();
 
+// add event listener to the button, to trigger the game progression when clicked
 document.getElementById("guess-btn").addEventListener("click",
 	event => {
 		let letterInput = document.getElementById("letter-input");

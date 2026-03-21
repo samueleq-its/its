@@ -15,14 +15,44 @@ html {
 	box-sizing: inherit;
 }
 
+/* font and page color*/
 body {
 	font-family: 'Trebuchet MS', sans-serif;
-	margin: 10px;
+	background-color: rgb(114, 127, 139);
 }
 
-div {
+/* page title  styling*/
+h1 {
+	background-color: rgb(53, 61, 68);
+	color: #ffffff;
+	margin: 0;
+	padding: 20px;
+}
+
+/* game container styling */
+main {
+	background-color: rgb(226, 231, 235);;
+	height: fit-content;
+	width: fit-content;
 	border: 1px solid black;
-	min-height: 100px;
-	padding: 5px;
-	width: 500px;
+
+	margin: 10vh auto 0;
+	padding: 20px 10px 10px;
+}
+
+/* game sections */
+div {
+	min-height: 50px;
+	padding: 20px;
+
+}
+
+/* game sections separation */
+div:not(:last-child) {
+	border-bottom: 1px solid black;
+}
+
+/* description */
+p {
+	margin: 0;
 }
