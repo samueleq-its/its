@@ -25,7 +25,17 @@ let wordsList = [
 	"elephant",
 	"notebook",
 	"triangle",
-	"waterfall"
+	"waterfall",
+	"programming",
+	"constellation",
+	"playground",
+	"butterfly",
+	"honeycomb",
+	"encyclopedia",
+	"skateboard",
+	"friendship",
+	"imagination",
+	"photography"
 ];
 let targetLetters; // array of the letters of the word to guess
 // array of the letters discovered by the user, initialized with "_" and updated with the correct guesses
@@ -84,8 +94,9 @@ function displayDetails() {
 
 	detailsDiv.innerHTML = "";
 	[
-		`Discovered Letters: ${discoveredLetters}`,
+		`Word: ${discoveredLetters.join(" ")}`,
 		`Guessed Letters: ${guessedLetters}`,
+		`Remaining Lives: ${lives}`,
 		`Score: ${score}`
 	].forEach(
 		line => {
@@ -138,5 +149,7 @@ document.getElementById("guess-btn").addEventListener("click",
 /* TODO:
 - prevent input of numbers
 - 'enter' without selecting button
+	- event when a letter is typed in the input field
 - display full word on game loss
+- restart button
 */

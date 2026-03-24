@@ -6,7 +6,7 @@
     background-color: $background-color;
 }
 
-@mixin boh2($outer-color, $inner-color) {
+@mixin inverted-articles($outer-color, $inner-color) {
     @include box-color($outer-color);
     max-width: 1600px;
 
@@ -35,13 +35,13 @@
     section {
         padding: 20px;
         &:first-child {
-            @include boh2($outer-color, $inner-color);
+            @include inverted-articles($outer-color, $inner-color);
         }
 
         &:last-child {
             $opposite-outer-color: color.invert($outer-color);
             $opposite-inner-color: color.invert($inner-color);
-            @include boh2($opposite-outer-color, $opposite-inner-color);
+            @include inverted-articles($opposite-outer-color, $opposite-inner-color);
         }
     }
 }
@@ -56,6 +56,7 @@ html {
     ::before,
     ::after {
         box-sizing: inherit;
+        content: "###"
     }
 }
 
