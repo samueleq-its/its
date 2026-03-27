@@ -14,3 +14,7 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+
+ul li {
+	list-style: none;
+}

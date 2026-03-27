@@ -1,0 +1,106 @@
+{
+	"id": 1,
+	"name": "Torino Auto Plant",
+	"isActive": true,
+	"foundedYear": 1985,
+	"address": {
+		"street": "Via Industria 10",
+		"city": "Torino",
+		"country": "Italy"
+	},
+	"departments": ["Assembly", "Paint", "Quality Control", "Logistics"],
+	"cars": [
+		{
+			"id": 1,
+			"make": "Fiat",
+			"model": "Panda",
+			"year": 2020,
+			"engine": {
+				"type": "Inline-4",
+				"displacement": "2.5L",
+				"horsepower": 203,
+				"fuelType": [
+					"Gasoline",
+					"LPG"
+				]
+			},
+			"fourWheelDrive": false,
+			"Color":"Black",
+			"licensePlate": "AQ4821CF"
+		},
+		{
+			"id": 2,
+			"make": "Fiat",
+			"model": "Panda",
+			"year": 2020,
+			"engine": {
+				"type": "Inline-4",
+				"displacement": "2.5L",
+				"horsepower": 203,
+				"fuelType": [
+					"Gasoline",
+					"LPG"
+				]
+			},
+			"fourWheelDrive": false,
+			"Color": "Red",
+			"licensePlate": "AX1234RT"
+		},
+		{
+			"id": 3,
+			"make": "Fiat",
+			"model": "Panda",
+			"year": 2020,
+			"engine": {
+				"type": "Inline-4",
+				"displacement": "2.5L",
+				"horsepower": 203,
+				"fuelType": [
+					"Gasoline",
+					"LPG"
+				]
+			},
+			"fourWheelDrive": false,
+			"Color": "Blue",
+			"licensePlate": "AX5678BT"
+		},
+		{
+			"id": 4,
+	
+			"make": "Fiat",
+			"model": "Panda",
+			"year": 2020,
+			"engine": {
+				"type": "Inline-4",
+				"displacement": "2.5L",
+				"horsepower": 203,
+				"fuelType": [
+					"Gasoline",
+					"LPG"
+				]
+			},
+			"fourWheelDrive": false,
+			"Color": "Green",
+			"licensePlate": "AX598ZA"
+		},
+		{
+			"id": 5,
+			"make": "Fiat",
+			"model": "Panda",
+			"year": 2020,
+			"engine": {
+				"type": "Inline-4",
+				"displacement": "2.5L",
+				"horsepower": 203,
+				"fuelType": [
+					"Gasoline",
+					"LPG"
+				]
+			},
+			"fourWheelDrive": true,
+			"Color": "Black",
+			"licensePlate": "AZ600PU"
+		}
+	],
+	"notes": null
+}

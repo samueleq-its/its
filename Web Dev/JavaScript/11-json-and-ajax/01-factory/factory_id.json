@@ -9,6 +9,6 @@
 		"country": "Italy"
 	},
 	"departments": ["Assembly", "Paint", "Quality Control", "Logistics"],
-	"cars": [1, 2, 3, 4, 5],
+	"carsIds": [1, 2, 3, 4, 5],
 	"notes": null
 }

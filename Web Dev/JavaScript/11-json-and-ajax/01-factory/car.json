@@ -1,4 +1,5 @@
 {
+    "id": null,
     "make": "Fiat",
     "model": "Panda",
     "year": 2020,
@@ -9,6 +10,6 @@
         "fuelType": ["Gasoline", "LPG"]
     },
     "fourWheelDrive": false,
-    "colorsAvailable": ["Red", "Blue", "White", "Black"],
+    "color": ["Red", "Blue", "White", "Black"],
     "licensePlate": null
 }
