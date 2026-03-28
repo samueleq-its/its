@@ -125,7 +125,11 @@ let carsString = `[
 console.log(JSON.parse(factoryString));
 console.log(JSON.parse(carsString));
 
-// json to html
+/**
+ * Creates an HTML list representing a factory object.
+ * @param {Object} factory - The factory object to convert to HTML.
+ * @returns {HTMLElement} The created HTML list element.
+ */
 function createFactoryHtml(factory) {
     /*
     create a ul element

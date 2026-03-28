@@ -8,11 +8,10 @@
  */
 
 /**
- * function description
- * @param {type} paramName description
- * @returns {type} description
+ * Moves the cat across the screen, resetting to the left once it goes off the right edge.
+ * This function is called repeatedly by setInterval to create the animation effect.
+ * @param {string} catId the id of the cat image to move
  */
-
 function catWalkRepeat(catId) {
     const cat = document.getElementById(catId);
     const position = parseInt(cat.style.left.replace("px", "")) || 0;
@@ -23,7 +22,11 @@ function catWalkRepeat(catId) {
     }
 }
 
-//transform: rotateY(180deg);
+/**
+ * Moves the cat across the screen, flipping the image and inverting the movement direction when it reaches the edges.
+ * This function is called repeatedly by setInterval to create the animation effect.
+ * @param {string} catId the id of the cat image to move
+ */
 function catWalkFlip(catId) {
     const cat = document.getElementById(catId);
     const position = parseInt(cat.style.left.replace("px", "")) || 0;
@@ -40,9 +43,10 @@ function catWalkFlip(catId) {
     }
 }
 
-/**catWalkWait
- * setinterval until middle of the screen, then settimeout for 10 seconds, then setinterval again
- * 
+/**
+ * Moves the cat across the screen, waiting at the center before changing image and continuing with catWalkFlip.
+ * This function is called repeatedly by setInterval to create the animation effect.
+ * @param {string} catId the id of the cat image to move
  */
 function catWalkWait(catId) {
     const cat = document.getElementById(catId);
@@ -63,8 +67,6 @@ function catWalkWait(catId) {
         );
     }
 }
-
-
 
 setInterval(catWalkRepeat, 50, "cat-repeat");
 let catWalkFlipId = setInterval(catWalkFlip, 50, "cat-flip");

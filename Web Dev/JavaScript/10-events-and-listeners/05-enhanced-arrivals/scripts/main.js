@@ -5,6 +5,7 @@
  *
  * handles the update and display of the arrivals table, updating the flight status to "LANDED"
  * when the arrival time has passed and removing flights that have landed more than 60s ago
+ * also allows to expand each row to show extra info about the flight, such as plane number and expected time if delayed
  */
 
 const UPDATE_RATE = 10000;
@@ -417,9 +418,9 @@ let arrivalsList = [
 ];
 
 /**
- * updates flight that have landed
- * removes flight that have landed more than LANDED_REMOVAL_TIME ago (60s)
- * @param {object[]} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
+ * Updates landed flights and removes old landed flights.
+ * @param {object[]} arrivalsList Array of flight objects.
+ * @returns {void}
  */
 function updateFlights(arrivalsList) {
 	for (let i = (arrivalsList.length - 1); i >= 0; i--) {
@@ -434,9 +435,10 @@ function updateFlights(arrivalsList) {
 }
 
 /**
- * 
- * @param {object[]} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
- * @param {HTMLElement} arrivalsTable
+ * Updates table rows with the current flights.
+ * @param {object[]} arrivalsList Array of flight objects.
+ * @param {HTMLElement} arrivalsTable Tbody element of the arrivals table.
+ * @returns {void}
  */
 function updateTable(arrivalsList, arrivalsTable) {
 	// for each flight
@@ -452,9 +454,9 @@ function updateTable(arrivalsList, arrivalsTable) {
 }
 
 /**
- * 
- * @param {object} flight object containing flight info
- * @returns {HTMLElement} table row with the flight main info
+ * Creates the main row for a flight.
+ * @param {object} flight Flight object.
+ * @returns {HTMLTableRowElement} Main flight row.
  */
 function createMainRow(flight) {
 	let mainRow = document.createElement("tr");
@@ -491,9 +493,9 @@ function createMainRow(flight) {
 }
 
 /**
- * 
- * @param {object} flight object containing flight info
- * @returns {HTMLElement} table row with the flight extra info
+ * Creates the extra info row for a flight.
+ * @param {object} flight Flight object.
+ * @returns {HTMLTableRowElement} Extra info row.
  */
 function createExtraRow(flight) {
 	let extraRow = document.createElement("tr");
@@ -516,26 +518,16 @@ function createExtraRow(flight) {
 }
 
 /**
- * expands the indicated row, if the row is already expanded closes it, 
- * if there's another expanded row closes it 
- * @param {string} flightNum 
+ * Expands or collapses the selected flight row and collapses any previously expanded row.
+ * @param {string} flightNum Flight number.
+ * @returns {void}
  */
 function rowClickHandler(flightNum) {
-	/*
-	if clicked row is already expanded (expandedFlight)
-		close it
-		expandedFlight = null
-	else
-		if there's another expanded row
-			close it
-		open clicked row
-		expandedFlight = clicked row flight number
-	*/
-	if (expandedFlight == flightNum) {
+	if (expandedFlight == flightNum) { //if the same row is clicked again collapse it
 		document.querySelector(`#${flightNum} + .accordion`).classList.remove("expanded");
 		expandedFlight = null;
 	} else {
-		if (expandedFlight) {
+		if (expandedFlight) { // if another row is expanded collapse it before expanding the new one
 			document.querySelector(`#${expandedFlight} + .accordion`).classList.remove("expanded");
 		}
 		document.querySelector(`#${flightNum} + .accordion`).classList.add("expanded");
@@ -544,8 +536,8 @@ function rowClickHandler(flightNum) {
 }
 
 /**
- * adds a listener to every row in the table that calls the rowClickHandler function
- * when the row is clicked, allowing to expand and collapse the extra info column
+ * Adds click listeners to all main rows.
+ * @returns {void}
  */
 function addListeners() {
 	let rowsList = document.querySelectorAll("tbody tr:not(.accordion)");
@@ -564,9 +556,10 @@ function addListeners() {
 }
 
 /**
- * wrapper function to update flights and table
- * @param {object[]} arrivalsList array of flight objects containing time, origin, flightStatus, flightNum and plane
- * @param {HTMLElement} arrivalsTable the tbody element where the table rows will be inserted
+ * Updates flights and refreshes the table.
+ * @param {object[]} arrivalsList Array of flight objects.
+ * @param {HTMLElement} arrivalsTable Tbody element where rows are inserted.
+ * @returns {void}
  */
 function update(arrivalsList, arrivalsTable) {
 	updateFlights(arrivalsList);
