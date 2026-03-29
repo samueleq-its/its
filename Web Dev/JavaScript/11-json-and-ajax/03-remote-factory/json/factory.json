@@ -1,0 +1,14 @@
+{
+	"id": 1,
+	"name": "Torino Auto Plant",
+	"isActive": true,
+	"foundedYear": 1985,
+	"address": {
+		"street": "Via Industria 10",
+		"city": "Torino",
+		"country": "Italy"
+	},
+	"departments": ["Assembly", "Paint", "Quality Control", "Logistics"],
+	"carsIds": [1, 2, 3, 4, 5],
+	"notes": null
+}

@@ -1,0 +1,279 @@
+DOCENTE SHADI LAHHAM
+UNITA’ FORMATIVA
+ARGOMENTO Specificato nel titolo della slide successivaIntervento realizzato da
+SWD - Fondamenti di UX/UI e HTML/CSS
+Design thinking
+Crafting digital experiences
+Shadi Lahham - Web development
+UX & UI
+Digital experiences
+Digital Experience (DX) refers to the overall experience a user has when
+interacting with a digital product or service across multiple touchpoints,
+including websites, mobile apps, and other digital platforms
+It encompasses both the User Interface (UI) and the User Experience (UX)
+focusing on providing a seamless and satisfying journey for users
+Digital Experience
+4
+The overall user interaction with
+digital services or products across
+platforms like websites and apps
+Digital Experience
+User Interface (UI) emphasizes the visual and interactive elements of a digital
+product or service
+It includes design elements such as layout, typography, colors, icons, and
+imagery, as well as interactive components like buttons, forms, menus, and
+navigation controls
+The primary goal of UI design is to create a visually appealing and intuitive
+interface that guides users through the product or service and facilitates their
+interaction with it
+User Interface
+6
+The design of visual elements and
+flows that facilitate user interaction
+with software, websites, or devices
+User Interface
+User Experience (UX) specifically emphasizes the design and usability aspects of
+the digital experience, ensuring that real human users can easily accomplish
+their tasks and goals with minimal friction or confusion
+It involves understanding user behaviors, preferences, and needs to create
+intuitive and enjoyable interactions
+It encompasses design, usability, and overall satisfaction with the user interface
+and interactions
+User Experience
+8
+Enhancing satisfaction by improving
+usability, accessibility, and enjoyment
+in user interactions
+User Experience
+Design thinking process
+A method for problem-solving that emphasizes understanding people's needs,
+technological possibilities, and business viability
+It's iterative, meaning it involves cycles of creating, testing, and refining solutions
+Design Thinking
+11
+Design Thinking
+Creative problem-solving that
+emphasizes user needs, ideation,
+prototyping, and iterative testing
+1. Empathize
+Understand needs and experiences of those you design for
+2. Define
+Clearly define problem based on what you've learned
+3. Ideate
+Generate diverse solutions to inspire creativity & innovation
+Design Thinking
+13
+4. Prototype
+Create tangible representations of your ideas to test and refine
+5. Test
+Test prototypes, gather user feedback, iterate for improvements
+6. Implement
+Integrate solution into business strategy, ensuring feasibility
+Design Thinking
+14
+User research
+User research
+User research aims to understand users' needs, behaviors, and preferences to
+design products or services that meet their requirements effectively
+● Conducting interviews
+● Observing users
+● Analyzing existing data
+16
+User Interviews
+Conversations with users to gather
+insights about their experiences, pain
+points, and expectations
+User observation
+Watching users using products or
+doing tasks to understand behaviors
+and usability issues
+Analyzing Existing Data
+Review quantitative data like user
+logs, surveys, analytics, and identify,
+trends, and areas to improve
+Definition & ideation
+Personas are created to represent a category or type of user behavior
+They are highly useful for communicating collected information and insights
+during research and for organizing our understanding of the research data
+When little is known about the audience for a product or service, the following
+aspects are encompassed by personas: Goals, Motivations, Needs, Expectations,
+Challenges, Technology Considerations, and Accessibility
+Personas
+21
+Personas
+Fictional representations of user
+behaviors, needs, goals, expectations,
+to guide development
+Persona profile
+Imaginary summary showing needs,
+goals, expectations, challenges,
+technology use, and behaviors
+After personas have been created, customer journey mapping is utilized to
+analyze interactions with a process and identify pain points, difficulties, and
+opportunities for improvement
+It is necessary to collect existing information and data because there is often
+already relevant information identified during past activities
+It's important to collect both qualitative data like customer service call logs and
+quantitative data like analytics and customer satisfaction scores
+Customer Journey Map
+24
+Customer Journey Map
+Visual representation of customer
+interaction and experience with a
+product across touchpoints
+Brainstorming
+Generating multiple ideas within a
+time limit, welcoming wild
+suggestions, to solve problems
+Brainstorming is aimed at generating ideas efficiently and producing a multitude
+of ideas within a set time constraint, prioritizing quantity over quality, and
+encouraging unconventional ideas
+Conducted in teams but individually, brainstorming sessions focus on generating
+ideas for features, services, or other elements beneficial to users and the
+Following the session, the best ideas are selected for further development in
+subsequent phases
+Brainstorming
+27
+Information architecture
+Organizing content based on user
+mental models, expectations and goals
+through the use of a sitemap
+Information architecture (IA) is the structural design of digital information
+environments, such as websites, apps, and software, to facilitate navigation,
+findability, and usability
+It involves creating a visual sitemap by organizing and categorizing content in a
+hierarchical organization of content and navigation pathways that align with
+users' mental models and makes it easy for them to locate and access
+information
+Information architecture
+29
+User flow
+A visual representation illustrating
+steps users take to accomplish tasks
+in digital products, for optimization
+Illustrates the path users follow as they interact with various screens, features,
+and functionalities, guiding them from entry points to desired outcomes
+User flows help designers understand and optimize the user journey by
+identifying key touchpoints, decision points, and potential pain points,
+ultimately contributing to the creation of more intuitive and user-friendly digital
+experiences
+User flow
+31
+Prototyping
+Wireframing
+Sketching the layout of a webpage or
+app to show structure, functionality,
+and UX before development
+Wireframing is a critical phase in interface design involving creating low-fidelity
+prototypes, like handmade or digital wireframes, to visualize the interface's main
+structure
+These wireframes focus on elements such as spacing, interaction zones, and
+flows, providing a foundation for exploring and iterating on design solutions
+before moving into detailed visual design phases
+Wireframing
+34
+Mockups
+Visual drafts showcasing design
+elements, aiding communication,
+feedback, and development
+Low & high-fidelity
+Mockups range from low to high
+fidelity, spanning simple drafts to
+detailed, realistic representations
+Visual representations or drafts of a design idea, often created to illustrate the
+layout, functionality, and visual aspects of a product or interface
+They typically depict key elements such as user interface components, content
+placement, color schemes, typography, and overall aesthetics
+Mockups can be low or high-fidelity designs and are used to communicate and
+validate design concepts, gather feedback from stakeholders, and guide the
+development of the final product
+Mockups
+37
+Testing
+Usability testing
+Evaluating product effectiveness and
+efficiency by observing real users,
+getting feedback, and refining the UX
+Usability testing assesses product or system effectiveness and efficiency by
+observing real users interacting with it, presenting tasks resembling typical use
+cases, and gathering feedback on their experience, including ease of use,
+intuitiveness, efficiency, and satisfaction
+It identifies usability issues, enabling iterative refinement and enhancement of
+the user interface and experience
+Usability testing
+40
+Iteration
+After usability testing, the design process typically involves iterative cycles
+where prototypes are refined based on user feedback
+These cycles include making adjustments and improvements to address
+identified issues, followed by re-testing to evaluate the effectiveness of the
+changes
+This iterative approach continues until the prototypes meet the desired level of
+usability and effectiveness
+Iteration
+42
+Implementation
+Final implementation in design thinking follows testing, where prototypes are
+translated into products or services through collaboration between design and
+development teams
+It involves creating specifications, coding, interface building, feature integration,
+and quality assurance testing
+The design process doesn't end after implementation. Post-launch, iterative
+improvements based on feedback and usage data analysis are common
+Implementation
+44
+Your turn
+1.UX or UI
+● Create a document explaining the difference between UX (User Experience)
+and UI (User Interface)
+● Begin by defining each term in our own words using simple language
+● Provide examples from your own experience to illustrate the distinction
+between them
+● Use clear language and include references and visuals
+● Can be done in Italian or English
+● Submit your work as a .pdf or .doc file
+46
+2.Thinking in design
+● Create a document explaining the concept of Design Thinking
+● Explain the Design Thinking Process in your own words
+● Try to think of examples from your own to show how Design Thinking might
+be applied in real-life situations
+● Can be done in Italian or English
+● Submit your work as a .pdf or .doc file
+47
+3.To prototype or not to prototype
+● Create a document explaining the advantages of prototyping in developing
+digital products
+● Defining prototyping and explain its significance
+● Search for examples where prototyping provides real benefits to business or
+institutions that you know
+● You can include references and visuals where necessary
+● Can be done in Italian or English
+● Submit your work as a .pdf or .doc file
+48
+References
+Design Thinking Process: 5 Stages
+Personas: Visualizing User Research?
+What is Information Architecture?
+Brainstorming Techniques and Methods
+Wireframes: Purpose and Use
+Low vs. High Fidelity Prototyping Differences
+Creating Website Mockups in 4 Steps
+Ultimate Guide to User Testing
+49
+© Copyright & Attribution
+Freepik
+Presentation uses visuals that are designed using vector assets and images
+under the Free license for which attribution is required
+Pxhere
+Presentation uses images that are free of copyrights under CC0 Public Domain
+Free for personal and commercial use. No attribution required
+Unsplash
+Presentation uses images that are free to use under the Unsplash License
+50
+© Copyright & Attribution
+Unless otherwise stated, all materials are © 2026 Shadi Lahham
+For personal use only. May not be shared or reproduced without written permission
+Brief excerpts may be used with proper attribution
+External links and resources are copyrighted by their respective owners
+51
