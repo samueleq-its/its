@@ -21,3 +21,11 @@ div {
 	background-color: rgba(211, 211, 211, 0.5);
 	margin: 5px;
 }
+
+.accordion {
+	display: none;
+}
+
+.accordion.expanded {
+	display: block;
+}
