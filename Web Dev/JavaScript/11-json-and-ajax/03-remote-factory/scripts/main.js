@@ -7,9 +7,18 @@
  * on multiple lines
  */
 
-const endpoint = "https://api.jsonblob.com/";
-const factoryBlobId = "019d3ebd-7dfa-74ca-92c4-3e3d2dcc2692";
-const carsBlobId = "019d3ebd-d529-7d26-9800-4248845daa43";
+
+const jsonblob = {
+    endpoint: "https://api.jsonblob.com/",
+    factory: "019d3ebd-7dfa-74ca-92c4-3e3d2dcc2692",
+    cars: [
+        "019d4e11-8584-7a55-a9b9-7b7272a289a7",
+        "019d4e11-c59a-7177-8110-6dfd77bcf506",
+        "019d4e13-0b14-71d9-9346-fbe6ccc0ea10",
+        "019d4e11-f153-7ba8-a97f-6892045ad5a9",
+        "019d4e12-a5f9-77b7-ae5d-e12302a98bf5"
+    ]
+};
 
 function createTextElement(type, text) {
     let elem = document.createElement(type);
