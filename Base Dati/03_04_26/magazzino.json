@@ -1,0 +1,12 @@
+{
+    "_default": {
+        "1": {
+            "nome_prodotto": "Laptop",
+            "prezzo": 1500
+        },
+        "2": {
+            "nome_prodotto": "PC",
+            "prezzo": 1200
+        }
+    }
+}
