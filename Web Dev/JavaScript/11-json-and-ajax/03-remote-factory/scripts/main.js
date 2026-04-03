@@ -78,7 +78,7 @@ function displayCar(car) {
 }
 
 const factoryRequest = new XMLHttpRequest();
-factoryRequest.open("GET", endpoint + factoryBlobId);
+factoryRequest.open("GET", jsonblob.endpoint + jsonblob.factory);
 // TODO: handle errors
 factoryRequest.onload = () => {
     // display factory info to screen
@@ -86,15 +86,16 @@ factoryRequest.onload = () => {
 };
 factoryRequest.send();
 
-const carsRequest = new XMLHttpRequest();
-carsRequest.open("GET", endpoint + carsBlobId);
-// TODO: handle errors
-carsRequest.onload = () => {
-    for (let car of JSON.parse(carsRequest.responseText)) {
-        displayCar(car);
-    }
-};
-carsRequest.send();
+for (let carId of jsonblob.cars) {
+    const carsRequest = new XMLHttpRequest();
+    carsRequest.open("GET", jsonblob.endpoint + carId);
+    // TODO: handle errors
+    carsRequest.onload = () => {
+        displayCar(JSON.parse(carsRequest.responseText));
+    };
+    carsRequest.send();
+}
+
 
 /**
  * cars:
