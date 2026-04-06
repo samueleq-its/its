@@ -67,10 +67,6 @@ function displayMessage(message, isWarning = false) {
  */
 function putCar(carId) {
     displayMessage("Saving...");
-    const carPutRequest = new XMLHttpRequest();
-    carPutRequest.open("PUT", jsonblob.endpoint + jsonblob.cars[carId]);
-    carPutRequest.setRequestHeader("Content-Type", "application/json");
-
     //create object from the form
     let updatedCar = {
         "id": carId,
@@ -90,14 +86,25 @@ function putCar(carId) {
             updatedCar[elem.name] = value;
         }
     }
-    carPutRequest.onload = () => {
-        displayMessage("Data saved correctly");
-        setTimeout(() => { window.location.reload(); }, 1000);
-    };
-    carPutRequest.onerror = (event) => { // error happened, data wasn't saved
-        displayMessage("Error! data wasn't saved", true);
-    };
-    carPutRequest.send(JSON.stringify(updatedCar));
+
+    fetch(jsonblob.endpoint + jsonblob.cars[carId],
+        {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updatedCar)
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error();
+            } else {
+                displayMessage("Data saved correctly");
+                setTimeout(() => { window.location.reload(); }, 1000);
+            }
+        }).catch((error) => {
+            displayMessage("Error! data wasn't saved", true);
+            console.error(error);
+        });
+
 }
 
 /**
@@ -183,20 +190,6 @@ function displayCar(car) {
 }
 
 /**
- * Handler for the onloadend event of the XMLHttpRequest, if the request is successful it executes the given action function, otherwise it displays the given error message
- * @param {XMLHttpRequest} XHRRequest the calling request 
- * @param {function} action function to execute if the request is successful
- * @param {string} errorMessage error message to display if the request fails
- */
-function loadEndHandler(XHRRequest, action, errorMessage) {
-    if (XHRRequest.status == 200) {
-        action();
-    } else {
-        displayMessage(errorMessage, true);
-    }
-}
-
-/**
  * helper function, adds the fade-out class to the loading element to hide it with a fade out animation
  */
 function loadingFinish() {
@@ -208,19 +201,20 @@ function loadingFinish() {
  */
 function* loadCarsGen() {
     for (let carId in jsonblob.cars) {
-        const carRequest = new XMLHttpRequest();
-        carRequest.open("GET", jsonblob.endpoint + jsonblob.cars[carId]);
-        carRequest.onloadend = () => {
-            loadEndHandler(
-                carRequest,
-                () => {
-                    displayCar(JSON.parse(carRequest.responseText));
-                    loadCars.next();
-                },
-                "Error! car data wasn't loaded, reload or contact support"
-            );
-        };
-        carRequest.send();
+        fetch(jsonblob.endpoint + jsonblob.cars[carId])
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error();
+                }
+            }).then(data => {
+                displayCar(data);
+                loadCars.next();
+            }).catch(error => {
+                displayMessage("Error! car data wasn't loaded, reload or contact support", true);
+                console.error(error);
+            });
         yield;
     }
     loadingFinish();
@@ -228,20 +222,20 @@ function* loadCarsGen() {
 
 let loadCars = loadCarsGen();
 
-const factoryRequest = new XMLHttpRequest();
-factoryRequest.open("GET", jsonblob.endpoint + jsonblob.factory);
-factoryRequest.onloadend = () => {
-    loadEndHandler(
-        factoryRequest,
-        () => {
-            displayFactory(JSON.parse(factoryRequest.responseText));
-            loadCars.next();
-        },
-        "Error! factory data wasn't loaded"
-    );
-};
-
-factoryRequest.send();
+fetch(jsonblob.endpoint + jsonblob.factory)
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error();
+        }
+    }).then(data => {
+        displayFactory(data);
+        loadCars.next();
+    }).catch(error => {
+        displayMessage("Error! factory data wasn't loaded, reload or contact support", true);
+        console.error(error);
+    });
 
 /*
 TODO:

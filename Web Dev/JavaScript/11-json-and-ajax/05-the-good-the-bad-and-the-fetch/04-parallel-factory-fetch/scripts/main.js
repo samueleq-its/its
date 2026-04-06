@@ -20,6 +20,11 @@ const jsonblob = {
     }
 };
 
+let requestsQueue = { factory: null };
+for (let carId in jsonblob.cars) {
+    requestsQueue[carId] = null;
+}
+
 /**
  * helper function, returns an element of the given type with the given text
  * @param {string} type type of the element to create
@@ -65,12 +70,8 @@ function displayMessage(message, isWarning = false) {
  * Updates the information of a car in the remote API, the car id is used to get the form and the jsonblob id, the form is used to create an object with the updated data that is sent to the API
  * @param {string} carId the id of the car to update, used to get the form and the jsonblob id
  */
-function putCar(carId) {
+async function putCar(carId) {
     displayMessage("Saving...");
-    const carPutRequest = new XMLHttpRequest();
-    carPutRequest.open("PUT", jsonblob.endpoint + jsonblob.cars[carId]);
-    carPutRequest.setRequestHeader("Content-Type", "application/json");
-
     //create object from the form
     let updatedCar = {
         "id": carId,
@@ -90,14 +91,23 @@ function putCar(carId) {
             updatedCar[elem.name] = value;
         }
     }
-    carPutRequest.onload = () => {
+    let response = await fetch(jsonblob.endpoint + jsonblob.cars[carId],
+        {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updatedCar)
+        });
+    try {
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
         displayMessage("Data saved correctly");
         setTimeout(() => { window.location.reload(); }, 1000);
-    };
-    carPutRequest.onerror = (event) => { // error happened, data wasn't saved
-        displayMessage("Error! data wasn't saved", true);
-    };
-    carPutRequest.send(JSON.stringify(updatedCar));
+        
+    } catch (error) {
+        displayMessage("Error! data couldn't be loaded, reload or contact support");
+        console.error(error);
+    }
 }
 
 /**
@@ -153,7 +163,6 @@ function displayCar(car) {
     appendLabelInput(carDiv, `${car.id}-licensePlate`, "licensePlate", "License plate: ", car.licensePlate);
 
     //extra info accordion
-    //make separate function?
     const accordion = document.createElement("div");
     carDiv.append(accordion);
     appendLabelInput(accordion, `${car.id}-fourWheelDrive`, "fourWheelDrive", "Four wheel drive: ", car.fourWheelDrive);
@@ -204,44 +213,53 @@ function loadingFinish() {
 }
 
 /**
- * Generator function that loads the cars data from the API one by one, after each car is loaded it yields to wait for the next call to next() before loading the next car, when all cars are loaded it calls the loadingFinish function to hide the loading element
+ * checks if all the requests in the requestsQueue object have been completed
+ * if they are, it displays the factory and cars data and hides the loading element
  */
-function* loadCarsGen() {
-    for (let carId in jsonblob.cars) {
-        const carRequest = new XMLHttpRequest();
-        carRequest.open("GET", jsonblob.endpoint + jsonblob.cars[carId]);
-        carRequest.onloadend = () => {
-            loadEndHandler(
-                carRequest,
-                () => {
-                    displayCar(JSON.parse(carRequest.responseText));
-                    loadCars.next();
-                },
-                "Error! car data wasn't loaded, reload or contact support"
-            );
-        };
-        carRequest.send();
-        yield;
+function checkRequestQueue() {
+    if (Object.values(requestsQueue).includes(null)) { return; }
+    for (let response in requestsQueue) {
+        if (response == "factory") {
+            displayFactory(requestsQueue[response]);
+        } else {
+            displayCar(requestsQueue[response]);
+        }
     }
     loadingFinish();
 }
 
-let loadCars = loadCarsGen();
+/**
+ * fetch wrapper function, fetches the json with the given id and if the request is successful
+ * executes the given onSuccess function with the json data as parameter,
+ * otherwise it displays an error message
+ * @param {string} jsonId id of the json to fetch, used to get the url from the jsonblob object
+ * @param {function} onSuccess function to execute if the request is successful
+ * @returns {object} json data of the response if the request is successful, undefined otherwise
+ */
+async function getData(jsonId, onSuccess) {
+    let response = await fetch(jsonblob.endpoint + jsonId);
+    try {
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        return onSuccess(await response.json());
+    } catch (error) {
+        displayMessage("Error! data couldn't be loaded, reload or contact support");
+        console.error(error);
+    }
+}
 
-const factoryRequest = new XMLHttpRequest();
-factoryRequest.open("GET", jsonblob.endpoint + jsonblob.factory);
-factoryRequest.onloadend = () => {
-    loadEndHandler(
-        factoryRequest,
-        () => {
-            displayFactory(JSON.parse(factoryRequest.responseText));
-            loadCars.next();
-        },
-        "Error! factory data wasn't loaded"
-    );
-};
+getData(jsonblob.factory, (data) => {
+    requestsQueue["factory"] = data;
+    checkRequestQueue();
+});
 
-factoryRequest.send();
+for (let carId in jsonblob.cars) {
+    getData(jsonblob.cars[carId], (data) => {
+        requestsQueue[carId] = data;
+        checkRequestQueue();
+    });
+}
 
 /*
 TODO:

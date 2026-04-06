@@ -1,0 +1,18 @@
+{
+    "id": 4,
+    "make": "Fiat",
+    "model": "Panda",
+    "year": 2020,
+    "engine": {
+        "type": "Inline-4",
+        "displacement": "2.5L",
+        "horsepower": 203,
+        "fuelType": [
+            "Gasoline",
+            "LPG"
+        ]
+    },
+    "fourWheelDrive": false,
+    "color": "Green",
+    "licensePlate": "AX598ZA"
+}

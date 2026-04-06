@@ -20,6 +20,11 @@ const jsonblob = {
     }
 };
 
+let requestsQueue = {factory: null};
+for (let carId in jsonblob.cars) {
+    requestsQueue[carId] = null;
+}
+
 /**
  * helper function, returns an element of the given type with the given text
  * @param {string} type type of the element to create
@@ -204,29 +209,20 @@ function loadingFinish() {
 }
 
 /**
- * Generator function that loads the cars data from the API one by one, after each car is loaded it yields to wait for the next call to next() before loading the next car, when all cars are loaded it calls the loadingFinish function to hide the loading element
+ * checks if all the requests in the requestsQueue object have been completed
+ * if they are, it displays the factory and cars data and hides the loading element
  */
-function* loadCarsGen() {
-    for (let carId in jsonblob.cars) {
-        const carRequest = new XMLHttpRequest();
-        carRequest.open("GET", jsonblob.endpoint + jsonblob.cars[carId]);
-        carRequest.onloadend = () => {
-            loadEndHandler(
-                carRequest,
-                () => {
-                    displayCar(JSON.parse(carRequest.responseText));
-                    loadCars.next();
-                },
-                "Error! car data wasn't loaded, reload or contact support"
-            );
-        };
-        carRequest.send();
-        yield;
+function checkRequestQueue(){
+    if (Object.values(requestsQueue).includes(null)) { return; }
+    for (let response in requestsQueue) {
+        if (response == "factory") {
+            displayFactory(JSON.parse(requestsQueue[response]));
+        } else  {
+            displayCar(JSON.parse(requestsQueue[response]));
+        }
     }
     loadingFinish();
 }
-
-let loadCars = loadCarsGen();
 
 const factoryRequest = new XMLHttpRequest();
 factoryRequest.open("GET", jsonblob.endpoint + jsonblob.factory);
@@ -234,14 +230,29 @@ factoryRequest.onloadend = () => {
     loadEndHandler(
         factoryRequest,
         () => {
-            displayFactory(JSON.parse(factoryRequest.responseText));
-            loadCars.next();
+            requestsQueue["factory"] = factoryRequest.responseText;
+            checkRequestQueue();
         },
-        "Error! factory data wasn't loaded"
+        "Error! factory data wasn't loaded, reload or contact support"
     );
 };
+factoryRequest.send()
+for (let carId in jsonblob.cars) {
+    const carRequest = new XMLHttpRequest();
+    carRequest.open("GET", jsonblob.endpoint + jsonblob.cars[carId]);
+    carRequest.onloadend = () => {
+        loadEndHandler(
+            carRequest,
+            () => {
+                requestsQueue[carId] = carRequest.responseText;
+                checkRequestQueue();
+            },
+            "Error! car data wasn't loaded, reload or contact support"
+        );
+    };
+    carRequest.send();
+}
 
-factoryRequest.send();
 
 /*
 TODO:
