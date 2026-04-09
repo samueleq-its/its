@@ -52,6 +52,11 @@ function appendLabelInput(parent, id, inputName, labelText, value) {
     parent.append(label, input);
 }
 
+/**
+ * Displays a message over the page, if isWarning is true sets the class 'warning-message' for styling
+ * @param {string} message text of the message to display
+ * @param {boolean} isWarning indicates if the message is a warning
+ */
 function displayMessage(message, isWarning = false) {
     const messageContainer = document.getElementById("message-container");
     messageContainer.classList.remove("hide");
