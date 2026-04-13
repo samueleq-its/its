@@ -72,7 +72,8 @@ function displayMessage(message, isWarning = false) {
 }
 
 /**
- * Updates the information of a car in the remote API, the car id is used to get the form and the jsonblob id, the form is used to create an object with the updated data that is sent to the API
+ * Updates the information of a car in the remote API, the car id is used to get the form
+ * and the jsonblob id, the form is used to create an object with the updated data that is sent to the API
  * @param {string} carId the id of the car to update, used to get the form and the jsonblob id
  */
 async function putCar(carId) {
@@ -117,7 +118,8 @@ async function putCar(carId) {
 
 /**
  * Displays the information of a factory in the DOM
- * @param {object} factoryData json object with the factory data, should contain name, address (with street, city and country), departments (array of strings), foundedYear and optionally notes
+ * @param {object} factoryData json object with the factory data, should contain name, address
+ * (with street, city and country), departments (array of strings), foundedYear and optionally notes
  */
 function displayFactory(factoryData) {
     let factoryDiv = document.getElementById("factory");
@@ -136,7 +138,8 @@ function displayFactory(factoryData) {
 
 /**
  * Displays the information of a car in the DOM
- * @param {object} car json object with the car data, should contain id, make, model, year, color, licensePlate, fourWheelDrive and engine (with type, displacement, horsepower and fuelType (array of strings))
+ * @param {object} car json object with the car data, should contain id, make, model, year, color,
+ * licensePlate, fourWheelDrive and engine (with type, displacement, horsepower and fuelType (array of strings))
  */
 function displayCar(car) {
     const carsContainer = document.getElementById("cars");
@@ -197,7 +200,8 @@ function displayCar(car) {
 }
 
 /**
- * Handler for the onloadend event of the XMLHttpRequest, if the request is successful it executes the given action function, otherwise it displays the given error message
+ * Handler for the onloadend event of the XMLHttpRequest, if the request is successful
+ * it executes the given action function, otherwise it displays the given error message
  * @param {XMLHttpRequest} XHRRequest the calling request 
  * @param {function} action function to execute if the request is successful
  * @param {string} errorMessage error message to display if the request fails
