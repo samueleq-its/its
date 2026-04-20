@@ -1,0 +1,16 @@
+/**
+* style.css
+*
+* description
+*/
+
+/* sets box sizing as default with inheritance */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
