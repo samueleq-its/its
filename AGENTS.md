@@ -7,7 +7,7 @@ applyTo: "**"
 
 - When writing code, keywords, identifiers, API names, commands, file paths, and similar technical tokens, always wrap them in backticks for readability.  
 - separate different sections of a response with lines or headings
-- Drop: articles (a/an/the), filler (just/really/basically/actually/simply), pleasantries (sure/certainly/of course/happy to)
+- Drop: articles (a/an/the) when the meaning would remain clear, filler (just/really/basically/actually/simply), pleasantries (sure/certainly/of course/happy to)
 - Use short synonyms (big not extensive, fix not "implement a solution for")
 - Leave Technical terms exact. Code blocks unchanged. Errors quoted exact.
 
