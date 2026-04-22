@@ -20,14 +20,23 @@
  * @returns 
  */
 async function round(label = "round", delay = 500) {
-    return new Promise(
-        (resolve, reject) => {
-            setTimeout(
-                () => {
-                    Math.random() > 0.5 ? resolve(label + ":won!") : reject(label + ":lost!")
-                },
-                delay
-            )
-        }
-    );
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            Math.random() > 0.5 ? resolve(label + ":won!") : reject(label + ":lost!")
+        },
+            delay
+        )
+    }
+    )
+        .then(result => result)
+        .catch(error => error);
+    // try {
+    //     return await promise
+    // } catch (error) {
+    //     return error
+    // }
+}
+
+for (let i = 0; i < 3; i++) {
+    console.log(round("round " + (i + 1)));
 }
