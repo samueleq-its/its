@@ -1,10 +1,7 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * This file contains the code to create a factory object and a list of cars, then it creates an HTML representation of the factory and the cars using a recursive function.
  */
 
 /**
@@ -126,7 +123,7 @@ console.log(JSON.parse(factoryString));
 console.log(JSON.parse(carsString));
 
 /**
- * Creates an HTML list representing a factory object.
+ * Creates an HTML list representing a factory object, works recursively to create nested lists for nested objects.
  * @param {Object} factory - The factory object to convert to HTML.
  * @returns {HTMLElement} The created HTML list element.
  */

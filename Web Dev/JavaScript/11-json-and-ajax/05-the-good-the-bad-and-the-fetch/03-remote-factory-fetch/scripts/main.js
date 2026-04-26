@@ -1,10 +1,7 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * alternative version of the previous exercise, using fetch and promises instead of XMLHttpRequest and callbacks
  */
 
 // object with the api URL and the ids of the jsons

@@ -1,10 +1,15 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * downloads a factory and a list of cars from a remote API and displays them in the page,
+ * allows to update the car data and save it to the API
+ * 
+ * the factory and the cars are stored in a remote API, the ids of the jsons are stored in the jsonblob object,
+ * the data is downloaded using XMLHttpRequest and displayed in the page, for the cars it creates
+ * a form that allows to update the data and save it to the API using a PUT request,
+ * when a save button is clicked it creates an object with the updated data from the form and sends it to the API,
+ * after each car is loaded it yields to wait for the next call to next() before loading the next car,
+ * when all cars are loaded it calls the loadingFinish function to hide the loading element
  */
 
 // object with the api URL and the ids of the jsons

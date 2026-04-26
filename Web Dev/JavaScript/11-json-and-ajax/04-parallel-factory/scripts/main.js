@@ -1,10 +1,7 @@
 /**
  * @file: main.js
  * @author: samuele.querio@edu-its.it
- * Purpose of file
- *
- * Detailed explanation of what the file does
- * on multiple lines
+ * alternative version of the previous exercise, sending all requests in parallel and checking if all the requests have been completed before displaying the data and hiding the loading element
  */
 
 // object with the api URL and the ids of the jsons
