@@ -1,0 +1,7 @@
+cliente_id,cliente_nome,peso_kg,distanza_km,tempo_minuti,priorita
+C001,Cliente A,85,15,45,normale
+C002,Cliente B,120,22,60,alta
+C003,Cliente C,65,8,30,normale
+C004,Cliente D,95,18,50,alta
+C005,Cliente E,55,12,40,normale
+C006,Cliente F,70,25,75,normale
