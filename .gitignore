@@ -25,3 +25,9 @@
 # JVM crash logs
 /Java/**/hs_err_pid*
 /Java/**/replay_pid*
+.idea/.gitignore
+.idea/its.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
