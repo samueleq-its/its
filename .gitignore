@@ -29,3 +29,5 @@
 # Jetbrains
 .idea/**
 
+# Pycache
+**/__pycache__

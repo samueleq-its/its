@@ -1,0 +1,37 @@
+{
+	"stato": "parzialmente_fattibile",
+	"motivo": "La domanda totale e' 490 kg, mentre la capacita' massima complessiva dei 3 furgoni e' 450 kg. Il piano ottimo quindi consegna 5 ordini su 6 rispettando i vincoli di carico e priorita'.",
+	"ordini_non_assegnati": ["C006"],
+	"piano": [
+		{
+			"furgone_id": 1,
+			"consegne": ["C002"],
+			"peso_totale_kg": 120,
+			"distanza_totale_km": 22,
+			"tempo_totale_minuti": 60,
+			"costo_carburante_euro": 17.6,
+			"costo_conducente_euro": 18,
+			"costo_totale_euro": 35.6
+		},
+		{
+			"furgone_id": 2,
+			"consegne": ["C004", "C005"],
+			"peso_totale_kg": 150,
+			"distanza_totale_km": 30,
+			"tempo_totale_minuti": 90,
+			"costo_carburante_euro": 24,
+			"costo_conducente_euro": 27,
+			"costo_totale_euro": 51
+		},
+		{
+			"furgone_id": 3,
+			"consegne": ["C003", "C001"],
+			"peso_totale_kg": 150,
+			"distanza_totale_km": 23,
+			"tempo_totale_minuti": 75,
+			"costo_carburante_euro": 18.4,
+			"costo_conducente_euro": 22.5,
+			"costo_totale_euro": 40.9
+		}
+	]
+}
