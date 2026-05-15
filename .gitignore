@@ -31,3 +31,5 @@
 
 # Pycache
 **/__pycache__
+
+.fake
