@@ -14,11 +14,13 @@ selected = 0
 
 while(True):
 	clear()
+	menu = ""
 	for i in range(len(menu_lines)):
 		line = menu_lines[i]
 		if i == selected:
 			line = Back.LIGHTYELLOW_EX + Fore.BLACK + line + Style.RESET_ALL
-		print(line)
+		menu += line + "\n"
+	print(menu)
 
 	# _, dir = getch(),getch()
 	# print(_, dir)
@@ -30,11 +32,13 @@ while(True):
 	while (True):
 		dir = getch()
 		match (dir):
-			case b'H':
+			case b'H': # UP
 				selected = max(0,selected -1)
 				break
-			case b'P':
+			case b'P': # DOWN
 				selected = min(len(menu_lines)-1, selected + 1)
 				break
-			case b'\x03':
+			case b'\r': # ENTER
+				pass
+			case b'\x03': # CTRL + C
 				exit()
