@@ -1,0 +1,25 @@
+/login.php
+	...?username=******&password=*****
+	200 (OK)
+	{success:true, token=*****}
+	-401 (no accesso)
+	{success:false, message=*****}
+
+/lista
+	restituisce una lista, o messaggio di errore se richiesta errata
+
+
+
+PYTHON
+
+1. login senza paramentri
+	check errore
+2. login con parametri errati
+	check errore
+3. login con parametri corretti
+	check token
+4. lista senza token
+
+5. lista token sbagliato
+
+6. lista token corretto
