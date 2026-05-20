@@ -1,0 +1,138 @@
+[
+	{
+		"id_prodotto" : 101,
+		"nome" : "Laptop Pro",
+		"prezzo_unitario" : 1200.00,
+		"quantita_stock" : 15,
+		"id_categoria" : 1,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 102,
+		"nome" : "Mouse Wireless",
+		"prezzo_unitario" : 25.50,
+		"quantita_stock" : 50,
+		"id_categoria" : 1,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 103,
+		"nome" : "Scrivania Legno",
+		"prezzo_unitario" : 150.00,
+		"quantita_stock" : 5,
+		"id_categoria" : 2,
+		"id_fornitore" : 20
+	},
+	{
+		"id_prodotto" : 104,
+		"nome" : "Sedia Ergonomica",
+		"prezzo_unitario" : 89.99,
+		"quantita_stock" : 0,
+		"id_categoria" : 2,
+		"id_fornitore" : 20
+	},
+	{
+		"id_prodotto" : 105,
+		"nome" : "Monitor 4K",
+		"prezzo_unitario" : 350.00,
+		"quantita_stock" : 8,
+		"id_categoria" : 1,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 106,
+		"nome" : "Tastiera Meccanica",
+		"prezzo_unitario" : 75.00,
+		"quantita_stock" : 25,
+		"id_categoria" : 3,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 107,
+		"nome" : "Cuffie Noise Cancelling",
+		"prezzo_unitario" : 199.00,
+		"quantita_stock" : 12,
+		"id_categoria" : 1,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 108,
+		"nome" : "Webcam HD",
+		"prezzo_unitario" : 45.90,
+		"quantita_stock" : 0,
+		"id_categoria" : 3,
+		"id_fornitore" : 10
+	},
+	{
+		"id_prodotto" : 109,
+		"nome" : "Libreria Modulare",
+		"prezzo_unitario" : 210.00,
+		"quantita_stock" : 3,
+		"id_categoria" : 2,
+		"id_fornitore" : 20
+	},
+	{
+		"id_prodotto" : 110,
+		"nome" : "Lampada da Scrivania LED",
+		"prezzo_unitario" : 35.00,
+		"quantita_stock" : 40,
+		"id_categoria" : 4,
+		"id_fornitore" : 40
+	},
+	{
+		"id_prodotto" : 111,
+		"nome" : "Piantana Alogena",
+		"prezzo_unitario" : 120.00,
+		"quantita_stock" : 7,
+		"id_categoria" : 4,
+		"id_fornitore" : 40
+	},
+	{
+		"id_prodotto" : 112,
+		"nome" : "Risme Carta A4 (5pz)",
+		"prezzo_unitario" : 22.50,
+		"quantita_stock" : 100,
+		"id_categoria" : 5,
+		"id_fornitore" : 60
+	},
+	{
+		"id_prodotto" : 113,
+		"nome" : "Set Penne Gel",
+		"prezzo_unitario" : 12.00,
+		"quantita_stock" : 200,
+		"id_categoria" : 5,
+		"id_fornitore" : 30
+	},
+	{
+		"id_prodotto" : 114,
+		"nome" : "Organizer da tavolo",
+		"prezzo_unitario" : 18.50,
+		"quantita_stock" : 15,
+		"id_categoria" : 5,
+		"id_fornitore" : 30
+	},
+	{
+		"id_prodotto" : 115,
+		"nome" : "Hard Disk Esterno 2TB",
+		"prezzo_unitario" : 85.00,
+		"quantita_stock" : 30,
+		"id_categoria" : 1,
+		"id_fornitore" : 50
+	},
+	{
+		"id_prodotto" : 116,
+		"nome" : "Smartphone Entry Level",
+		"prezzo_unitario" : 150.00,
+		"quantita_stock" : 10,
+		"id_categoria" : 1,
+		"id_fornitore" : 50
+	},
+	{
+		"id_prodotto" : 117,
+		"nome" : "Cavo HDMI 2m",
+		"prezzo_unitario" : 9.99,
+		"quantita_stock" : 150,
+		"id_categoria" : 3,
+		"id_fornitore" : 50
+	}
+]

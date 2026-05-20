@@ -1,0 +1,38 @@
+[
+	{
+		"id_fornitore" : 10,
+		"ragione_sociale" : "TechSpA",
+		"citta" : "Milano",
+		"email" : "info@techspa.it"
+	},
+	{
+		"id_fornitore" : 20,
+		"ragione_sociale" : "WoodDesign",
+		"citta" : "Torino",
+		"email" : "sales@wood.com"
+	},
+	{
+		"id_fornitore" : 30,
+		"ragione_sociale" : "OfficeSupply Co.",
+		"citta" : "Bologna",
+		"email" : "ordini@officesupply.it"
+	},
+	{
+		"id_fornitore" : 40,
+		"ragione_sociale" : "LuceDesign",
+		"citta" : "Firenze",
+		"email" : "contact@lucedesign.com"
+	},
+	{
+		"id_fornitore" : 50,
+		"ragione_sociale" : "Global Logistics",
+		"citta" : "Milano",
+		"email" : "logistics@global.com"
+	},
+	{
+		"id_fornitore" : 60,
+		"ragione_sociale" : "Cartiera Veneta",
+		"citta" : "Padova",
+		"email" : "info@cartieraveneta.it"
+	}
+]

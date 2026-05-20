@@ -1,0 +1,27 @@
+[
+	{
+		"id_categoria" : 1,
+		"nome" : "Elettronica",
+		"descrizione" : "Dispositivi hardware e gadget"
+	},
+	{
+		"id_categoria" : 2,
+		"nome" : "Arredamento",
+		"descrizione" : "Mobili e ufficio"
+	},
+	{
+		"id_categoria" : 3,
+		"nome" : "Periferiche",
+		"descrizione" : "Accessori per computer e input/output"
+	},
+	{
+		"id_categoria" : 4,
+		"nome" : "Illuminazione",
+		"descrizione" : "Lampade e sistemi di luce per ufficio"
+	},
+	{
+		"id_categoria" : 5,
+		"nome" : "Cancelleria",
+		"descrizione" : "Materiale di consumo per ufficio"
+	}
+]
