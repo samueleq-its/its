@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4026C4B5-45F3-4F25-A90F-EB003CDA0D17}|FileTesto-Scrittura\\FileTesto-Scrittura.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\filetesto-scrittura\\filetesto-scrittura\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4026C4B5-45F3-4F25-A90F-EB003CDA0D17}|FileTesto-Scrittura\\FileTesto-Scrittura.csproj|solutionrelative:filetesto-scrittura\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\Program.cs",
+              "RelativeDocumentMoniker": "FileTesto-Scrittura\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\Program.cs",
+              "RelativeToolTip": "FileTesto-Scrittura\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T14:34:24.928Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

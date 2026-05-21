@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\bin\Debug\net10.0\SommaContaNInteriPositivi.exe
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\bin\Debug\net10.0\SommaContaNInteriPositivi.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\bin\Debug\net10.0\SommaContaNInteriPositivi.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\bin\Debug\net10.0\SommaContaNInteriPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\bin\Debug\net10.0\SommaContaNInteriPositivi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\refint\SommaContaNInteriPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\SommaContaNInteriPositivi.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\SommaContaNInteriPositivi\SommaContaNInteriPositivi\obj\Debug\net10.0\ref\SommaContaNInteriPositivi.dll

@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\bin\Debug\net10.0\ClasseQuadrato.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\bin\Debug\net10.0\ClasseQuadrato.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\bin\Debug\net10.0\ClasseQuadrato.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\bin\Debug\net10.0\ClasseQuadrato.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\bin\Debug\net10.0\ClasseQuadrato.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\refint\ClasseQuadrato.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ClasseQuadrato.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseQuadrato\ClasseQuadrato\obj\Debug\net10.0\ref\ClasseQuadrato.dll

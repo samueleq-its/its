@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\bin\Debug\net10.0\GiornoSettimana.exe
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\bin\Debug\net10.0\GiornoSettimana.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\bin\Debug\net10.0\GiornoSettimana.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\bin\Debug\net10.0\GiornoSettimana.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\bin\Debug\net10.0\GiornoSettimana.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\refint\GiornoSettimana.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\GiornoSettimana.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GiornoSettimana\GiornoSettimana\obj\Debug\net10.0\ref\GiornoSettimana.dll

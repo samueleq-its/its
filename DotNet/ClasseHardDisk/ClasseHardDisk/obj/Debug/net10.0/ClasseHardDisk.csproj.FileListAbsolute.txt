@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\bin\Debug\net10.0\ClasseHardDisk.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\bin\Debug\net10.0\ClasseHardDisk.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\bin\Debug\net10.0\ClasseHardDisk.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\bin\Debug\net10.0\ClasseHardDisk.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\bin\Debug\net10.0\ClasseHardDisk.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\refint\ClasseHardDisk.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ClasseHardDisk.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseHardDisk\ClasseHardDisk\obj\Debug\net10.0\ref\ClasseHardDisk.dll

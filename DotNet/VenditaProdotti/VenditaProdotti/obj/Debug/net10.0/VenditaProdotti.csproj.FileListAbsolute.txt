@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\bin\Debug\net10.0\VenditaProdotti.exe
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\bin\Debug\net10.0\VenditaProdotti.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\bin\Debug\net10.0\VenditaProdotti.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\bin\Debug\net10.0\VenditaProdotti.dll
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\bin\Debug\net10.0\VenditaProdotti.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.dll
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\refint\VenditaProdotti.dll
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\VenditaProdotti.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\VenditaProdotti\VenditaProdotti\obj\Debug\net10.0\ref\VenditaProdotti.dll

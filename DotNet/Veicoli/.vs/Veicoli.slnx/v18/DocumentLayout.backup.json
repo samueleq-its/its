@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\veicoli\\veicoli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|solutionrelative:veicoli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\veicoli\\veicoli\\tipocambio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|solutionrelative:veicoli\\tipocambio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\veicoli\\veicoli\\scooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|solutionrelative:veicoli\\scooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\veicoli\\veicoli\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|solutionrelative:veicoli\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\veicoli\\veicoli\\veicolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CBFFA3-7695-F5BB-7283-6E1F0070D4C9}|Veicoli\\Veicoli.csproj|solutionrelative:veicoli\\veicolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TipoCambio.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\TipoCambio.cs",
+              "RelativeDocumentMoniker": "Veicoli\\TipoCambio.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\TipoCambio.cs",
+              "RelativeToolTip": "Veicoli\\TipoCambio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:39:35.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Scooter.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Scooter.cs",
+              "RelativeDocumentMoniker": "Veicoli\\Scooter.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Scooter.cs",
+              "RelativeToolTip": "Veicoli\\Scooter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:34:27.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Auto.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Auto.cs",
+              "RelativeDocumentMoniker": "Veicoli\\Auto.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Auto.cs",
+              "RelativeToolTip": "Veicoli\\Auto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:37:31.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Veicolo.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Veicolo.cs",
+              "RelativeDocumentMoniker": "Veicoli\\Veicolo.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Veicolo.cs",
+              "RelativeToolTip": "Veicoli\\Veicolo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:31:51.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Program.cs",
+              "RelativeDocumentMoniker": "Veicoli\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Veicoli\\Veicoli\\Program.cs",
+              "RelativeToolTip": "Veicoli\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:30:38.252Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

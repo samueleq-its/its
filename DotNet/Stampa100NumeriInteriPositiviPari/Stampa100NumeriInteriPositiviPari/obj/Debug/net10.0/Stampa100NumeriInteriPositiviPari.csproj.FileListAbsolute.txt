@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\bin\Debug\net10.0\Stampa100NumeriInteriPositiviPari.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\bin\Debug\net10.0\Stampa100NumeriInteriPositiviPari.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\bin\Debug\net10.0\Stampa100NumeriInteriPositiviPari.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\bin\Debug\net10.0\Stampa100NumeriInteriPositiviPari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\bin\Debug\net10.0\Stampa100NumeriInteriPositiviPari.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\refint\Stampa100NumeriInteriPositiviPari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\Stampa100NumeriInteriPositiviPari.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Stampa100NumeriInteriPositiviPari\Stampa100NumeriInteriPositiviPari\obj\Debug\net10.0\ref\Stampa100NumeriInteriPositiviPari.dll

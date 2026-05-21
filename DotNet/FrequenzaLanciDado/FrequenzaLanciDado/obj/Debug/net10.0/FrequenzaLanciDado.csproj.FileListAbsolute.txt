@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\bin\Debug\net10.0\FrequenzaLanciDado.exe
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\bin\Debug\net10.0\FrequenzaLanciDado.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\bin\Debug\net10.0\FrequenzaLanciDado.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\bin\Debug\net10.0\FrequenzaLanciDado.dll
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\bin\Debug\net10.0\FrequenzaLanciDado.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.dll
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\refint\FrequenzaLanciDado.dll
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\FrequenzaLanciDado.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\FrequenzaLanciDado\FrequenzaLanciDado\obj\Debug\net10.0\ref\FrequenzaLanciDado.dll

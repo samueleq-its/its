@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\bin\Debug\net10.0\ArrayInteri.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\bin\Debug\net10.0\ArrayInteri.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\bin\Debug\net10.0\ArrayInteri.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\bin\Debug\net10.0\ArrayInteri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\bin\Debug\net10.0\ArrayInteri.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\refint\ArrayInteri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ArrayInteri.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ArrayInteri\ArrayInteri\obj\Debug\net10.0\ref\ArrayInteri.dll

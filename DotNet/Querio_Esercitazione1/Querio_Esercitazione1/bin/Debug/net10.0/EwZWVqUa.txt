@@ -1,0 +1,4 @@
+CodiceOrdine=EwZWVqUa, Data=27/04/2026 17:50:35, Venditore=Nome=Luca, Cognome=Bianchi, Stipendio=1700, Tredicesima=3247, Settore=AUTO, Totale=179.9
+Querio_Esercitazione1.Prodotto, Quantità=2, Subtotale=31
+Querio_Esercitazione1.Prodotto, Quantità=1, Subtotale=48.9
+Querio_Esercitazione1.Prodotto, Quantità=4, Subtotale=100

@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\libroautorieditore.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\libroautorieditore.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\editore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\editore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\indirizzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\indirizzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\r.catalano.edu-its\\downloads\\libroautorieditore\\libro\\libro\\autore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\autore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibroAutoriEditore",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\LibroAutoriEditore.csproj",
+              "RelativeDocumentMoniker": "Libro\\LibroAutoriEditore.csproj",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\LibroAutoriEditore.csproj",
+              "RelativeToolTip": "Libro\\LibroAutoriEditore.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-03T14:37:01.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Indirizzo.cs",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Indirizzo.cs",
+              "RelativeDocumentMoniker": "Libro\\Indirizzo.cs",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Indirizzo.cs",
+              "RelativeToolTip": "Libro\\Indirizzo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:37:13.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Editore.cs",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Editore.cs",
+              "RelativeDocumentMoniker": "Libro\\Editore.cs",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Editore.cs",
+              "RelativeToolTip": "Libro\\Editore.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:37:14.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Autore.cs",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Autore.cs",
+              "RelativeDocumentMoniker": "Libro\\Autore.cs",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Autore.cs",
+              "RelativeToolTip": "Libro\\Autore.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:37:14.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Libro.cs",
+              "RelativeDocumentMoniker": "Libro\\Libro.cs",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Libro.cs",
+              "RelativeToolTip": "Libro\\Libro.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:37:14.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Program.cs",
+              "RelativeDocumentMoniker": "Libro\\Program.cs",
+              "ToolTip": "C:\\Users\\r.catalano.EDU-ITS\\Downloads\\LibroAutoriEditore\\Libro\\Libro\\Program.cs",
+              "RelativeToolTip": "Libro\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:37:14.136Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

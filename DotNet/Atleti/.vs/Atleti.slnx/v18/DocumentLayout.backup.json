@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\atleti\\atleti\\calciatore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|solutionrelative:atleti\\calciatore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\atleti\\atleti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|solutionrelative:atleti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\atleti\\atleti\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9B8D31-49A2-3A1D-E9F8-4BAB83097D42}|Atleti\\Atleti.csproj|solutionrelative:atleti\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calciatore.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Calciatore.cs",
+              "RelativeDocumentMoniker": "Atleti\\Calciatore.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Calciatore.cs",
+              "RelativeToolTip": "Atleti\\Calciatore.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwDYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T12:28:43.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Atleta.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Atleta.cs",
+              "RelativeDocumentMoniker": "Atleti\\Atleta.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Atleta.cs",
+              "RelativeToolTip": "Atleti\\Atleta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:29:12.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Program.cs",
+              "RelativeDocumentMoniker": "Atleti\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Atleti\\Atleti\\Program.cs",
+              "RelativeToolTip": "Atleti\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:26:47.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

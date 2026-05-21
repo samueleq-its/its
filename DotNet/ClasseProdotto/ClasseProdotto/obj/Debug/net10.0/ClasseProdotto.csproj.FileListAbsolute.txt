@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\bin\Debug\net10.0\ClasseProdotto.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\bin\Debug\net10.0\ClasseProdotto.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\bin\Debug\net10.0\ClasseProdotto.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\bin\Debug\net10.0\ClasseProdotto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\bin\Debug\net10.0\ClasseProdotto.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\refint\ClasseProdotto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ClasseProdotto.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseProdotto\ClasseProdotto\obj\Debug\net10.0\ref\ClasseProdotto.dll

@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\bin\Debug\net10.0\Casuale.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\bin\Debug\net10.0\Casuale.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\bin\Debug\net10.0\Casuale.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\bin\Debug\net10.0\Casuale.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\bin\Debug\net10.0\Casuale.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\refint\Casuale.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\Casuale.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Casuale\Casuale\obj\Debug\net10.0\ref\Casuale.dll

@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\bin\Debug\net10.0\ListaGenerica.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\bin\Debug\net10.0\ListaGenerica.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\bin\Debug\net10.0\ListaGenerica.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\bin\Debug\net10.0\ListaGenerica.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\bin\Debug\net10.0\ListaGenerica.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\refint\ListaGenerica.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ListaGenerica.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ListaGenerica\ListaGenerica\obj\Debug\net10.0\ref\ListaGenerica.dll

@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\automaauto\\automaauto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|solutionrelative:automaauto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\automaauto\\automaauto\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|solutionrelative:automaauto\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\automaauto\\automaauto\\tipocarburante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6651768B-E847-BDDC-6B8F-03D588D201CB}|AutomaAuto\\AutomaAuto.csproj|solutionrelative:automaauto\\tipocarburante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tipocarburante.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Tipocarburante.cs",
+              "RelativeDocumentMoniker": "AutomaAuto\\Tipocarburante.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Tipocarburante.cs",
+              "RelativeToolTip": "AutomaAuto\\Tipocarburante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:50:28.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Auto.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Auto.cs",
+              "RelativeDocumentMoniker": "AutomaAuto\\Auto.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Auto.cs",
+              "RelativeToolTip": "AutomaAuto\\Auto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:49:21.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Program.cs",
+              "RelativeDocumentMoniker": "AutomaAuto\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\AutomaAuto\\AutomaAuto\\Program.cs",
+              "RelativeToolTip": "AutomaAuto\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:48:11.938Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

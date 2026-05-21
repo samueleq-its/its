@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\bin\Debug\net10.0\Quadrilateri.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\bin\Debug\net10.0\Quadrilateri.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\bin\Debug\net10.0\Quadrilateri.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\bin\Debug\net10.0\Quadrilateri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\bin\Debug\net10.0\Quadrilateri.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\refint\Quadrilateri.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\Quadrilateri.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Quadrilateri\Quadrilateri\obj\Debug\net10.0\ref\Quadrilateri.dll

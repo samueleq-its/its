@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\bin\Debug\net10.0\GestioneMessaggi.exe
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\bin\Debug\net10.0\GestioneMessaggi.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\bin\Debug\net10.0\GestioneMessaggi.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\bin\Debug\net10.0\GestioneMessaggi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\bin\Debug\net10.0\GestioneMessaggi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\refint\GestioneMessaggi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\GestioneMessaggi.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\GestioneMessaggi\GestioneMessaggi\obj\Debug\net10.0\ref\GestioneMessaggi.dll

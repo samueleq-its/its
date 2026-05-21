@@ -1,0 +1,14 @@
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\bin\Debug\net8.0\LibroAutoriEditore.exe
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\bin\Debug\net8.0\LibroAutoriEditore.deps.json
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\bin\Debug\net8.0\LibroAutoriEditore.runtimeconfig.json
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\bin\Debug\net8.0\LibroAutoriEditore.dll
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\bin\Debug\net8.0\LibroAutoriEditore.pdb
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.AssemblyInfoInputs.cache
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.AssemblyInfo.cs
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.csproj.CoreCompileInputs.cache
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.dll
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\refint\LibroAutoriEditore.dll
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.pdb
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\LibroAutoriEditore.genruntimeconfig.cache
+C:\Users\r.catalano.EDU-ITS\Downloads\LibroAutoriEditore\Libro\Libro\obj\Debug\net8.0\ref\LibroAutoriEditore.dll

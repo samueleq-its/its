@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\ebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\ebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\editore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\editore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\indirizzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\indirizzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\libro\\libro\\autore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289F20E3-70AF-4D3E-8AEC-FE998E8B1D8A}|Libro\\LibroAutoriEditore.csproj|solutionrelative:libro\\autore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ebook.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Ebook.cs",
+              "RelativeDocumentMoniker": "Libro\\Ebook.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Ebook.cs",
+              "RelativeToolTip": "Libro\\Ebook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:38:41.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Indirizzo.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Indirizzo.cs",
+              "RelativeDocumentMoniker": "Libro\\Indirizzo.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Indirizzo.cs",
+              "RelativeToolTip": "Libro\\Indirizzo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:33:23.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Editore.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Editore.cs",
+              "RelativeDocumentMoniker": "Libro\\Editore.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Editore.cs",
+              "RelativeToolTip": "Libro\\Editore.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:33:23.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Autore.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Autore.cs",
+              "RelativeDocumentMoniker": "Libro\\Autore.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Autore.cs",
+              "RelativeToolTip": "Libro\\Autore.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:33:23.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Libro.cs",
+              "RelativeDocumentMoniker": "Libro\\Libro.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Libro.cs",
+              "RelativeToolTip": "Libro\\Libro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:33:23.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Program.cs",
+              "RelativeDocumentMoniker": "Libro\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Libro\\Libro\\Program.cs",
+              "RelativeToolTip": "Libro\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T15:33:23.355Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\bin\Debug\net10.0\Solidi.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\bin\Debug\net10.0\Solidi.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\bin\Debug\net10.0\Solidi.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\bin\Debug\net10.0\Solidi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\bin\Debug\net10.0\Solidi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\refint\Solidi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\Solidi.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Solidi\Solidi\obj\Debug\net10.0\ref\Solidi.dll

@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\bin\Debug\net10.0\Querio_Esercitazione1.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\bin\Debug\net10.0\Querio_Esercitazione1.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\bin\Debug\net10.0\Querio_Esercitazione1.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\bin\Debug\net10.0\Querio_Esercitazione1.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\bin\Debug\net10.0\Querio_Esercitazione1.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\refint\Querio_Esercitazione1.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\Querio_Esercitazione1.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Querio_Esercitazione1\Querio_Esercitazione1\obj\Debug\net10.0\ref\Querio_Esercitazione1.dll

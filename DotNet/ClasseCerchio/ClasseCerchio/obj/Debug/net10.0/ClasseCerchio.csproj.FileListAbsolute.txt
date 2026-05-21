@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\bin\Debug\net10.0\ClasseCerchio.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\bin\Debug\net10.0\ClasseCerchio.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\bin\Debug\net10.0\ClasseCerchio.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\bin\Debug\net10.0\ClasseCerchio.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\bin\Debug\net10.0\ClasseCerchio.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\refint\ClasseCerchio.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ClasseCerchio.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClasseCerchio\ClasseCerchio\obj\Debug\net10.0\ref\ClasseCerchio.dll

@@ -1,0 +1,18 @@
+﻿namespace GestioneMessaggi
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Gestione Messaggi!");
+
+			List<Messaggio> listaMessaggi = new List<Messaggio>
+			{
+			new Messaggio("Samuele", "Mattia", "Top", "Python is the best", new DateTime(2026,04,20,12,35,11),Priorita.NORMALE),
+
+			};
+
+
+		}
+	}
+}

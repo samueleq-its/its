@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\bin\Debug\net10.0\PrezzoQuantitaSconto.exe
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\bin\Debug\net10.0\PrezzoQuantitaSconto.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\bin\Debug\net10.0\PrezzoQuantitaSconto.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\bin\Debug\net10.0\PrezzoQuantitaSconto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\bin\Debug\net10.0\PrezzoQuantitaSconto.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\refint\PrezzoQuantitaSconto.dll
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\PrezzoQuantitaSconto.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\PrezzoQuantitaSconto\PrezzoQuantitaSconto\obj\Debug\net10.0\ref\PrezzoQuantitaSconto.dll

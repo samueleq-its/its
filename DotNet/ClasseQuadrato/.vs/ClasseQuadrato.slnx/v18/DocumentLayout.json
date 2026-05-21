@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\ClasseQuadrato\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D778BADF-AE1B-4455-83E1-95781409EC12}|ClasseQuadrato\\ClasseQuadrato.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\classequadrato\\classequadrato\\quadrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D778BADF-AE1B-4455-83E1-95781409EC12}|ClasseQuadrato\\ClasseQuadrato.csproj|solutionrelative:classequadrato\\quadrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D778BADF-AE1B-4455-83E1-95781409EC12}|ClasseQuadrato\\ClasseQuadrato.csproj|c:\\users\\samuele.querio\\documents\\github\\dotnet\\classequadrato\\classequadrato\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D778BADF-AE1B-4455-83E1-95781409EC12}|ClasseQuadrato\\ClasseQuadrato.csproj|solutionrelative:classequadrato\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\ClasseQuadrato\\ClasseQuadrato\\Program.cs",
+              "RelativeDocumentMoniker": "ClasseQuadrato\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\ClasseQuadrato\\ClasseQuadrato\\Program.cs",
+              "RelativeToolTip": "ClasseQuadrato\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T15:24:17.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quadrato.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\ClasseQuadrato\\ClasseQuadrato\\Quadrato.cs",
+              "RelativeDocumentMoniker": "ClasseQuadrato\\Quadrato.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\ClasseQuadrato\\ClasseQuadrato\\Quadrato.cs",
+              "RelativeToolTip": "ClasseQuadrato\\Quadrato.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T15:29:04.367Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

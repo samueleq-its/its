@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\bin\Debug\net10.0\QuadratoDispari.exe
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\bin\Debug\net10.0\QuadratoDispari.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\bin\Debug\net10.0\QuadratoDispari.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\bin\Debug\net10.0\QuadratoDispari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\bin\Debug\net10.0\QuadratoDispari.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\refint\QuadratoDispari.dll
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\QuadratoDispari.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\QuadratoDispari\QuadratoDispari\obj\Debug\net10.0\ref\QuadratoDispari.dll

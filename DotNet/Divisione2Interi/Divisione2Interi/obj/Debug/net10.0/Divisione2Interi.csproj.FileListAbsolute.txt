@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\bin\Debug\net10.0\Divisione2Interi.exe
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\bin\Debug\net10.0\Divisione2Interi.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\bin\Debug\net10.0\Divisione2Interi.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\bin\Debug\net10.0\Divisione2Interi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\bin\Debug\net10.0\Divisione2Interi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\refint\Divisione2Interi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\Divisione2Interi.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\Divisione2Interi\Divisione2Interi\obj\Debug\net10.0\ref\Divisione2Interi.dll

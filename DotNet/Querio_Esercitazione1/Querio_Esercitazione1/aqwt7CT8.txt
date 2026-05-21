@@ -1,0 +1,4 @@
+CodiceOrdine=aqwt7CT8, Data=27/04/2026 17:52:50, Venditore=Nome=Luca, Cognome=Bianchi, Stipendio=1700, Tredicesima=3247, Settore=AUTO, Totale=179.9
+{Codice=P001, NomeProdotto=Filtro olio, Descrizione=Filtro olio motore, Prezzo=15.5}, Quantità=2, Subtotale=31
+{Codice=P003, NomeProdotto=Pastiglie freno, Descrizione=Pastiglie freno anteriori, Prezzo=48.9}, Quantità=1, Subtotale=48.9
+{Codice=P005, NomeProdotto=Lampadine LED, Descrizione=Kit lampadine LED, Prezzo=25}, Quantità=4, Subtotale=100

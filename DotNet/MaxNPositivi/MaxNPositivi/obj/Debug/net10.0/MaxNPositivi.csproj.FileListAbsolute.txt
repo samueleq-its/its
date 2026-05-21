@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\bin\Debug\net10.0\MaxNPositivi.exe
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\bin\Debug\net10.0\MaxNPositivi.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\bin\Debug\net10.0\MaxNPositivi.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\bin\Debug\net10.0\MaxNPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\bin\Debug\net10.0\MaxNPositivi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\refint\MaxNPositivi.dll
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\MaxNPositivi.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\MaxNPositivi\MaxNPositivi\obj\Debug\net10.0\ref\MaxNPositivi.dll

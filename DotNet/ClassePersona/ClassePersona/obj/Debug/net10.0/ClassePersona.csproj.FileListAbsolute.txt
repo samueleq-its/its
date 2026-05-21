@@ -1,0 +1,14 @@
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\bin\Debug\net10.0\ClassePersona.exe
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\bin\Debug\net10.0\ClassePersona.deps.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\bin\Debug\net10.0\ClassePersona.runtimeconfig.json
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\bin\Debug\net10.0\ClassePersona.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\bin\Debug\net10.0\ClassePersona.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\refint\ClassePersona.dll
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.pdb
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ClassePersona.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\github\DotNet\ClassePersona\ClassePersona\obj\Debug\net10.0\ref\ClassePersona.dll
