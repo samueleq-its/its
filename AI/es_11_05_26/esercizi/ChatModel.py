@@ -1,7 +1,7 @@
 from ollama import Client
 import json
 
-MODEL = 'llama3.2:latest'
+MODEL = "ministral-3:3b" #'llama3.2:latest'
 
 class ChatModel:
     def __init__(self, top_p=1.0, temperature=0.5, output_length=3000):
