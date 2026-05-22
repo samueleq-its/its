@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj": {}
+    "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj": {
+    "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj",
+        "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj",
         "projectName": "MaxNPositivi",
-        "projectPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj",
+        "projectPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\MaxNPositivi\\MaxNPositivi\\MaxNPositivi.csproj",
         "packagesPath": "C:\\Users\\samuele.querio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\MaxNPositivi\\MaxNPositivi\\obj\\",
+        "outputPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\MaxNPositivi\\MaxNPositivi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samuele.querio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

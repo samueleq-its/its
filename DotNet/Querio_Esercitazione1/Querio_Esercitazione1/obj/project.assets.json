@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\Querio_Esercitazione1.csproj",
+      "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\Querio_Esercitazione1.csproj",
       "projectName": "Querio_Esercitazione1",
-      "projectPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\Querio_Esercitazione1.csproj",
+      "projectPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\Querio_Esercitazione1.csproj",
       "packagesPath": "C:\\Users\\samuele.querio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\obj\\",
+      "outputPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\Querio_Esercitazione1\\Querio_Esercitazione1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samuele.querio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

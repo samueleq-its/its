@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj": {}
+    "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj": {
+    "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj",
+        "projectUniqueName": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj",
         "projectName": "FileTesto-Scrittura",
-        "projectPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj",
+        "projectPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\FileTesto-Scrittura.csproj",
         "packagesPath": "C:\\Users\\samuele.querio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samuele.querio\\Documents\\github\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\obj\\",
+        "outputPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\FileTesto-Scrittura\\FileTesto-Scrittura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samuele.querio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
