@@ -1,0 +1,15 @@
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\bin\Debug\net10.0\GestioneProveITS.exe
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\bin\Debug\net10.0\GestioneProveITS.deps.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\bin\Debug\net10.0\GestioneProveITS.runtimeconfig.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\bin\Debug\net10.0\GestioneProveITS.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\bin\Debug\net10.0\GestioneProveITS.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.sourcelink.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\refint\GestioneProveITS.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\GestioneProveITS.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\GestioneProveITS\GestioneProveITS\obj\Debug\net10.0\ref\GestioneProveITS.dll

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|c:\\users\\samuele.querio\\documents\\github\\its\\dotnet\\gestioneproveits\\gestioneproveits\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|solutionrelative:gestioneproveits\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|c:\\users\\samuele.querio\\documents\\github\\its\\dotnet\\gestioneproveits\\gestioneproveits\\esamibiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|solutionrelative:gestioneproveits\\esamibiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|c:\\users\\samuele.querio\\documents\\github\\its\\dotnet\\gestioneproveits\\gestioneproveits\\esame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE54F658-BD2E-4C59-A0CE-57BFD1089C9C}|GestioneProveITS\\GestioneProveITS.csproj|solutionrelative:gestioneproveits\\esame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EsamiBiz.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\EsamiBiz.cs",
+              "RelativeDocumentMoniker": "GestioneProveITS\\EsamiBiz.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\EsamiBiz.cs",
+              "RelativeToolTip": "GestioneProveITS\\EsamiBiz.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T12:40:06.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Esame.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\Esame.cs",
+              "RelativeDocumentMoniker": "GestioneProveITS\\Esame.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\Esame.cs",
+              "RelativeToolTip": "GestioneProveITS\\Esame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T12:40:04.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\Program.cs",
+              "RelativeDocumentMoniker": "GestioneProveITS\\Program.cs",
+              "ToolTip": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITS\\GestioneProveITS\\Program.cs",
+              "RelativeToolTip": "GestioneProveITS\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T12:39:49.621Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

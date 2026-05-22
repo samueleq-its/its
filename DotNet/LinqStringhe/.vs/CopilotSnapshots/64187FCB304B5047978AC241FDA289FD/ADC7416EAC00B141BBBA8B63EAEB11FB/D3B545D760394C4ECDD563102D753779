@@ -1,0 +1,14 @@
+﻿namespace LinqStringhe
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("LInq!");
+
+            //array qui
+
+
+        }
+    }
+}

@@ -1,0 +1,15 @@
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\bin\Debug\net10.0\LinqStringhe.exe
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\bin\Debug\net10.0\LinqStringhe.deps.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\bin\Debug\net10.0\LinqStringhe.runtimeconfig.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\bin\Debug\net10.0\LinqStringhe.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\bin\Debug\net10.0\LinqStringhe.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.sourcelink.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\refint\LinqStringhe.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\LinqStringhe.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqStringhe\LinqStringhe\obj\Debug\net10.0\ref\LinqStringhe.dll

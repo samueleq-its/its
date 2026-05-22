@@ -1,0 +1,20 @@
+﻿namespace LinqStringhe
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("LInq!");
+
+            //array qui
+            string[] nomi = {
+                "Alessandro", "Beatrice", "Carlo", "Daniela", "Edoardo",
+                "Francesca", "Giovanni", "Elena", "Igor", "Laura",
+                "Marco", "Martina", "Nicola", "Paola", "Riccardo",
+                "Silvia", "Tommaso", "Valentina", "Umberto", "Zoe"
+            };
+
+
+        }
+    }
+}

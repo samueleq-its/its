@@ -1,0 +1,15 @@
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\bin\Debug\net10.0\LinqObject.exe
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\bin\Debug\net10.0\LinqObject.deps.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\bin\Debug\net10.0\LinqObject.runtimeconfig.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\bin\Debug\net10.0\LinqObject.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\bin\Debug\net10.0\LinqObject.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.sourcelink.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\refint\LinqObject.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\LinqObject.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqObject\LinqObject\obj\Debug\net10.0\ref\LinqObject.dll

@@ -1,0 +1,15 @@
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\bin\Debug\net10.0\LinqLambdaExpression.exe
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\bin\Debug\net10.0\LinqLambdaExpression.deps.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\bin\Debug\net10.0\LinqLambdaExpression.runtimeconfig.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\bin\Debug\net10.0\LinqLambdaExpression.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\bin\Debug\net10.0\LinqLambdaExpression.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.AssemblyInfoInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.AssemblyInfo.cs
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.csproj.CoreCompileInputs.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.sourcelink.json
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\refint\LinqLambdaExpression.dll
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.pdb
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\LinqLambdaExpression.genruntimeconfig.cache
+C:\Users\samuele.querio\Documents\GitHub\its\DotNet\LinqLambdaExpression\LinqLambdaExpression\obj\Debug\net10.0\ref\LinqLambdaExpression.dll

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "2NUvu/hI1dw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samuele.querio\\Documents\\GitHub\\its\\DotNet\\GestioneProveITSSoluzione\\GestioneProveITS\\GestioneProveITS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samuele.querio\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\samuele.querio\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\samuele.querio\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\samuele.querio\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.27\\microsoft.netcore.app.host.win-x64.8.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}
