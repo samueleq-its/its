@@ -32,4 +32,26 @@
 # Pycache
 **/__pycache__
 
+# C# / .NET
+obj/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+TestResults/
+artifacts/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
 .fake
+DotNet/ArrayInteri/ArrayInteri/obj/Debug/net10.0/ArrayInteri.AssemblyInfo.cs
