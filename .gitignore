@@ -54,4 +54,3 @@ artifacts/
 !.vscode/settings.json
 
 .fake
-DotNet/ArrayInteri/ArrayInteri/obj/Debug/net10.0/ArrayInteri.AssemblyInfo.cs
