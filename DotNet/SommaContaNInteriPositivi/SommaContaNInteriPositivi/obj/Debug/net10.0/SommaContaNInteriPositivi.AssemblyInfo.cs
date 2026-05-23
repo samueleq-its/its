@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SommaContaNInteriPositivi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e02b370c8d9aa8b7ecfeea229bd93ec20046e2d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99242efc22c6bcad147923585a6262e686ff8c35")]
 [assembly: System.Reflection.AssemblyProductAttribute("SommaContaNInteriPositivi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SommaContaNInteriPositivi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
