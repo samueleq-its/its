@@ -1,0 +1,103 @@
+htaccess xamp > apache > config > httpd.conf
+	(https://www.bogliaccino.it/public/fondamenti/md/Fondamenti-master-011_htaccess.md)
+php.ini in xamp > apache > config > php.ini
+	mostrare/nascondere errori
+
+
+TRY-CATCH
+	https://www.bogliaccino.it/public/php/md/CorsoPHP-master-appunti-092_try_catch.md
+
+	esempio di eccezioni in Java
+
+
+FUNZIONI
+	https://www.bogliaccino.it/public/php/slide/php_funzioni
+
+	return in una funzione per ritornare un valore (WOW)
+
+	le funzioni sono first-class-citizen, possono essere passate come variabili (come python, JS) (no in java)
+
+
+menzioni di funzioni per array e gestione tempo
+NON è necessario impararle tutte a memoria
+https://www.bogliaccino.it/public/php/md/CorsoPHP-master-appunti-02_1_funzioni_array.md
+https://www.bogliaccino.it/public/php/md/CorsoPHP-master-appunti-02_2_funzioni_tempo.md
+
+$$ variabile di variabili
+&$ riferimento a variabile
+
+
+COMPOSER
+	https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_7_composer.md
+	usa Packagist
+
+	installa composer
+	https://getcomposer.org/download/
+	nella cartella php (L07/AutosaloneDB)
+	DA TERMINALE:
+		> composer init 
+
+		This command will guide you through creating your composer.json config.
+
+		Package name (<vendor>/<name>) [samuele.querio/autosalone-db]: 
+		Description []: Progetto autosalone con php
+		Author [Samuele-VM <samuele.querio@edu-its.it>, n to skip]: 
+		Minimum Stability []: 
+		Package Type (e.g. library, project, metapackage, composer-plugin) []: project
+		License []: MIT
+
+		Define your dependencies.
+
+		Would you like to define your dependencies (require) interactively [yes]? n
+		Would you like to define your dev dependencies (require-dev) interactively [yes]? n
+		Add PSR-4 autoload mapping? Maps namespace "SamueleQuerio\AutosaloneDb" to the entered relative path. [src/, n to skip]: 
+
+		{
+		"name": "samuele.querio/autosalone-db",
+		"description": "Progetto autosalone con php",
+		"type": "project",
+		"license": "MIT",
+		"autoload": {
+			"psr-4": {
+			"SamueleQuerio\\AutosaloneDb\\": "src/"
+			}
+		},
+		"authors": [
+			{
+			"name": "Samuele-VM",
+			"email": "samuele.querio@edu-its.it"
+			}
+		],
+		"require": {}
+		}
+	
+	modifica composer.json
+	"psr-4": {
+            "SamueleQuerio\\AutosaloneDb\\": "src/"
+        }
+	> "APP\\": "src/"
+	dopo aver modificato composer.json
+	composer dump-autoload
+
+	poi:
+	composer install (ma non so perchè)
+
+
+	per utilizzare una classe di sistema mettere prima del nome '\'
+	es:
+	\Datetime::createFromFormat('Y-m-d', $data_immatricolazione);
+
+
+namespace
+https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_3_namepsace.md
+
+
+PDO
+https://github.com/maboglia/CorsoPHP/blob/master/appunti/07_1_PDO.md
+
+DTO data transfer object, non passare informazioni alle viste che non servono (es non passare intero utente che include password)
+
+:: permette di accedere alle proprietà e metodi della classe (cioè statici)
+è equivalente a -> per proprietà e metodi di un oggetto
+
+
