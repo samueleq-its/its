@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="title"></h1>
+	
+	<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modello</th>
+    <th>Cilindrata</th>
+    <th>Prezzo</th>
+  </tr>
+  <tbody>
+  </tbody>
+</table>
+
+	
+	<script type="text/javascript">
+		document.getElementById("title").textContent="Automobili";
+		
+		const URL = "api/automobili";
+		
+		fetch(URL)
+			.then(res => res.json())
+			.then(automobili => {
+				for (const auto of automobili){
+					const TR = document.createElement("tr");
+					const TD1 = document.createElement("td");
+					TD1.textContent = auto.marca;
+					const TD2 = document.createElement("td");
+					TD2.textContent = auto.modello;
+					const TD3 = document.createElement("td");
+					TD3.textContent = auto.cilindrata;
+					const TD4 = document.createElement("td");
+					TD4.textContent = auto.prezzo;
+					
+					TR.append(TD1,TD2,TD3,TD4)
+					document.querySelector("table > tbody").append(TR)
+					
+				}
+			})
+	</script>
+</body>
+</html>
