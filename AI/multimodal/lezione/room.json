@@ -1,0 +1,102 @@
+{
+    "furnitures": [
+        {
+            "type": "sofa",
+            "description": "Gray fabric sofa with a textured pattern and a throw pillow featuring a blue and white design that reads 'MADE IN FRANCE'. It's placed against the light blue wall.",
+            "quantity": 1,
+            "position": "Left side of the room, near the entrance"
+        },
+        {
+            "type": "armchair",
+            "description": "Single armchair with a neutral grey fabric, paired with a yellow woven ottoman beside it.",
+            "quantity": 1,
+            "position": "Adjacent to the sofa, slightly to the right"
+        },
+        {
+            "type": "dining table",
+            "description": "Wooden round dining table with a light natural finish. It has four chairs with cushioned seats and backs in varying shades of blue and green.",
+            "quantity": 1,
+            "position": "Center-right of the room, near the window"
+        },
+        {
+            "type": "side table",
+            "description": "Black metal side table with a modern, minimalist design. It has a round base and a small shelf.",
+            "quantity": 1,
+            "position": "Near the sofa, to the left of the ottoman"
+        },
+        {
+            "type": "storage unit",
+            "description": "Light wooden cabinet with a sleek, built-in design. It has multiple drawers and a small TV stand. Contains a television set on top.",
+            "quantity": 1,
+            "position": "Left side, near the TV and below the mirror"
+        },
+        {
+            "type": "console",
+            "description": "Light wooden console table with a glossy finish, placed against the wall. It holds books, decorative items, and a plant.",
+            "quantity": 1,
+            "position": "Against the wall to the right of the sofa"
+        },
+        {
+            "type": "chair",
+            "description": "Modern wooden chair with a simple design, positioned near the dining table.",
+            "quantity": 3,
+            "position": "Around the dining table"
+        },
+        {
+            "type": "ottoman",
+            "description": "Woven yellow ottoman, placed under the armchair and sofa area.",
+            "quantity": 1,
+            "position": "Near the sofa, under the armchair"
+        },
+        {
+            "type": "rug",
+            "description": "A neutral-toned, woven rug in a geometric pattern with a mix of colors like beige, gray, and yellow, placed on the floor.",
+            "quantity": 1,
+            "position": "Between the sofa and the ottoman"
+        },
+        {
+            "type": "mirror",
+            "description": "Round mirror with a wooden frame, mounted on the wall above the TV unit.",
+            "quantity": 1,
+            "position": "Left side wall, above the TV"
+        },
+        {
+            "type": "wall sconces",
+            "description": "Modern pendant light with a glass diffuser and a yellowish hue, hanging from the ceiling above the dining area.",
+            "quantity": 1,
+            "position": "Above the dining table"
+        },
+        {
+            "type": "pillow",
+            "description": "Throw pillow on the sofa with a blue and white design reading 'MADE IN FRANCE'.",
+            "quantity": 1,
+            "position": "On the sofa"
+        },
+        {
+            "type": "decorative items",
+            "description": "Collection of small decorative items such as framed art, plants, and other knick-knacks on the console table and wall.",
+            "quantity": 5,
+            "position": "On console table and wall"
+        }
+    ],
+    "decorations": [
+        {
+            "type": "wall color",
+            "description": "Light blue walls with a soft gradient, enhancing the room's airy feel.",
+            "quantity": 2,
+            "position": "Entire walls of the room"
+        },
+        {
+            "type": "flooring",
+            "description": "Light gray and neutral-toned flooring with subtle patterns, complementing the room\u2019s overall aesthetic.",
+            "quantity": 1,
+            "position": "Throughout the floor"
+        },
+        {
+            "type": "plant",
+            "description": "Several potted plants in different sizes, placed strategically around the room, adding a touch of greenery.",
+            "quantity": 3,
+            "position": "Various locations around the room, including the console table and the wall above the dining table."
+        }
+    ]
+}

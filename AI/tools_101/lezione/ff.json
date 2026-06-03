@@ -1,0 +1,27 @@
+{
+    "type": "function",
+    "function": {
+        "name": "get_weather",
+        "description": "Get weather information for a specified city",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "description": "The name of the city"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "celsius",
+                        "fahrenheit"
+                    ],
+                    "description": "The temperature unit"
+                }
+            },
+            "required": [
+                "city"
+            ]
+        }
+    }
+}
