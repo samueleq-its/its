@@ -1,0 +1,178 @@
+﻿# Piano esercizio C# - Lista casuale di atleti
+
+## Obiettivo
+
+Creare un progetto Console App in C# per generare una lista di atleti con composizione casuale.
+
+Ogni atleta deve avere:
+- cognome
+- nome
+- data di nascita
+- disciplina
+- numero di pettorina
+- sesso
+
+Inoltre il programma deve calcolare:
+- età
+- categoria di appartenenza
+
+Il progetto dovrà poi mostrare le seguenti interrogazioni:
+- elenco completo degli atleti
+- elenco degli atleti raggruppati per disciplina
+- elenco degli atleti raggruppati per categoria
+
+---
+
+## Traduzione in inglese della richiesta
+
+Create a Console App project to generate a randomly composed list of athletes.
+
+Each athlete must have:
+- last name
+- first name
+- date of birth
+- discipline
+- bib number
+- sex
+
+The program must also determine:
+- age
+- category
+
+Required queries:
+- list of all athletes
+- list of athletes grouped by discipline
+- list of athletes grouped by category
+
+---
+
+## Note di progetto
+
+Anche se la traccia è tradotta in inglese, il codice sarà scritto in italiano.
+
+Quindi si useranno:
+- nomi delle classi in italiano
+- nomi dei metodi in italiano
+- nomi delle proprietà in italiano
+- output della console in italiano
+
+---
+
+## Riferimento categorie
+
+Le categorie FIDAL da considerare sono:
+
+- Esordienti: 6-11 anni
+- Ragazzi: 12-13 anni
+- Cadetti: 14-15 anni
+- Allievi: 16-17 anni
+- Juniores: 18-19 anni
+- Promesse: 20-22 anni
+- Seniores: 23 anni e oltre
+- SM/SF35: 35-39 anni
+- SM/SF40: 40-44 anni
+- SM/SF45: 45-49 anni
+- SM/SF50: 50-54 anni
+- SM/SF55: 55-59 anni
+- SM/SF60: 60-64 anni
+- SM/SF65: 65-69 anni
+- SM/SF70: 70-74 anni
+- SM/SF75: 75-79 anni
+- SM/SF80: 80-84 anni
+- SM/SF85: 85-89 anni
+- SM/SF90: 90-94 anni
+- SM/SF95: 95-100 anni
+
+Nota: la categoria dipende sia dall’età sia dal sesso.
+
+---
+
+## Vincoli di implementazione
+
+- La classe atleta deve essere creata per prima.
+- Le proprietà richieste devono essere pubbliche.
+- Età e categoria devono essere ottenute tramite metodi.
+- Il metodo della categoria deve restituire una stringa.
+- Esempio: se l’età è 17, il risultato deve essere AM per un maschio e AF per una femmina.
+- Nel main verranno stampate le interrogazioni richieste.
+
+---
+
+## Piano riformulato
+
+### Step 1 - Creazione del modello atleta
+Definire la classe Atleta con le proprietà pubbliche necessarie:
+- Cognome
+- Nome
+- DataNascita
+- Disciplina
+- NumeroPettorina
+- Sesso
+
+Scopo di questo step:
+- preparare la struttura dei dati
+- non implementare ancora la generazione casuale
+- non implementare ancora le interrogazioni
+
+### Step 2 - Calcolo dell’età
+Aggiungere un metodo per ricavare l’età a partire dalla data di nascita.
+
+Scopo di questo step:
+- ottenere un valore calcolato e non memorizzato
+- verificare che l’età sia coerente con la data di nascita
+
+### Step 3 - Calcolo della categoria
+Aggiungere un metodo per determinare la categoria in base a:
+- età
+- sesso
+
+Scopo di questo step:
+- restituire una stringa categoria
+- gestire la differenza tra atleta maschio e atleta femmina
+- applicare le fasce di età FIDAL
+
+### Step 4 - Generazione casuale dei dati
+Creare la logica per costruire una lista casuale di atleti.
+
+I dati casuali dovranno riguardare:
+- cognome
+- nome
+- data di nascita
+- disciplina
+- numero di pettorina
+- sesso
+
+Scopo di questo step:
+- popolare la lista
+- avere un insieme di atleti realistico per i test
+
+### Step 5 - Interrogazioni richieste
+Stampare in console:
+- elenco completo degli atleti
+- elenco raggruppato per disciplina
+- elenco raggruppato per categoria
+
+Scopo di questo step:
+- verificare il risultato finale
+- presentare i dati in modo leggibile
+
+### Step 6 - Controllo finale
+Verificare:
+- correttezza della categoria
+- correttezza dell’età
+- correttezza dei raggruppamenti
+- leggibilità dell’output
+
+---
+
+## Ordine operativo
+
+Lo sviluppo seguirà questo ordine:
+1. definire la classe atleta
+2. aggiungere il calcolo dell’età
+3. aggiungere il calcolo della categoria
+4. generare gli atleti casualmente
+5. stampare le interrogazioni
+6. verificare il risultato
+
+Dopo ogni step si dovrà attendere conferma prima di procedere con il successivo.

@@ -1,0 +1,58 @@
+﻿prepare a markdown file to plan for a c# exercise, do not solve the exercise yet
+
+the exercise request is the following:
+
+---
+Creare un progetto App Console per generare una lista di atleti di composizione casuale. 
+
+Gli atleti devono avere un cognome, nome, data di nascita, disciplina, numero di pettorina e sesso. Si richiede l'età e la categoria di appartenenza. 
+
+Esempi di categoria: SM45 atleti maschi con età compresa tra 45 e 49 anni, SF45 atlete femmine con età compresa tra 45 e 49 anni. Si consideri per le categorie il seguente link: https://www.fidal.it/content/Le-categorie-di-tesseramento-atleti/49913.
+
+Si richiedono le seguenti interrogazioni:
+
+- Elenco degli atleti 
+- Elenco degli atleti raggruppati per Disciplina
+- Elenco degli atleti raggruppati per Categoria
+
+---
+the categories found at the link are the following:
+
+CATEGORIA 	ETA'
+Esordienti (EM/EF) 	6-11 anni
+Ragazzi (RM/RF) 	12-13 anni
+Cadetti (CM/CF) 	14-15 anni
+Allievi (AM/AF) 	16-17 anni
+Juniores (JM/JF) 	18-19 anni
+Promesse (PM/PF) 	20-22 anni
+Seniores* (SM/SF) 	23 anni ed oltre
+SM/SF35 	35-39 anni
+SM/SF40 	40-44 anni
+SM/SF45 	45-49 anni
+SM/SF50 	50-54 anni
+SM/SF55 	55-59 anni
+SM/SF60 	60-64 anni
+SM/SF65 	65-69 anni
+SM/SF70 	70-74 anni
+SM/SF75 	75-79 anni
+SM/SF80 	80-84 anni
+SM/SF85 	85-89 anni
+SM/SF90 	90-94 anni
+SM/SF95 	95-100 anni
+
+---
+
+- translate the assignement to english
+- the code will be instead written in italian
+- refine the plan
+- after each step you will wait for confirmation before proceding with next one
+
+PLAN:
+- first the athlete class must be created with the required properties (public)
+- age and category will be methods
+- Category will return a string  
+example:
+if age is 17 returns "AM" if male and "AF" if female
+- in main print the required queries
+
+use the tool to ask for clarification if there's need
