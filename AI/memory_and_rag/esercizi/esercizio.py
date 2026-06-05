@@ -1,51 +1,90 @@
+from typing import Sequence, Collection
+
 import ollama
 import chromadb
 import pymupdf4llm
 from langchain_text_splitters import MarkdownTextSplitter
 
+
 #region CONFIG
-USE_PERSISTENT_DB = True
+DB_PATH = "./rag_vdb"
 CLEAR_DB = False
+
 MODEL = ["all-minilm:latest", "all-minilm:33m"][0]
 FILE_PDF = "./Manuale_Gestione_SIARB.pdf"
-CHUNK_SIZE = 322 # 1000 (MAX 322?)
-CHUNK_OVERLAP = 75 # 200
+
+
 N_CHUNKS = 5 # chunk da recuperare durante la query
 CHAT_MODEL = "ministral-3:3b"
 #endregion
 
 #region CREAZIONE KNOWLEDGE BASE
-if USE_PERSISTENT_DB:
-    db = chromadb.PersistentClient(path="./rag_vdb") # CREA DB PERSISTENTE
-else:
-    db = chromadb.Client() # CREA DB IN RAM
+def init_db(db_path: str, clear_db: bool = False) -> Collection:
+    db = chromadb.PersistentClient(path="./rag_vdb")  # CREA DB PERSISTENTE
+    if clear_db:
+        try:
+            db.delete_collection("collection")
+            print("DB azzerato")
+        except:
+            print("impossibile azzerare DB")
 
-if CLEAR_DB:
-    try:
-        db.delete_collection("collection")
-        print("DB azzerato")
-    except:
-        print("impossibile azzerare DB")
-
-collection = db.get_or_create_collection(
+    collection : Collection = db.get_or_create_collection(
         name="collection",
         # metadata={"description": "Prima collection di test"}
     )
-print(f"dimensione knowledge base: {collection.count()}")
+    print(f"dimensione knowledge base: {collection.count()}")
+    return collection
 
-if CLEAR_DB or not USE_PERSISTENT_DB:
+def gen_embedding(file_path: str) -> list[tuple[str, Sequence[float]]]:
+    CHUNK_SIZE = 1000  # 1000 (MAX 322?)
+    CHUNK_OVERLAP = 200  # 200
     md_text = pymupdf4llm.to_markdown(FILE_PDF)
-    splitter = MarkdownTextSplitter(chunk_size= CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
-    #splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
-    chunks = splitter.split_text(md_text)
-    print(f"Chunk creati: {len(chunks)}")
+    splitter = MarkdownTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
 
-    # GENERATE EMBEDDING
-    chunks_len = len(chunks)
-    for i, chunk in enumerate(chunks):
-            print(f"processando chunk {i+1}/{chunks_len}...")
-            embedding = ollama.embed(model=MODEL, input=chunk).embeddings[0]
-            collection.add(
+    results = list()
+
+    chunks_list = splitter.split_text(md_text)
+    embeddings_list = list()
+
+    i: int = 0
+    while i < len(chunks_list):
+        cur_chunk = chunks_list[i]
+        print(f"processando chunk {i + 1}/{len(chunks_list)}...")
+
+        # try to generate embedding
+        try:
+            embedding: Sequence[float] = ollama.embed(model=MODEL, input=cur_chunk).embeddings[0]
+
+        # if failed split chunk, try again
+        except:
+            print("embedding fallito")
+            print(f"dimensioni chunk: {len(cur_chunk)}")
+            chunk_size = len(cur_chunk) / 2
+            chunk_overlap = chunk_size / 5
+
+            chunk_splitter = MarkdownTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+            subchunk_list = chunk_splitter.split_text(cur_chunk)
+
+            chunks_list[i:i+1] = subchunk_list
+            continue
+
+        # if succeded go to next
+        embeddings_list.append(embedding)
+        results.append((cur_chunk, embedding))
+        i += 1
+    print("embedding generati")
+
+
+    return results
+
+
+collection = init_db(DB_PATH, CLEAR_DB)
+
+if collection.count() == 0:
+    chunk_embeddings = gen_embedding(FILE_PDF)
+
+    for i, (chunk, embedding) in enumerate(chunk_embeddings):
+        collection.add(
                 embeddings=[embedding],
                 documents=[chunk],
                 metadatas=[{"chunk_index": i, "source": FILE_PDF}],
@@ -53,6 +92,7 @@ if CLEAR_DB or not USE_PERSISTENT_DB:
             )
     print(f"\nKnowledge base pronta: {collection.count()} chunk indicizzati")
 #endregion
+
 
 #region QUERIES
 queries = [
