@@ -1,4 +1,6 @@
 import json
+
+from langchain_text_splitters import MarkdownTextSplitter
 from ollama import Client
 from config import *
 from utils import embed,get_memory
@@ -6,10 +8,9 @@ from utils import embed,get_memory
 SYSTEM_PROMPT = \
     """
     ## ISTRUZIONI:
-    Sei un assistente esperto. Rispondi alla domanda basandoti ESCLUSIVAMENTE sul contesto fornito e sullo storico della chat.
-    Se la risposta non è nel contesto, rispondi: "Non ho informazioni sufficienti nel documento o nello storico della chat."
-    utilizza gli strumenti forniti per recuperare informazioni o leggere lo storico della chat
-    puoi utilizzare più strumenti contemporaneamente o in passi successivi
+    - utilizza gli strumenti forniti per recuperare informazioni o cercare messaggi precedenti 
+    - rispondi unicamente in base alle informazioni disponibili tramite gli strumenti o nello storico della chat, indica chiaramente quando non hai informazioni sufficienti per rispondere
+    - puoi utilizzare più strumenti contemporaneamente o in passi successivi
     
     """
 
@@ -82,9 +83,33 @@ class Agent:
 
         return "Query troppo complessa - raggiunto limite iterazioni. Prova a semplificare la richiesta."
 
+    def _genera_riassunto(self, message: str) -> str:
+        system_prompt = \
+f'''
+riassumi il seguente testo in massimo 300 caratteri, mantenendo dati forniti dall'utente e informazioni chiave
+'''
+        response = self._client.chat(
+            model=CHAT_MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user",
+                    "content": message
+                }
+            ],
+            options={"num_predict":250}
+        )
+        print(f"riassunto generato: \n {response.message.content}")
+        return response.message.content
+
     def _save_memory(self, user_message: str, response: str):
         documento = f"Utente: {user_message}\nAssistente: {response}"
-        embedding = embed(documento)
+
+        riassunto = self._genera_riassunto(documento)
+        embedding = embed(riassunto)
 
         memoria_chat = get_memory()
         memoria_chat.add(
@@ -94,14 +119,35 @@ class Agent:
             ids=[f"turno_{self._rounds}"]
         )
 
+    def _update_history(self, user_message: str, response: str, max_lenght: int):
+        print("DEBUG: updating history...")
+        self.history.append({"role": "user", "content": user_message})
+        self.history.append({"role": "assistant", "content": response})
+        print(self.history)
 
+        if len(self.history) > max_lenght * 2:
+            print("DEBUG: culling history...")
+            self.history.pop(0)
+            self.history.pop(0)
+
+    def _append_history(self):
+        history_text = ""
+        for entry in self.history:
+            history_text += f"{entry['role']} {entry['content']}"
 
     def chat(self, user_message: str):
-        messages = [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user_message}]
+        # SI ROMPE DIZIONARIO
+        system_prompt = SYSTEM_PROMPT + f"""
+        ## MESSAGGI PRECEDENTI:
+        {self._append_history()} 
+        """
+        print(system_prompt)
+        messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_message}]
 
         response = self._chat_tools(messages)
 
         self._save_memory(user_message, response)
-
+        self._update_history(user_message, response, max_lenght=3)
 
         self._rounds += 1
+        return response

@@ -23,7 +23,7 @@ def get_memory():
     return get_collection(init_db(DB_PATH), CHAT_MEMORY_NAME)
 
 def embed(documento: str) -> Sequence[float]:
-    return ollama.embed(model=EMBEDDING_MODEL, input=documento).embeddings[0]
+    return ollama.embed(model=EMBEDDING_MODEL, input=documento, options={"num_ctx ": 8192}).embeddings[0]
 
 def gen_embedding(file_path: str) -> list[tuple[str, Sequence[float]]]:
     CHUNK_SIZE = 1000  # 1000 (MAX 322?)
