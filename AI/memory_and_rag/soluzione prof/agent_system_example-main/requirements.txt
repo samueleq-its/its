@@ -1,0 +1,6 @@
+pymupdf4llm
+chromadb
+ollama
+gradio
+mcp[cli]
+pydantic

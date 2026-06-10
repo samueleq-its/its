@@ -1,8 +1,9 @@
-from typing import Sequence, Collection
+from typing import Sequence
 
 import ollama
 import chromadb
 import pymupdf4llm
+from chromadb.api.models.Collection import Collection
 from langchain_text_splitters import MarkdownTextSplitter
 
 

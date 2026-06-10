@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# Dati generati a runtime
+vdb/*
+!vdb/.gitkeep
+mem/WARNING.md
+mem/MEMORY.md
+
+# Editor
+.vscode/
+.idea/
+*.swp
