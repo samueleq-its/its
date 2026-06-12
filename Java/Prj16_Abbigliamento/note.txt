@@ -1,0 +1,17 @@
+come aggiungere pacchetti:
+RMB su cartella progettp > Spring > Add Starters
+	flag su pom
+
+Database H2
+
+CONSOLE:
+http://localhost:9002/h2-console/login.jsp?jsessionid=3ca8c54792ce6bcc28db143543c5c315
+JDBC URL: ./data/dbdemo (quello che c'è in application.properties)
+
+dati caricati da console:
+https://raw.githubusercontent.com/maboglia/DataBase/refs/heads/main/09_data/prodotti.sql
+
+creare "eseguibile"
+run as > maven build > goal: package
+
+produce jar in cartella_progetto\target

@@ -6,12 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.querio.model.Maglia;
+import com.querio.model.Prodotto;
+import com.querio.repos.ProdottoRepo;
 
 @Service
 public class TShirtServiceImp implements TShirtService {
 
 	@Autowired
-	List<Maglia> magliette;
+	private ProdottoRepo repo;
+	
+//	@Autowired
+//	private List<Maglia> magliette;
 
 	@Override
 	public List<Maglia> getmagliette() {
@@ -38,6 +43,40 @@ public class TShirtServiceImp implements TShirtService {
 	public Maglia addMaglietta(String maglietta) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Prodotto> getProdotti() {
+		return repo.findAll();
+	}
+
+	@Override
+	public Prodotto addProdotto(Prodotto p) {
+		// TODO Auto-generated method stub
+		return repo.save(p);
+	}
+
+	@Override
+	public Prodotto updateProdotto(Prodotto p) {
+		// TODO Auto-generated method stub
+		return repo.save(p);
+	}
+
+	@Override
+	public Prodotto getProdottoById(int id) {
+		// TODO Auto-generated method stub
+		return repo.findById(id).orElse(null);
+	}
+
+	@Override
+	public void DeleteProdottoById(int id) {
+		repo.deleteById(id);
+		
+	}
+
+	@Override
+	public List<Prodotto> getProdottiByCategoria(String categoria) {
+		return repo.findByCategoria(categoria);
 	}
 
 }
