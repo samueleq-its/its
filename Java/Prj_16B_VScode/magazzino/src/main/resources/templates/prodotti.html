@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prodotti</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Prodotti</h1>
+
+
+		<form id="salva-form">
+			<fieldset>
+				<input type="number" id="prodotto-id" name="id" placeholder="id / lasciare vuoto per nuovo prodotto">
+				<input type="text" id="prodotto-nome" name="nome" placeholder="nome">
+				<select name="categoria" id="categoria-select">
+					<option value="">seleziona categoria</option>
+				</select>
+				<input type="number" id="prodotto-prezzo" name="prezzo" placeholder="prezzo">
+				<input type="number" id="prodotto-giacenza" name="giacenza" placeholder="giacenza">
+
+				<button id="salva-btn">crea / aggiorna</button>
+			</fieldset>
+		</form>
+
+
+		<select name="categoria" id="filtro-categoria">
+			<option value="tutti">tutte le categorie</option>
+		</select>
+		<table>
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Nome</td>
+					<td>Categoria</td>
+					<td>Prezzo</td>
+					<td>Giacenza</td>
+				</tr>
+			</thead>
+			<tbody id="elenco-prodotti">
+
+			</tbody>
+		</table>
+
+
+	</div>
+
+
+
+	<script>
+		const API_URL = "/api/prodotti";
+		const filtroCategoria = document.getElementById("filtro-categoria");
+
+		function getSelectedCategoria() {
+			return filtroCategoria.value;
+		}
+
+		async function deleteById(id) {
+			let response = await fetch(API_URL + "/delete/" + id, { method: "DELETE" });
+			console.log(await response.text());
+		}
+
+		async function fetchProdotti() {
+			let data = await fetch(API_URL);
+			return data.json();
+		}
+
+		async function fetchProdottiByCategoria(categoria) {
+			let data = await fetch(API_URL + "/categoria/" + categoria);
+			return data.json();
+		}
+
+		async function fetchProdottoById(id) {
+			let data = await fetch(API_URL + "/" + id);
+			try {
+				return await data.json();
+			} catch {
+				alert(`Nessun prodotto trovato con id ${id}`)
+				return null;
+			}
+		}
+
+		async function fetchCategorie() {
+			let data = await fetch(API_URL + "/categorie");
+			return data.json();
+		}
+
+		async function updateListaProdotti(categoria) {
+			let prodotti;
+			if (categoria === "tutti") {
+				prodotti = fetchProdotti();
+			} else {
+				prodotti = fetchProdottiByCategoria(categoria);
+			}
+			displayProdotti(await prodotti);
+		}
+
+		async function salvaProdotto(prodotto) {
+
+			await fetch(API_URL + "/new", {
+				method: "POST",
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(prodotto)
+			})
+		}
+
+		async function modificaProdotto(prodotto) {
+			await fetch(API_URL + "/update", {
+				method: "PUT",
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(prodotto)
+			})
+		}
+
+		async function handleForm() {
+			let form = document.getElementById("salva-form");
+			let formdata = new FormData(form);
+
+			let prodotto = {};
+			formdata.forEach((v, k) => {
+				if (!v) { return; }
+				prodotto[k] = v;
+			});
+
+			console.log(prodotto);
+
+			if (!prodotto.nome || !prodotto.categoria) {
+				alert("form incompleto")
+				return;
+			}
+
+			if (!prodotto.id) {
+				await salvaProdotto(prodotto);
+			} else {
+				await modificaProdotto(prodotto);
+			}
+			updateListaProdotti(getSelectedCategoria());
+		}
+
+		function displayProdotti(prodotti) {
+			let elencoProdotti = document.getElementById("elenco-prodotti");
+			elencoProdotti.innerHTML = "";
+			for (const prodotto of prodotti) {
+				let tr = document.createElement("tr");
+
+				let tdid = document.createElement("td");
+				let tdnome = document.createElement("td");
+				let tdcategoria = document.createElement("td");
+				let tdprezzo = document.createElement("td");
+				let tdgiacenza = document.createElement("td");
+
+				tdid.innerText = prodotto.id;
+				tdnome.innerText = prodotto.nome;
+				tdcategoria.innerText = prodotto.categoria;
+				tdprezzo.innerText = prodotto.prezzo;
+				tdgiacenza.innerText = prodotto.giacenza;
+
+				let delbutton = document.createElement("button");
+				delbutton.innerText = "X";
+				delbutton.id = prodotto.id;
+
+				delbutton.onclick = async (e) => {
+					await deleteById(prodotto.id);
+					updateListaProdotti(getSelectedCategoria());
+				}
+
+				tr.append(tdid, tdnome, tdcategoria, tdprezzo, tdgiacenza);
+				tr.append(delbutton);
+
+				elencoProdotti.append(tr);
+
+			}
+		}
+
+		function displayCategorie(categorie) {
+			let categorieFiltro = document.getElementById("filtro-categoria");
+			let categorieForm = document.getElementById("categoria-select");
+
+			for (const categoria of categorie) {
+				let optfiltro = document.createElement("option");
+				optfiltro.textContent = categoria;
+				optfiltro.value = categoria;
+				categorieFiltro.append(optfiltro);
+
+				let optform = document.createElement("option");
+				optform.textContent = categoria;
+				optform.value = categoria;
+				categorieForm.append(optform);
+			}
+		}
+
+		function updateFormValues(prodotto) {
+			document.getElementById("prodotto-nome").value = prodotto.nome;
+			document.getElementById("categoria-select").value = prodotto.categoria;
+			document.getElementById("prodotto-prezzo").value = prodotto.prezzo;
+			document.getElementById("prodotto-giacenza").value = prodotto.giacenza;
+		}
+
+		async function main() {
+			let prodotti = fetchProdotti();
+			let categorie = fetchCategorie();
+
+			displayProdotti(await prodotti);
+			displayCategorie(await categorie);
+
+			// aggiornamento elenco al cambio di categoria
+			document.getElementById("filtro-categoria").onchange = (e) => {
+				updateListaProdotti(getSelectedCategoria());
+			}
+
+			// precompilazione form per update
+			document.getElementById("prodotto-id").onchange = async (e) => {
+				let prodotto = await fetchProdottoById(e.target.value);
+				updateFormValues(prodotto);
+			}
+
+			// gestione form
+			document.getElementById("salva-btn").onclick = (e) => {
+				e.preventDefault();
+				handleForm();
+			}
+		}
+
+		main()
+
+		//TODO: alerts
+
+	</script>
+
+</body>
+
+</html>
