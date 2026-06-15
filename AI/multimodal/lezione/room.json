@@ -1,120 +1,72 @@
 {
     "furnitures": [
         {
-            "type": "sofa",
-            "description": "Grey fabric with a textured pattern and a wooden or metal frame. Positioned against a wall, near the entrance.",
-            "quantity": 1,
-            "position": "left side of the room, near the entrance"
-        },
-        {
-            "type": "armchair",
-            "description": "A grey, cushioned armchair with a fabric covering and a minimalist design, placed near the sofa.",
-            "quantity": 1,
-            "position": "directly beside the sofa"
-        },
-        {
-            "type": "dining table",
-            "description": "Round wooden dining table with a simple, light wood finish.",
-            "quantity": 1,
-            "position": "center of the room, towards the right side"
-        },
-        {
-            "type": "chairs",
-            "description": "Four chairs with a mix of upholstered fabric and wooden legs. Two are upholstered in a light green and navy blue, the other two are darker blue and light wood.",
-            "quantity": 4,
-            "position": "around the dining table"
-        },
-        {
-            "type": "side table",
-            "description": "Small black metal side table with a round top, placed near the sofa.",
-            "quantity": 1,
-            "position": "in front of the sofa"
-        },
-        {
-            "type": "small ottoman",
-            "description": "Small wicker or woven ottoman with a yellow hue, placed near the sofa and armchair.",
-            "quantity": 1,
-            "position": "in front of the sofa"
-        },
-        {
-            "type": "TV stand",
-            "description": "Light wooden TV stand with an open shelving design, holding a flat-screen TV.",
-            "quantity": 1,
-            "position": "left side of the room, near the TV"
-        },
-        {
-            "type": "dresser/console",
-            "description": "Wooden console or dresser with a light finish, holding decorative items and some books. It has a few drawers and a small shelf.",
-            "quantity": 1,
-            "position": "right side of the room, near the dining table"
-        },
-        {
-            "type": "wall-mounted mirror",
-            "description": "Large round mirror with a wooden frame, placed above the sofa.",
-            "quantity": 1,
-            "position": "left wall, above the sofa"
-        },
-        {
-            "type": "floor lamp",
-            "description": "Hanging light fixture with multiple glass spheres, suspended from the ceiling.",
-            "quantity": 1,
-            "position": "over the dining table"
-        },
-        {
-            "type": "rug",
-            "description": "Large, neutral-toned rug with a woven pattern, placed under the sofa and armchair area.",
-            "quantity": 1,
-            "position": "under the seating area"
-        },
-        {
-            "type": "plant",
-            "description": "A few potted plants of varying sizes, placed on shelves, the floor, and near windows.",
+            "type": "Seating",
+            "description": "The room features a mix of seating options including a grey armchair with a fabric pattern that says 'DIESEL' on it, placed near a window. Nearby, there is a grey sofa with a yellow throw pillow. Additional seating includes a few modern chairs with a mix of wooden and fabric upholstery, one of which is a black seat with wooden legs and another with a blue seat.",
             "quantity": 3,
-            "position": "shelves, windowsill, and around the room"
+            "position": "Left side near window, center, and right side near the dining area"
         },
         {
-            "type": "wall art",
-            "description": "Abstract or geometric wall art piece featuring earthy tones and geometric shapes, mounted on the wall near the dining table.",
+            "type": "Dining",
+            "description": "A wooden round dining table with four chairs around it, each having a mix of fabric and wooden finishes. Under the table, there are small stools.",
             "quantity": 1,
-            "position": "right wall, above the dining table"
+            "position": "Center-right of the room"
         },
         {
-            "type": "door",
-            "description": "The room opens to another space via a sliding or regular door with a light-colored door frame.",
-            "quantity": 1,
-            "position": "center of the background wall, connecting to another room"
+            "type": "Storage",
+            "description": "The space includes several pieces of storage: a tall wooden cabinet next to the sofa, a small black metal stool, and a coffee table with a woven texture. There is also a wall-mounted shelf or cabinet with a modern design above the sofa, and a side table with books.",
+            "quantity": 5,
+            "position": "Near the sofa, to the left of the dining table, on the walls, and along the room's perimeter"
+        },
+        {
+            "type": "Lighting",
+            "description": "The room has modern pendant lights hanging from the ceiling, which appear to be spherical in design. There is also a wall-mounted lamp and a large mirror.",
+            "quantity": 3,
+            "position": "Over the dining table, near the sofa, and on the wall"
+        },
+        {
+            "type": "Decor",
+            "description": "The decor includes a variety of elements: a large abstract geometric painting on the wall, various small plants and hanging planters, a round yellow woven rug, a round mirror on the wall, and a mix of natural and earthy tones with pops of color like the yellow throw pillow and blue chair.",
+            "quantity": 8,
+            "position": "Wall, floor, and around the seating areas"
+        },
+        {
+            "type": "Flooring",
+            "description": "The flooring consists of light-colored, possibly wood or laminate, with a woven yellow rug near the sofa and a smaller woven rug under the dining table.",
+            "quantity": 2,
+            "position": "Throughout the room"
+        },
+        {
+            "type": "Electronics",
+            "description": "A flat-screen TV mounted on the wall near the sofa, and a small TV stand with books and decorative items.",
+            "quantity": 2,
+            "position": "Left side near the sofa and on the side table"
+        },
+        {
+            "type": "Decorative Items",
+            "description": "Small decorative items like candle holders, small decorative plates, and a variety of knick-knacks on the wall-mounted cabinet and shelves. There are also some wall hooks with hanging items.",
+            "quantity": 7,
+            "position": "Around the room, particularly on the cabinets and shelves"
         }
     ],
     "decorations": [
         {
-            "type": "wallpaper or paint",
-            "description": "The walls are painted in a soft, muted teal or light blue shade, giving a calm and contemporary feel.",
-            "quantity": 4,
-            "position": "entire walls of the room"
-        },
-        {
-            "type": "lighting",
-            "description": "Natural light from large windows and the hanging spherical pendant light over the dining area.",
-            "quantity": 2,
-            "position": "windows and hanging fixture"
-        },
-        {
-            "type": "cushions",
-            "description": "Various cushions on the sofa and chairs, featuring neutral tones and vibrant accents like yellow and blue.",
-            "quantity": 4,
-            "position": "on the sofa and chairs"
-        },
-        {
-            "type": "decorative items",
-            "description": "Small decorative items like candles, vases, and framed pictures on the console table and shelves.",
-            "quantity": 5,
-            "position": "on the console table and shelves"
-        },
-        {
-            "type": "hanging decor",
-            "description": "Decorative items hanging from the ceiling or walls, like the spherical pendant light.",
+            "type": "Wall Art",
+            "description": "Large abstract geometric painting on the wall, featuring shades of blue, beige, and black.",
             "quantity": 1,
-            "position": "over the dining table"
+            "position": "Right side of the room, above the dining table"
+        },
+        {
+            "type": "Plants",
+            "description": "Several potted plants, including hanging and floor-standing types, providing greenery and a natural aesthetic.",
+            "quantity": 4,
+            "position": "Around the room, near the ceiling and on shelves"
+        },
+        {
+            "type": "Rugs",
+            "description": "Two rugs: one large yellow woven rug near the sofa and a smaller one under the dining table.",
+            "quantity": 2,
+            "position": "Near the seating area and under the dining table"
         }
     ]
 }
