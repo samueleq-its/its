@@ -1,10 +1,7 @@
 from config import *
+from utils import inizializzazioneDB
 from repo import Repo
 from agent import MultimodalAgent as Agent
-from utils import embed
-
-RESET = False
-
 
 img_list = [
     CURRENT_DIR / "images" / "cane.jpg",
@@ -17,26 +14,38 @@ agent = Agent()
 
 # inizializzazione DB
 
-if RESET:
+usr_in = input("Reset DB? [y/N]")
+match (usr_in.lower()):
+    case "y":
+        reset = True
+    case "n":
+        reset = False
+    case _:
+        reset = False
+
+print(f"DB size: {repo.size()}")
+
+if reset:
     repo.reset_collection()
 
-# image -> description
-descriptions = []
-embeddings = []
-for image in img_list:
-    response = agent.describe(image_path=image)
+if repo.size() != 0:
+    print("DB già inizializzato")
+else:
+    print("inizializzazione DB")
+    # image -> description
+    inizializzazioneDB(
+            img_list=img_list,
+            agent=agent,
+            repo=repo
+            )
 
-    print(f"\n\n{response}\n\n")
-
-    descriptions.append(response)
-    embeddings.append(embed(response))
-
-# embedding description
-
+# in input riceve una descrizione o un immagine
+# descrive l'immagine (se presente)
+# restituisce un immagine simile
+# aggiunge l'immagine al DB
 
 
 # interrogazione DB
 # image -> description
 # ricerca per embedding
-#aggiunta immagine a db?
-
+# aggiunta immagine a db?

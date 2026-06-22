@@ -21,11 +21,14 @@ class Repo:
             print("impossibile azzerare DB")
         self.collection = self.db.get_or_create_collection(name=COLLECTION_NAME)
 
-    def insert(self, embeddings : Sequence[float],
-               description: str, img_path: str,
+    def insert(self,
+               embeddings : Sequence[float],
+               description: str,
+               img_path: str,
                metadata: dict = {}):
 
         doc_id = str(uuid.uuid4())
+        metadata["image_uri"] = img_path
 
         self.collection.add(
             embeddings=[embeddings],
@@ -41,3 +44,6 @@ class Repo:
             include=['metadatas', 'documents', 'distances']
         )
         return results
+
+    def size(self) -> int:
+        return self.collection.count()
