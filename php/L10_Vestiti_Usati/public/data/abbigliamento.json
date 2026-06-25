@@ -1,0 +1,182 @@
+[
+	{
+	  "nome": "T-shirt Uomo Cotone",
+	  "categoria": "Uomo",
+	  "prezzo": 19.99,
+	  "giacenza": 50
+	},
+	{
+	  "nome": "Giacca Uomo Invernale",
+	  "categoria": "Uomo",
+	  "prezzo": 79.99,
+	  "giacenza": 30
+	},
+	{
+	  "nome": "Pantaloni Uomo Slim",
+	  "categoria": "Uomo",
+	  "prezzo": 39.99,
+	  "giacenza": 40
+	},
+	{
+	  "nome": "Maglione Donna Cashmere",
+	  "categoria": "Donna",
+	  "prezzo": 99.99,
+	  "giacenza": 20
+	},
+	{
+	  "nome": "Gonna Donna Estate",
+	  "categoria": "Donna",
+	  "prezzo": 34.99,
+	  "giacenza": 25
+	},
+	{
+	  "nome": "Stivali Donna Invernali",
+	  "categoria": "Donna",
+	  "prezzo": 59.99,
+	  "giacenza": 15
+	},
+	{
+	  "nome": "Camicia Bambino Cotone",
+	  "categoria": "Bambino",
+	  "prezzo": 14.99,
+	  "giacenza": 100
+	},
+	{
+	  "nome": "Pantaloncini Bambino",
+	  "categoria": "Bambino",
+	  "prezzo": 12.99,
+	  "giacenza": 80
+	},
+	{
+	  "nome": "Felpa Bambino",
+	  "categoria": "Bambino",
+	  "prezzo": 19.99,
+	  "giacenza": 60
+	},
+	{
+	  "nome": "Giacca Bambino Antivento",
+	  "categoria": "Bambino",
+	  "prezzo": 49.99,
+	  "giacenza": 40
+	},
+	{
+	  "nome": "Polo Uomo Estiva",
+	  "categoria": "Uomo",
+	  "prezzo": 29.99,
+	  "giacenza": 45
+	},
+	{
+	  "nome": "Jeans Uomo Relaxed",
+	  "categoria": "Uomo",
+	  "prezzo": 49.99,
+	  "giacenza": 35
+	},
+	{
+	  "nome": "Camicia Uomo Flanella",
+	  "categoria": "Uomo",
+	  "prezzo": 34.99,
+	  "giacenza": 55
+	},
+	{
+	  "nome": "Giubbotto Uomo Pelle",
+	  "categoria": "Uomo",
+	  "prezzo": 120.0,
+	  "giacenza": 20
+	},
+	{
+	  "nome": "Cappotto Uomo Lungo",
+	  "categoria": "Uomo",
+	  "prezzo": 89.99,
+	  "giacenza": 25
+	},
+	{
+	  "nome": "Shorts Uomo Sportivi",
+	  "categoria": "Uomo",
+	  "prezzo": 24.99,
+	  "giacenza": 60
+	},
+	{
+	  "nome": "T-shirt Donna Manica Lunga",
+	  "categoria": "Donna",
+	  "prezzo": 22.99,
+	  "giacenza": 40
+	},
+	{
+	  "nome": "Pantalone Donna Elegante",
+	  "categoria": "Donna",
+	  "prezzo": 59.99,
+	  "giacenza": 30
+	},
+	{
+	  "nome": "Blusa Donna Seta",
+	  "categoria": "Donna",
+	  "prezzo": 89.99,
+	  "giacenza": 15
+	},
+	{
+	  "nome": "Abito Donna Cerimonia",
+	  "categoria": "Donna",
+	  "prezzo": 150.0,
+	  "giacenza": 10
+	},
+	{
+	  "nome": "Cappello Donna Estate",
+	  "categoria": "Donna",
+	  "prezzo": 19.99,
+	  "giacenza": 50
+	},
+	{
+	  "nome": "Sandali Donna Estate",
+	  "categoria": "Donna",
+	  "prezzo": 39.99,
+	  "giacenza": 45
+	},
+	{
+	  "nome": "Giacca Bomber Donna",
+	  "categoria": "Donna",
+	  "prezzo": 65.0,
+	  "giacenza": 25
+	},
+	{
+	  "nome": "T-shirt Bambino Cartoon",
+	  "categoria": "Bambino",
+	  "prezzo": 9.99,
+	  "giacenza": 70
+	},
+	{
+	  "nome": "Felpa Bambino Cappuccio",
+	  "categoria": "Bambino",
+	  "prezzo": 21.99,
+	  "giacenza": 80
+	},
+	{
+	  "nome": "Pantaloni Bambino Tuta",
+	  "categoria": "Bambino",
+	  "prezzo": 17.99,
+	  "giacenza": 65
+	},
+	{
+	  "nome": "Giubbino Bambino Impermeabile",
+	  "categoria": "Bambino",
+	  "prezzo": 49.99,
+	  "giacenza": 30
+	},
+	{
+	  "nome": "Cappellino Bambino",
+	  "categoria": "Bambino",
+	  "prezzo": 12.99,
+	  "giacenza": 90
+	},
+	{
+	  "nome": "Giacca Bambino Jeans",
+	  "categoria": "Bambino",
+	  "prezzo": 34.99,
+	  "giacenza": 50
+	},
+	{
+	  "nome": "T-shirt Uomo Grafica",
+	  "categoria": "Uomo",
+	  "prezzo": 18.99,
+	  "giacenza": 40
+	}
+  ]
