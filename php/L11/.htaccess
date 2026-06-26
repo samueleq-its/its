@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /PHP/L11/
+
+# Let existing files and folders work normally
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route /api, /api/resource, /api/resource/id to /api/index.html
+RewriteRule ^api(?:/.*)?$ api/index.php [L]
