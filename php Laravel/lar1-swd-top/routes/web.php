@@ -10,6 +10,5 @@ Route::get('/', function () {
 
 // Route::get('/swd/{nome}', [HomeController::class, 'index']);
 
-Route::get('/categorie/{categoria}', [ProductController::class, 'categorie' ])->name('categorie');
+Route::get('/categorie/{categoria}', [ProductController::class, 'categorie'])->name('categorie');
 Route::resource('/products', ProductController::class);
-
