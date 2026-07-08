@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<title>Home</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="info"></div>
+
+		<form action="" class="prenotazione">
+			<input type="text" id="nome-prenotazione" name="nome-prenotazione" value="" placeholder="nome prenotazione">
+			<input type="number" id="posti" name="posti" value="" placeholder="posti">
+		</form>
+
+	</div>
+
+	<script>
+		const API = "/api";
+
+		async function getFilm(params) {
+			let resp = await fetch(API + "/films/" + params.id);
+			return await resp.json();
+		}
+
+		async function prenota(id, nomePrenotazione, posti) {
+			jsonPrenotazione = {
+				"idFilmInSala": id,
+				"nome": nomePrenotazione,
+				"postiPrenotati": posti
+			};
+
+			const response = await fetch(API + "/prenotazioni", {
+				method: "POST",
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(jsonPrenotazione)
+			});
+
+			if (response.ok) {
+				alert("Prenotazione effettuata con successo!");
+			} else {
+				alert("Errore nella prenotazione.");
+			}
+			window.location.reload()
+
+		}
+
+		async function main() {
+			let film = await getFilm({ id: new URLSearchParams(window.location.search).get("id") });
+			console.log(film);
+
+			const filmInfo = document.querySelector(".info");
+			filmInfo.innerHTML = `
+				<h3>${film.titolo}</h3>
+				<p>${film.genere}</p>
+				<p>${film.regista}</p>
+				`;
+
+			const container = document.querySelector(".container");
+			for (const filmInSala of film.filmInSala) {
+				const card = document.createElement("article");
+				card.classList.add("card");
+				// console.log(filmInSala);
+				//Object { data: "2026-07-05T21:30:00", id: 2, postiRimanenti: 160, prezzo: 10 }
+				card.innerHTML = `
+				<h4>Proiezione: ${filmInSala.data}</h4>
+				<p>Posti rimanenti: ${filmInSala.postiRimanenti}</p>
+				<p>Prezzo: ${filmInSala.prezzo}</p>
+				`;
+
+				const btnPrenota = document.createElement("button");
+				btnPrenota.id = filmInSala.id;
+				btnPrenota.textContent = "Prenota";
+				btnPrenota.onclick = (e) => {
+					let id = e.target.id;
+					let nomePrenotazione = document.getElementById("nome-prenotazione").value;
+					let posti = document.getElementById("posti").value;
+
+					prenota(id, nomePrenotazione, posti);
+				};
+				card.appendChild(btnPrenota);
+
+				container.appendChild(card);
+			}
+
+		}
+
+		main();
+
+	</script>
+</body>
+
+</html>

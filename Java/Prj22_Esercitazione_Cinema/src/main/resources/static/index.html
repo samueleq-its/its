@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<title>Home</title>
+</head>
+
+<body>
+	<div class="container">
+
+	</div>
+
+
+	<script>
+		const API = "/api";
+
+		async function getFilms(params) {
+			let resp = await fetch(API + "/films");
+			return await resp.json();
+		}
+
+		async function main() {
+			let films = await getFilms();
+			console.log(films);
+
+			const container = document.querySelector(".container");
+			for (const film of films) {
+				const card = document.createElement("article");
+				card.classList.add("card");
+				card.innerHTML = `
+				<h3>${film.titolo}</h3>
+				<a href="/film.html?id=${film.id}" class="button">Dettagli</a>
+				`;
+				container.appendChild(card);
+			}
+		}
+
+		main();
+
+	</script>
+</body>
+
+</html>
