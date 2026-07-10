@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<title th:text="${title}">Document</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 th:text="${title}"></h1>
+
+		<div class="group">
+			<form action="" method="GET" role="group">
+				<select name="type">
+					<option value=""></option>
+					<option th:each="type : ${types}" th:value="${type}" th:text="${type}" th:selected="${selectedType == type}">
+					</option>
+				</select>
+				<input type="submit" value="Filtra">
+			</form>
+			<a href="?type=" role="button">Tutti</a>
+		</div>
+
+		<table>
+			<thead>
+				<th>Nome</th>
+				<th>Tipo 1</th>
+				<th>Tipo 2</th>
+			</thead>
+			<tbody>
+				<tr th:each="entry : ${pokemonMap}">
+					<td>
+						<a th:href="@{/{id}(id=${entry.key})}" th:text="${entry.value.name}"></a>
+					</td>
+					<td th:text="${entry.value.type1}">tipo1</td>
+					<td th:text="${entry.value.type2}">tipo2</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</body>
+
+</html>

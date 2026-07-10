@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<title th:text="${title}">Dettaglio Pokémon</title>
+</head>
+
+<body>
+	<main class="container">
+		<h1 th:text="${title}">Dettaglio Pokémon</h1>
+
+		<img th:src="${img}">
+
+		<table>
+			<tbody>
+				<tr>
+					<th>ID</th>
+					<td th:text="${pokemon.id}"></td>
+				</tr>
+
+				<tr>
+					<th>Nome</th>
+					<td th:text="${pokemon.name}"></td>
+				</tr>
+
+				<tr>
+					<th>Tipo principale</th>
+					<td th:text="${pokemon.type1}"></td>
+				</tr>
+
+				<tr>
+					<th>Tipo secondario</th>
+					<td th:text="${pokemon.type2 != null and !pokemon.type2.isEmpty() ? pokemon.type2 : '-'}"></td>
+				</tr>
+
+				<tr>
+					<th>Punteggio totale</th>
+					<td th:text="${pokemon.total}"></td>
+				</tr>
+
+				<tr>
+					<th>Punti Salute (HP)</th>
+					<td th:text="${pokemon.hp}"></td>
+				</tr>
+
+				<tr>
+					<th>Attacco</th>
+					<td th:text="${pokemon.attack}"></td>
+				</tr>
+
+				<tr>
+					<th>Difesa</th>
+					<td th:text="${pokemon.defense}"></td>
+				</tr>
+
+				<tr>
+					<th>Attacco Speciale</th>
+					<td th:text="${pokemon.spAtk}"></td>
+				</tr>
+
+				<tr>
+					<th>Difesa Speciale</th>
+					<td th:text="${pokemon.spDef}"></td>
+				</tr>
+
+				<tr>
+					<th>Velocità</th>
+					<td th:text="${pokemon.speed}"></td>
+				</tr>
+
+				<tr>
+					<th>Generazione</th>
+					<td th:text="${pokemon.generation}"></td>
+				</tr>
+
+				<tr>
+					<th>Leggendario</th>
+					<td th:text="${pokemon.legendary == 'True' ? 'Sì' : 'No'}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<a th:href="@{/}" role="button">Torna alla lista</a>
+	</main>
+</body>
+
+</html>
