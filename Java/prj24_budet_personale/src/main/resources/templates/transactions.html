@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments :: head}"></head>
+
+<body>
+	<div class="container">
+
+		<div th:replace="~{fragments :: navbar}"></div>
+
+		<h1 th:text="${title}"></h1>
+
+		<table>
+			<thead>
+				<th>Data</th>
+				<th>Descrizione</th>
+				<th>Categoria</th>
+				<th>Tipo</th>
+				<th>Importo</th>
+				<th>scontrino</th>
+				<th>azioni</th>
+			</thead>
+			<tbody>
+				<tr th:each=" transaction : ${transactions}">
+					<td th:text="${transaction.date}"></td>
+					<td th:text="${transaction.description}"></td>
+					<td th:text="${transaction.category}"></td>
+					<td th:text="${transaction.type}"></td>
+					<td th:text="${transaction.amount}"></td>
+					<td th:text="${transaction.receipt}"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+
+</html>
