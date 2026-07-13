@@ -1,0 +1,17 @@
+{
+    "name": "samuele.querio/l12_esercitazione_quiz_paesi",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samuele-VM",
+            "email": "samuele.querio@edu-its.it"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,38 @@
+SESSIONE
+	punteggio (numero risposte corrette * difficolta?)
+	numero domande risposte
+	difficolta
+
+
+GET
+fetch all paesi[]
+rand paese corretto
+rand paesi errati (1-3)
+
+	A FRONTEND
+	paese
+	risposte[] (corretta + errate in ordine casuale)
+
+frontend mostra quiz
+
+POST
+	DA FRONTEND
+	paese
+	risposta
+
+fetch paese
+if risposta = paese[oggetto del quiz]
+	punti ++
+
+
+
+
+
+classe Quiz (paesi[], difficolta)
+
+	genera domanda()
+		rng corretta
+		rng errate[difficolta]
+
+	extra:
+	non deve fare 2 volte la stessa domanda, può restituire null se le domande sono esaurite
