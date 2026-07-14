@@ -10,9 +10,9 @@
 
 <body>
 
-	@include('layouts.menu')
 
 	<div class="container">
+		@include('layouts.menu')
 		@yield("content")
 	</div>
 </body>
