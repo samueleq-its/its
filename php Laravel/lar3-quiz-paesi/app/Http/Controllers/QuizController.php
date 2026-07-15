@@ -52,14 +52,14 @@ class QuizController extends Controller
 
         $countries = Country::all()->toArray();
 
-        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, 4, 'name', function ($country) {
-            return $country['capital'];
-        });
-
         $sessionData = [];
         $sessionData['games'] = session()->get('games');
         $sessionData['score'] = session()->get('score');
         $sessionData['difficulty'] = session()->get('difficulty');
+
+        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, $sessionData['difficulty'], 'name', function ($country) {
+            return $country['capital'];
+        });
 
         return view('quiz.quiz', compact('title', 'subject', 'answers', 'sessionData'));
     }
@@ -94,7 +94,7 @@ class QuizController extends Controller
         $messageColor = $answerIsCorrect ? 'green' : 'red';
 
         // preparazione quiz
-        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, 4, 'name', function ($country) {
+        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, $sessionData['difficulty'], 'name', function ($country) {
             return $country['capital'];
         });
 
@@ -118,14 +118,14 @@ class QuizController extends Controller
 
         $countries = Country::all()->toArray();
 
-        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, 4, 'name', function ($country) {
-            return $country['alpha2Code'];
-        });
-
         $sessionData = [];
         $sessionData['games'] = session()->get('games');
         $sessionData['score'] = session()->get('score');
         $sessionData['difficulty'] = session()->get('difficulty');
+
+        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, $sessionData['difficulty'], 'name', function ($country) {
+            return $country['alpha2Code'];
+        });
 
         return view('quiz.flags', compact('title', 'subject', 'answers', 'sessionData'));
     }
@@ -150,6 +150,7 @@ class QuizController extends Controller
         if ($answerIsCorrect) {
             session()->increment('score');
         }
+
         $sessionData = [];
         $sessionData['games'] = session()->get('games');
         $sessionData['score'] = session()->get('score');
@@ -160,7 +161,7 @@ class QuizController extends Controller
         $messageColor = $answerIsCorrect ? 'green' : 'red';
 
         // preparazione quiz
-        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, 4, 'name', function ($country) {
+        ['subject' => $subject, 'answers' => $answers] = $this->prepareQuiz($countries, $sessionData['difficulty'], 'name', function ($country) {
             return $country['alpha2Code'];
         });
 
