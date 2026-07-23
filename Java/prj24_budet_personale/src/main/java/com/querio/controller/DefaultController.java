@@ -24,4 +24,9 @@ public class DefaultController {
 		return "home";
 	}
 
+	@GetMapping("unauthorized")
+	public String getUnauthorized() {
+		return "unauthorized";
+	}
+
 }

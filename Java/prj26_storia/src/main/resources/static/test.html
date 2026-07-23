@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Elenco Eventi</h1>
+		<article>
+			<h2 id="test"></h2>
+			<p></p>
+			<p></p>
+			<p></p>
+		</article>
+	</div>
+
+	<script>
+		const URL = "http://localhost:9001/api/events/random";
+		fetch(URL)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);
+				document.getElementById("test").innerText = data.descrizione;
+			});
+	</script>
+</body>
+
+</html>

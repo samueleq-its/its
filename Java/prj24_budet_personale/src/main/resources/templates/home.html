@@ -11,7 +11,8 @@
 		<h1 th:text="${title}"></h1>
 
 		<a th:href="${loggedIn} ? @{/logout} : @{/login}" th:text="${loggedIn} ? 'Logout' : 'Login'" role="button"></a>
-		<a href="/transactions" role="button">transazioni</a>
+		<a href="/transactions/dashboard" role="button">Dashboard</a>
+		<a href="/transactions" role="button">Transazioni</a>
 
 	</div>
 </body>

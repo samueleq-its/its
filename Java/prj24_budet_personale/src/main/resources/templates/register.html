@@ -14,12 +14,11 @@
 		<h3 style="color: red;" th:if="${errMessage}" th:text="${errMessage}"></h3>
 
 		<form action="" method="post">
+			<input type="text" name="name" placeholder="nome">
 			<input type="text" name="email" placeholder="email">
 			<input type="password" name="password" placeholder="password">
-			<input type="submit" value="Accedi">
+			<input type="submit" value="Registrati">
 		</form>
-
-		<a href="/register" role="button">Registrati</a>
 
 	</div>
 </body>

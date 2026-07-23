@@ -10,6 +10,8 @@
 
 		<h1 th:text="${title}"></h1>
 
+		<a href="/transactions/create" role="button">Nuova Transazione</a>
+
 		<table>
 			<thead>
 				<th>Data</th>
@@ -27,8 +29,15 @@
 					<td th:text="${transaction.category}"></td>
 					<td th:text="${transaction.type}"></td>
 					<td th:text="${transaction.amount}"></td>
-					<td th:text="${transaction.receipt}"></td>
-					<td></td>
+					<td>
+						<a th:if="${transaction.receipt != null and !#strings.isEmpty(transaction.receipt)}"
+							th:href="@{/transactions/{id}/receipt(id=${transaction.id})}" role="button">Scarica</a>
+						<span th:if="${transaction.receipt == null or #strings.isEmpty(transaction.receipt)}">-</span>
+					</td>
+					<td>
+						<a th:href="@{/transactions/{id}(id=${transaction.id})}" role="button">Dettagli</a>
+						<a th:href="@{/transactions/{id}/delete(id=${transaction.id})}" role="button">Elimina</a>
+					</td>
 				</tr>
 			</tbody>
 		</table>

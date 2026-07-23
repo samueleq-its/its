@@ -1,35 +1,25 @@
 package com.querio.service;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
+import java.util.Map;
 
 import com.querio.entity.Transaction;
-import com.querio.repo.TransactionRepo;
 
-@Service
-public class TransactionService {
+/**
+ * TransactionService
+ */
+public interface TransactionService {
+	List<Transaction> getAll();
 
-	private final TransactionRepo repo;
+	List<Transaction> getByUserId(long userId);
 
-	public TransactionService(TransactionRepo repo) {
-		this.repo = repo;
-	}
+	Transaction getById(long transId);
 
-	public List<Transaction> getAll() {
-		return repo.findAll();
-	}
+	Transaction update(long transId, Transaction t) throws Exception;
 
-	public List<Transaction> getByUserId(long userId) {
-		return repo
-				.findAll()
-				.stream()
-				.filter(t -> t.getUser().getId() == userId)
-				.toList();
-	}
+	Transaction create(Transaction t, long userId) throws Exception;
 
-	public Transaction getById(long transId) {
-		return repo.findById(transId).orElse(null);
-	}
+	void delete(long transId);
 
+	Map<String, Object> getDashboarInfo(long userId);
 }
