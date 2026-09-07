@@ -181,9 +181,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DettaglioFilm.aspx" />
+    <Content Include="DettaglioPrestito.aspx" />
+    <Content Include="DettaglioStudente.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Film.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Prestiti.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -241,6 +244,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Studenti.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -384,6 +388,20 @@
     <Compile Include="DettaglioFilm.aspx.designer.cs">
       <DependentUpon>DettaglioFilm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DettaglioPrestito.aspx.cs">
+      <DependentUpon>DettaglioPrestito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DettaglioPrestito.aspx.designer.cs">
+      <DependentUpon>DettaglioPrestito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DettaglioStudente.aspx.cs">
+      <DependentUpon>DettaglioStudente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DettaglioStudente.aspx.designer.cs">
+      <DependentUpon>DettaglioStudente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Film.aspx.cs">
       <DependentUpon>Film.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +413,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Prestiti.aspx.cs">
+      <DependentUpon>Prestiti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestiti.aspx.designer.cs">
+      <DependentUpon>Prestiti.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -411,6 +436,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Studenti.aspx.cs">
+      <DependentUpon>Studenti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studenti.aspx.designer.cs">
+      <DependentUpon>Studenti.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

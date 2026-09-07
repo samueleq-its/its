@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.querio.entity.Event;
-import com.querio.service.EventService;
+import com.querio.service.EventServiceImp;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/api/events")
 public class EventREST {
 
-	private final EventService eventService;
+	private final EventServiceImp eventService;
 
-	public EventREST(EventService eventService) {
+	public EventREST(EventServiceImp eventService) {
 		this.eventService = eventService;
 	}
 
