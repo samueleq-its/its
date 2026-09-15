@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MVCVuoto.Models.Prodotto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Denominazione)
+            </th>
+            <!--<th>
+                Html.DisplayNameFor(model => model.Descrizione)
+            </th>-->
+            <th>
+                @Html.DisplayNameFor(model => model.Prezzo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Giacenza)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denominazione)
+            </td>
+            <!--<td>
+                Html.DisplayFor(modelItem => item.Descrizione)
+                </td>-->
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giacenza)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { codice=item.Codice }) |
+                @Html.ActionLink("Delete", "Delete", new {  codice=item.Codice })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

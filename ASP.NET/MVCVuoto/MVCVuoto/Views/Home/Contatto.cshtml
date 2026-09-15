@@ -1,0 +1,48 @@
+﻿@model MVCVuoto.Models.ContattoViewModel
+
+@{
+    ViewData["Title"] = "Contatto";
+}
+
+<h1>Contatto</h1>
+
+<h4>ContattoViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RecuperaContatto">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nominativo" class="control-label"></label>
+                <input asp-for="Nominativo" class="form-control" />
+                <span asp-validation-for="Nominativo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oggetto" class="control-label"></label>
+                <input asp-for="Oggetto" class="form-control" />
+                <span asp-validation-for="Oggetto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Messaggio" class="control-label"></label>
+                <input asp-for="Messaggio" class="form-control" />
+                <span asp-validation-for="Messaggio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
