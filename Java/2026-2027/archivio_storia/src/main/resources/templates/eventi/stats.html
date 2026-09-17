@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Statistiche Eventi')}"></head>
+<body>
+
+    <!-- Header / Navbar -->
+    <div th:replace="~{fragments/layout :: navbar}"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h1>Statistiche Eventi</h1>
+            <a href="/" class="outline" role="button">← Torna alla lista</a>
+        </div>
+
+        <div id="loading-indicator">
+            <article style="text-align: center;">Caricamento statistiche in corso...</article>
+        </div>
+
+        <!-- Dashboard Grid (Hidden until loaded) -->
+        <div id="stats-content" style="display: none;">
+            
+            <!-- Summary Cards Row -->
+            <div class="grid">
+                <!-- Total Events -->
+                <article style="text-align: center;">
+                    <header><strong>Totale Eventi</strong></header>
+                    <h2 id="stat-totale" style="margin-bottom: 0;">-</h2>
+                </article>
+
+                <!-- Oldest Event -->
+                <article>
+                    <header><strong>Evento Più Antico</strong></header>
+                    <div id="stat-antico">
+                        <p style="margin: 0;">Nessun dato</p>
+                    </div>
+                </article>
+
+                <!-- Most Recent Event -->
+                <article>
+                    <header><strong>Evento Più Recente</strong></header>
+                    <div id="stat-recente">
+                        <p style="margin: 0;">Nessun dato</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Categories Breakdown Table -->
+            <article style="margin-top: 1rem;">
+                <header><strong>Eventi per Categoria</strong></header>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Categoria</th>
+                            <th scope="col" style="text-align: right;">Numero Eventi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categorie-table-body">
+                        <tr>
+                            <td colspan="2" style="text-align: center;">Nessuna categoria trovata.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Stats Fetching Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Fetch all endpoints concurrently
+                const [totaleRes, anticoRes, recenteRes, categorieRes] = await Promise.all([
+                    fetch('/api/eventi/totale'),
+                    fetch('/api/eventi/piu-antico'),
+                    fetch('/api/eventi/piu-recente'),
+                    fetch('/api/eventi/totale-per-categoria')
+                ]);
+
+                // Parse responses
+                const totale = await totaleRes.json();
+                const antico = anticoRes.ok ? await anticoRes.json() : null;
+                const recente = recenteRes.ok ? await recenteRes.json() : null;
+                const categorieMap = await categorieRes.json();
+
+                // Render Summary Cards
+                document.getElementById('stat-totale').textContent = totale;
+
+                if (antico) {
+                    document.getElementById('stat-antico').innerHTML = `
+                        <h4 style="margin-bottom: 0.2rem;">${antico.titolo}</h4>
+                        <small>Anno: ${antico.anno} | ${antico.luogo || 'Luogo N/D'}</small>
+                    `;
+                }
+
+                if (recente) {
+                    document.getElementById('stat-recente').innerHTML = `
+                        <h4 style="margin-bottom: 0.2rem;">${recente.titolo}</h4>
+                        <small>Anno: ${recente.anno} | ${recente.luogo || 'Luogo N/D'}</small>
+                    `;
+                }
+
+                // Render Categorie Table
+                const tbody = document.getElementById('categorie-table-body');
+                tbody.innerHTML = '';
+
+                const entries = Object.entries(categorieMap);
+                if (entries.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="2" style="text-align: center;">Nessun dato disponibile.</td></tr>';
+                } else {
+                    entries.forEach(([cat, count]) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${cat || 'Non specificata'}</td>
+                            <td style="text-align: right;"><strong>${count}</strong></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                }
+
+                // Show Content
+                document.getElementById('loading-indicator').style.display = 'none';
+                document.getElementById('stats-content').style.display = 'block';
+
+            } catch (error) {
+                console.error('Errore durante il caricamento delle statistiche:', error);
+                document.getElementById('loading-indicator').innerHTML = `
+                    <article style="text-align: center; color: var(--pico-del-color);">
+                        Impossibile caricare le statistiche.<br><br>
+                        <a href="/" role="button" class="outline">Torna alla lista</a>
+                    </article>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

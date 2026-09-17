@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Dettaglio Evento')}"></head>
+<body>
+
+    <!-- Header / Navbar -->
+    <div th:replace="~{fragments/layout :: navbar}"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h1>Dettaglio Evento</h1>
+            <a href="/" class="outline" role="button">← Torna alla lista</a>
+        </div>
+
+        <div id="loading-indicator">
+            <article style="text-align: center;">Caricamento dettagli in corso...</article>
+        </div>
+
+        <!-- Form Container (Hidden until loaded) -->
+        <form id="evento-form" style="display: none;">
+            <div class="grid">
+                <div>
+                    <label for="titolo">Titolo</label>
+                    <input type="text" id="titolo" required>
+                </div>
+                <div>
+                    <label for="anno">Anno</label>
+                    <input type="number" id="anno" required>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div>
+                    <label for="luogo">Luogo</label>
+                    <input type="text" id="luogo">
+                </div>
+                <div>
+                    <label for="civilta">Civiltà</label>
+                    <input type="text" id="civilta">
+                </div>
+                <div>
+                    <label for="categoria">Categoria</label>
+                    <input type="text" id="categoria">
+                </div>
+            </div>
+
+            <div>
+                <label for="descrizione">Descrizione</label>
+                <textarea id="descrizione" rows="4"></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button type="submit" style="flex: 1;">Salva Modifiche</button>
+                <button type="button" id="delete-btn" class="contrast" style="flex: 1; background-color: var(--pico-del-color); border-color: var(--pico-del-color);">Elimina</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- API & Form Interaction Script -->
+    <script>
+        // Extract ID from the URL path (e.g., /5 -> 5)
+        const pathSegments = window.location.pathname.split('/');
+        const eventoId = pathSegments[pathSegments.length - 1];
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            if (!eventoId || isNaN(eventoId)) {
+                showError('ID evento non valido.');
+                return;
+            }
+
+            try {
+                // Fetch event details
+                const response = await fetch(`/api/eventi/${eventoId}`);
+                if (!response.ok) {
+                    throw new Error('Evento non trovato');
+                }
+
+                const evento = await response.json();
+
+                // Populate form fields
+                document.getElementById('titolo').value = evento.titolo || '';
+                document.getElementById('anno').value = evento.anno || '';
+                document.getElementById('luogo').value = evento.luogo || '';
+                document.getElementById('civilta').value = evento.civilta || '';
+                document.getElementById('categoria').value = evento.categoria || '';
+                document.getElementById('descrizione').value = evento.descrizione || '';
+
+                // Display form
+                document.getElementById('loading-indicator').style.display = 'none';
+                document.getElementById('evento-form').style.display = 'block';
+
+            } catch (error) {
+                console.error('Errore:', error);
+                showError('Impossibile caricare i dettagli dell\'evento.');
+            }
+        });
+
+        // Save / Update (PUT)
+        document.getElementById('evento-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const updatedEvento = {
+                titolo: document.getElementById('titolo').value,
+                anno: parseInt(document.getElementById('anno').value),
+                luogo: document.getElementById('luogo').value,
+                civilta: document.getElementById('civilta').value,
+                categoria: document.getElementById('categoria').value,
+                descrizione: document.getElementById('descrizione').value
+            };
+
+            try {
+                const response = await fetch(`/api/eventi/${eventoId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updatedEvento)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Errore durante l\'aggiornamento');
+                }
+
+                alert('Evento salvato con successo!');
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('Si è verificato un errore durante il salvataggio.');
+            }
+        });
+
+        // Delete (DELETE)
+        document.getElementById('delete-btn').addEventListener('click', async () => {
+            const confirmed = confirm('Sei sicuro di voler eliminare definitivamente questo evento?');
+            if (!confirmed) return;
+
+            try {
+                const response = await fetch(`/api/eventi/${eventoId}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Errore durante l\'eliminazione');
+                }
+
+                alert('Evento eliminato con successo!');
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('Si è verificato un errore durante l\'eliminazione.');
+            }
+        });
+
+        function showError(message) {
+            document.getElementById('loading-indicator').innerHTML = `
+                <article style="text-align: center; color: var(--pico-del-color);">
+                    ${message}<br><br>
+                    <a href="/" role="button" class="outline">Torna alla lista</a>
+                </article>
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/layout :: head('Lista Eventi')}"></head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <div th:replace="~{fragments/layout :: navbar}"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h1>Lista Eventi</h1>
+            <a href="/nuovo" role="button">+ Nuovo Evento</a>
+        </div>
+
+        <!-- Filter Controls -->
+        <article style="padding: 1rem; margin-bottom: 1.5rem;">
+            <header style="margin-bottom: 0.5rem; font-weight: bold;">Filtra Eventi</header>
+            <div class="grid">
+                <div>
+                    <label for="filter-titolo">Titolo</label>
+                    <input type="search" id="filter-titolo" placeholder="Cerca titolo...">
+                </div>
+                <div>
+                    <label for="filter-anno">Anno</label>
+                    <select id="filter-anno">
+                        <option value="">Tutti</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-civilta">Civiltà</label>
+                    <select id="filter-civilta">
+                        <option value="">Tutte</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-categoria">Categoria</label>
+                    <select id="filter-categoria">
+                        <option value="">Tutte</option>
+                    </select>
+                </div>
+            </div>
+        </article>
+
+        <!-- Table -->
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Anno</th>
+                    <th scope="col">Civiltà</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Azione</th>
+                </tr>
+            </thead>
+            <tbody id="eventi-table-body">
+                <tr>
+                    <td colspan="5" style="text-align: center;">Caricamento eventi in corso...</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- API & Filtering Integration Script -->
+    <script>
+        let allEventi = [];
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Fetch events and filter dropdown data simultaneously
+                const [eventiRes, anniRes, categorieRes, civiltaRes] = await Promise.all([
+                    fetch('/api/eventi'),
+                    fetch('/api/eventi/anni'),
+                    fetch('/api/eventi/categorie'),
+                    fetch('/api/eventi/civilta')
+                ]);
+
+                allEventi = await eventiRes.json();
+                const anni = await anniRes.json();
+                const categorie = await categorieRes.json();
+                const civiltaList = await civiltaRes.json();
+
+                // Populate filter select options
+                populateSelect('filter-anno', anni);
+                populateSelect('filter-categoria', categorie);
+                populateSelect('filter-civilta', civiltaList);
+
+                // Render initial table
+                renderTable(allEventi);
+
+                // Attach filter event listeners
+                document.getElementById('filter-titolo').addEventListener('input', filterAndRender);
+                document.getElementById('filter-anno').addEventListener('change', filterAndRender);
+                document.getElementById('filter-categoria').addEventListener('change', filterAndRender);
+                document.getElementById('filter-civilta').addEventListener('change', filterAndRender);
+
+            } catch (error) {
+                console.error('Errore durante il caricamento dati:', error);
+                document.getElementById('eventi-table-body').innerHTML =
+                    '<tr><td colspan="5" style="text-align: center; color: var(--pico-del-color);">Impossibile caricare i dati.</td></tr>';
+            }
+        });
+
+        function populateSelect(elementId, items) {
+            const select = document.getElementById(elementId);
+            items.forEach(item => {
+                if (item !== null && item !== undefined && item !== '') {
+                    const opt = document.createElement('option');
+                    opt.value = item;
+                    opt.textContent = item;
+                    select.appendChild(opt);
+                }
+            });
+        }
+
+        function filterAndRender() {
+            const queryTitolo = document.getElementById('filter-titolo').value.toLowerCase().trim();
+            const selectedAnno = document.getElementById('filter-anno').value;
+            const selectedCategoria = document.getElementById('filter-categoria').value;
+            const selectedCivilta = document.getElementById('filter-civilta').value;
+
+            const filtered = allEventi.filter(evento => {
+                const matchTitolo = !queryTitolo || (evento.titolo && evento.titolo.toLowerCase().includes(queryTitolo));
+                const matchAnno = !selectedAnno || String(evento.anno) === selectedAnno;
+                const matchCategoria = !selectedCategoria || evento.categoria === selectedCategoria;
+                const matchCivilta = !selectedCivilta || evento.civilta === selectedCivilta;
+
+                return matchTitolo && matchAnno && matchCategoria && matchCivilta;
+            });
+
+            renderTable(filtered);
+        }
+
+        function renderTable(eventi) {
+            const tbody = document.getElementById('eventi-table-body');
+            tbody.innerHTML = '';
+
+            if (eventi.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Nessun evento trovato con i filtri selezionati.</td></tr>';
+                return;
+            }
+
+            eventi.forEach(evento => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${evento.titolo || ''}</td>
+                    <td>${evento.anno || ''}</td>
+                    <td>${evento.civilta || ''}</td>
+                    <td>${evento.categoria || ''}</td>
+                    <td>
+                        <a href="/${evento.id}" role="button" class="outline" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">Dettagli</a>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+
+</html>

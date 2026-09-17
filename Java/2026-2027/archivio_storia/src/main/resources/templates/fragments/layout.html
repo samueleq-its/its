@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Head Fragment -->
+
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Gestione Eventi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+    <!-- Navbar Fragment -->
+    <nav th:fragment="navbar" class="container">
+        <ul>
+            <li><strong>Gestione Eventi</strong></li>
+        </ul>
+        <ul>
+            <li><a href="/" class="contrast">Lista Eventi</a></li>
+            <li><a href="/nuovo" class="contrast">Nuovo Evento</a></li>
+            <li><a href="/statistiche" class="contrast">Statistiche</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
