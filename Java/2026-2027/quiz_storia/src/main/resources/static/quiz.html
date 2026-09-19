@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Storico - Gioca</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .feedback-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .correct {
+            background-color: rgba(46, 125, 50, 0.15);
+            border: 2px solid #2e7d32;
+            color: #2e7d32;
+        }
+
+        .wrong {
+            background-color: rgba(198, 40, 40, 0.15);
+            border: 2px solid #c62828;
+            color: #c62828;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>🏛️ Quiz Storico</strong></li>
+            </ul>
+            <ul>
+                <li><a href="index.html" class="secondary">⬅ Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <article id="quizCard">
+            <header id="domandaHeader">
+                <h3 id="domandaTesto">Caricamento domanda...</h3>
+            </header>
+
+            <div id="opzioniContainer" class="options-grid"></div>
+
+            <div id="feedback" class="feedback-box" style="display: none;"></div>
+
+            <footer id="quizFooter" style="display: none; margin-top: 1.5rem;">
+                <button id="btnProssima" onclick="caricaProssimoQuiz()" class="contrast">Prossima Domanda ➔</button>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+        let giaRisposto = false;
+
+        document.addEventListener('DOMContentLoaded', caricaProssimoQuiz);
+
+        async function caricaProssimoQuiz() {
+            giaRisposto = false;
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('quizFooter').style.display = 'none';
+            document.getElementById('opzioniContainer').innerHTML = '';
+            document.getElementById('domandaTesto').textContent = 'Caricamento domanda...';
+
+            try {
+                const res = await fetch('/api/quiz');
+                if (!res.ok) throw new Error("Nessuna domanda disponibile");
+
+                const quiz = await res.json();
+                mostraQuiz(quiz);
+            } catch (err) {
+                document.getElementById('domandaTesto').textContent = "⚠️ Impossibile caricare la domanda o domande finite per questa categoria/difficoltà.";
+            }
+        }
+
+        function mostraQuiz(quiz) {
+            document.getElementById('domandaTesto').textContent = quiz.domanda;
+            const container = document.getElementById('opzioniContainer');
+
+            quiz.risposte.forEach(risposta => {
+                const btn = document.createElement('button');
+                btn.className = 'outline';
+                btn.textContent = risposta;
+                btn.onclick = () => inviaRisposta(risposta, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        async function inviaRisposta(rispostaSelezionata, bottoneCliccato) {
+            if (giaRisposto) return;
+            giaRisposto = true;
+
+            // Disabilita tutti i bottoni
+            const bottoni = document.querySelectorAll('#opzioniContainer button');
+            bottoni.forEach(b => b.disabled = true);
+
+            try {
+                // Send string as text/plain or clean json
+                const res = await fetch('/api/quiz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: rispostaSelezionata
+                });
+
+                // Parse as plain text instead of res.json()
+                const rispostaCorretta = (await res.text()).replace(/^"|"$/g, '').trim();
+                const rispostaPulita = rispostaSelezionata.trim();
+                const feedbackDiv = document.getElementById('feedback');
+
+                if (rispostaPulita.toLowerCase() === rispostaCorretta.toLowerCase()) {
+                    bottoneCliccato.className = '';
+                    feedbackDiv.className = 'feedback-box correct';
+                    feedbackDiv.innerHTML = '<strong>Esatto! 🎉</strong> Risposta corretta.';
+                } else {
+                    bottoneCliccato.className = 'secondary';
+                    feedbackDiv.className = 'feedback-box wrong';
+                    feedbackDiv.innerHTML = `<strong>Sbagliato! ❌</strong> La risposta corretta era: <strong>${rispostaCorretta}</strong>`;
+                }
+
+                feedbackDiv.style.display = 'block';
+                document.getElementById('quizFooter').style.display = 'block';
+
+            } catch (err) {
+                console.error("Errore durante la verifica della risposta:", err);
+            }
+        }
+    </script>
+</body>
+
+</html>

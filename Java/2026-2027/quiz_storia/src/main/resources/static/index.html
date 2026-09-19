@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Storico - Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            color: var(--pico-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1 style="text-align: center;">🏛️ Quiz di Storia</h1>
+            <p style="text-align: center;">Metti alla prova la tua conoscenza dei grandi eventi storici</p>
+        </header>
+
+        <!-- Statistiche Sessione -->
+        <section>
+            <h2>Le Tue Statistiche</h2>
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <h3 id="quizEffettuati">0</h3>
+                    <small>Domande Giocate</small>
+                </article>
+                <article class="stat-card">
+                    <h3 id="risposteCorrette">0</h3>
+                    <small>Risposte Corrette</small>
+                </article>
+                <article class="stat-card">
+                    <h3 id="percentuale">0%</h3>
+                    <small>Accuratezza</small>
+                </article>
+            </div>
+        </section>
+
+        <!-- Impostazioni Partita -->
+        <section>
+            <article>
+                <header><strong>Impostazioni di Gioco</strong></header>
+                <div class="grid">
+                    <label for="selectCategoria">
+                        Categoria
+                        <select id="selectCategoria" onchange="cambiaCategoria()">
+                            <option value="">Tutte le categorie</option>
+                        </select>
+                    </label>
+
+                    <label for="selectDifficolta">
+                        Difficoltà
+                        <select id="selectDifficolta" onchange="cambiaDifficolta()">
+                        </select>
+                    </label>
+                </div>
+            </article>
+        </section>
+
+        <!-- Azioni principali -->
+        <footer class="grid">
+            <button onclick="continuaPartita()" class="contrast">▶ Gioca</button>
+            <button onclick="resetSessione()" class="secondary outline">🔄 Reset Sessione</button>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            caricaStatistiche();
+            caricaCategorie();
+            caricaDifficolta();
+        });
+
+        async function caricaStatistiche() {
+            try {
+                const res = await fetch('/api/quiz/sessione?param=info');
+                const data = await res.json();
+
+                document.getElementById('quizEffettuati').textContent = data.quizEffettuati;
+                document.getElementById('risposteCorrette').textContent = data.risposteCorrette;
+
+                const percent = data.quizEffettuati > 0
+                    ? Math.round((data.risposteCorrette / data.quizEffettuati) * 100)
+                    : 0;
+                document.getElementById('percentuale').textContent = `${percent}%`;
+
+                if (data.difficolta) {
+                    document.getElementById('selectDifficolta').value = data.difficolta;
+                }
+                if (data.categoria) {
+                    document.getElementById('selectCategoria').value = data.categoria;
+                }
+            } catch (err) {
+                console.error("Errore caricamento statistiche:", err);
+            }
+        }
+
+        async function caricaCategorie() {
+            try {
+                const res = await fetch('/api/quiz/categoria');
+                const categorie = await res.json();
+                const select = document.getElementById('selectCategoria');
+
+                categorie.forEach(cat => {
+                    const opt = document.createElement('option');
+                    opt.value = cat;
+                    opt.textContent = cat;
+                    select.appendChild(opt);
+                });
+            } catch (err) {
+                console.error("Errore caricamento categorie:", err);
+            }
+        }
+
+        async function caricaDifficolta() {
+            try {
+                const res = await fetch('/api/quiz/difficolta');
+                const difficoltaList = await res.json();
+                const select = document.getElementById('selectDifficolta');
+
+                difficoltaList.forEach(diff => {
+                    const opt = document.createElement('option');
+                    opt.value = diff;
+                    opt.textContent = diff;
+                    select.appendChild(opt);
+                });
+            } catch (err) {
+                console.error("Errore caricamento difficoltà:", err);
+            }
+        }
+
+        async function cambiaCategoria() {
+            const val = document.getElementById('selectCategoria').value;
+            await fetch('/api/quiz/categoria', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(val)
+            });
+            caricaStatistiche();
+        }
+
+        async function cambiaDifficolta() {
+            const val = document.getElementById('selectDifficolta').value;
+            await fetch('/api/quiz/difficolta', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(val)
+            });
+            caricaStatistiche();
+        }
+
+        async function resetSessione() {
+            await fetch('/api/quiz/sessione/reset?param=reset');
+            caricaStatistiche();
+        }
+
+        function continuaPartita() {
+            window.location.href = 'quiz.html';
+        }
+    </script>
+</body>
+
+</html>
