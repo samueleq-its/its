@@ -1,0 +1,53 @@
+﻿@model VideotecaEF.Models.Film
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Film</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Titolo" class="control-label"></label>
+                <input asp-for="Titolo" class="form-control" />
+                <span asp-validation-for="Titolo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Supporto" class="control-label"></label>
+                <input asp-for="Supporto" class="form-control" />
+                <span asp-validation-for="Supporto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Regista" class="control-label"></label>
+                <input asp-for="Regista" class="form-control" />
+                <span asp-validation-for="Regista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attori" class="control-label"></label>
+                <input asp-for="Attori" class="form-control" />
+                <span asp-validation-for="Attori" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genere" class="control-label"></label>
+                <input asp-for="Genere" class="form-control" />
+                <span asp-validation-for="Genere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
