@@ -1,0 +1,624 @@
+{
+  "FILM#f01": {
+    "film_id": "f01",
+    "title": "Alien",
+    "director": "Ridley Scott",
+    "genres": [
+      "Sci-Fi",
+      "Horror"
+    ],
+    "actors": [
+      "Sigourney Weaver",
+      "Tom Skerritt",
+      "John Hurt",
+      "Ian Holm"
+    ]
+  },
+  "TITLE#alien": [
+    "FILM#f01"
+  ],
+  "DIRECTOR#ridley scott": [
+    "FILM#f01",
+    "FILM#f02",
+    "FILM#f03"
+  ],
+  "ACTOR#sigourney weaver": [
+    "FILM#f01",
+    "FILM#f20"
+  ],
+  "ACTOR#tom skerritt": [
+    "FILM#f01"
+  ],
+  "ACTOR#john hurt": [
+    "FILM#f01"
+  ],
+  "ACTOR#ian holm": [
+    "FILM#f01"
+  ],
+  "GENRE#sci-fi": [
+    "FILM#f01",
+    "FILM#f02",
+    "FILM#f13",
+    "FILM#f15",
+    "FILM#f16",
+    "FILM#f19",
+    "FILM#f20"
+  ],
+  "GENRE#horror": [
+    "FILM#f01",
+    "FILM#f20"
+  ],
+  "FILM#f02": {
+    "film_id": "f02",
+    "title": "Blade Runner",
+    "director": "Ridley Scott",
+    "genres": [
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "actors": [
+      "Harrison Ford",
+      "Rutger Hauer",
+      "Sean Young"
+    ]
+  },
+  "TITLE#blade runner": [
+    "FILM#f02"
+  ],
+  "ACTOR#harrison ford": [
+    "FILM#f02"
+  ],
+  "ACTOR#rutger hauer": [
+    "FILM#f02"
+  ],
+  "ACTOR#sean young": [
+    "FILM#f02"
+  ],
+  "GENRE#thriller": [
+    "FILM#f02",
+    "FILM#f08",
+    "FILM#f09",
+    "FILM#f11",
+    "FILM#f12",
+    "FILM#f13"
+  ],
+  "FILM#f03": {
+    "film_id": "f03",
+    "title": "Gladiator",
+    "director": "Ridley Scott",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "actors": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen"
+    ]
+  },
+  "TITLE#gladiator": [
+    "FILM#f03"
+  ],
+  "ACTOR#russell crowe": [
+    "FILM#f03"
+  ],
+  "ACTOR#joaquin phoenix": [
+    "FILM#f03"
+  ],
+  "ACTOR#connie nielsen": [
+    "FILM#f03"
+  ],
+  "GENRE#action": [
+    "FILM#f03",
+    "FILM#f07",
+    "FILM#f13",
+    "FILM#f14",
+    "FILM#f19",
+    "FILM#f20"
+  ],
+  "GENRE#drama": [
+    "FILM#f03",
+    "FILM#f04",
+    "FILM#f05",
+    "FILM#f06",
+    "FILM#f10",
+    "FILM#f11",
+    "FILM#f14",
+    "FILM#f15",
+    "FILM#f17",
+    "FILM#f18"
+  ],
+  "FILM#f04": {
+    "film_id": "f04",
+    "title": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "genres": [
+      "Drama"
+    ],
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton"
+    ]
+  },
+  "TITLE#the shawshank redemption": [
+    "FILM#f04"
+  ],
+  "DIRECTOR#frank darabont": [
+    "FILM#f04",
+    "FILM#f05"
+  ],
+  "ACTOR#tim robbins": [
+    "FILM#f04"
+  ],
+  "ACTOR#morgan freeman": [
+    "FILM#f04"
+  ],
+  "ACTOR#bob gunton": [
+    "FILM#f04"
+  ],
+  "FILM#f05": {
+    "film_id": "f05",
+    "title": "The Green Mile",
+    "director": "Frank Darabont",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "actors": [
+      "Tom Hanks",
+      "Michael Clarke Duncan",
+      "David Morse"
+    ]
+  },
+  "TITLE#the green mile": [
+    "FILM#f05"
+  ],
+  "ACTOR#tom hanks": [
+    "FILM#f05",
+    "FILM#f17",
+    "FILM#f18"
+  ],
+  "ACTOR#michael clarke duncan": [
+    "FILM#f05"
+  ],
+  "ACTOR#david morse": [
+    "FILM#f05"
+  ],
+  "GENRE#fantasy": [
+    "FILM#f05"
+  ],
+  "FILM#f06": {
+    "film_id": "f06",
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "actors": [
+      "John Travolta",
+      "Samuel L. Jackson",
+      "Uma Thurman",
+      "Bruce Willis"
+    ]
+  },
+  "TITLE#pulp fiction": [
+    "FILM#f06"
+  ],
+  "DIRECTOR#quentin tarantino": [
+    "FILM#f06",
+    "FILM#f07",
+    "FILM#f08"
+  ],
+  "ACTOR#john travolta": [
+    "FILM#f06"
+  ],
+  "ACTOR#samuel l. jackson": [
+    "FILM#f06",
+    "FILM#f08"
+  ],
+  "ACTOR#uma thurman": [
+    "FILM#f06",
+    "FILM#f07"
+  ],
+  "ACTOR#bruce willis": [
+    "FILM#f06"
+  ],
+  "GENRE#crime": [
+    "FILM#f06",
+    "FILM#f07",
+    "FILM#f08",
+    "FILM#f09",
+    "FILM#f10",
+    "FILM#f12",
+    "FILM#f14",
+    "FILM#f18"
+  ],
+  "FILM#f07": {
+    "film_id": "f07",
+    "title": "Kill Bill: Vol. 1",
+    "director": "Quentin Tarantino",
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "actors": [
+      "Uma Thurman",
+      "Lucy Liu",
+      "Daryl Hannah"
+    ]
+  },
+  "TITLE#kill bill: vol. 1": [
+    "FILM#f07"
+  ],
+  "ACTOR#lucy liu": [
+    "FILM#f07"
+  ],
+  "ACTOR#daryl hannah": [
+    "FILM#f07"
+  ],
+  "FILM#f08": {
+    "film_id": "f08",
+    "title": "Jackie Brown",
+    "director": "Quentin Tarantino",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "actors": [
+      "Pam Grier",
+      "Samuel L. Jackson",
+      "Robert De Niro",
+      "Robert Forster"
+    ]
+  },
+  "TITLE#jackie brown": [
+    "FILM#f08"
+  ],
+  "ACTOR#pam grier": [
+    "FILM#f08"
+  ],
+  "ACTOR#robert de niro": [
+    "FILM#f08",
+    "FILM#f09",
+    "FILM#f10",
+    "FILM#f11"
+  ],
+  "ACTOR#robert forster": [
+    "FILM#f08"
+  ],
+  "FILM#f09": {
+    "film_id": "f09",
+    "title": "Heat",
+    "director": "Michael Mann",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "actors": [
+      "Al Pacino",
+      "Robert De Niro",
+      "Val Kilmer"
+    ]
+  },
+  "TITLE#heat": [
+    "FILM#f09"
+  ],
+  "DIRECTOR#michael mann": [
+    "FILM#f09"
+  ],
+  "ACTOR#al pacino": [
+    "FILM#f09"
+  ],
+  "ACTOR#val kilmer": [
+    "FILM#f09"
+  ],
+  "FILM#f10": {
+    "film_id": "f10",
+    "title": "Goodfellas",
+    "director": "Martin Scorsese",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "actors": [
+      "Robert De Niro",
+      "Ray Liotta",
+      "Joe Pesci"
+    ]
+  },
+  "TITLE#goodfellas": [
+    "FILM#f10"
+  ],
+  "DIRECTOR#martin scorsese": [
+    "FILM#f10",
+    "FILM#f11",
+    "FILM#f12"
+  ],
+  "ACTOR#ray liotta": [
+    "FILM#f10"
+  ],
+  "ACTOR#joe pesci": [
+    "FILM#f10"
+  ],
+  "FILM#f11": {
+    "film_id": "f11",
+    "title": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "actors": [
+      "Robert De Niro",
+      "Jodie Foster",
+      "Cybill Shepherd"
+    ]
+  },
+  "TITLE#taxi driver": [
+    "FILM#f11"
+  ],
+  "ACTOR#jodie foster": [
+    "FILM#f11"
+  ],
+  "ACTOR#cybill shepherd": [
+    "FILM#f11"
+  ],
+  "FILM#f12": {
+    "film_id": "f12",
+    "title": "The Departed",
+    "director": "Martin Scorsese",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "actors": [
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Jack Nicholson"
+    ]
+  },
+  "TITLE#the departed": [
+    "FILM#f12"
+  ],
+  "ACTOR#leonardo dicaprio": [
+    "FILM#f12",
+    "FILM#f13",
+    "FILM#f18"
+  ],
+  "ACTOR#matt damon": [
+    "FILM#f12",
+    "FILM#f17"
+  ],
+  "ACTOR#jack nicholson": [
+    "FILM#f12"
+  ],
+  "FILM#f13": {
+    "film_id": "f13",
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Thriller"
+    ],
+    "actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy"
+    ]
+  },
+  "TITLE#inception": [
+    "FILM#f13"
+  ],
+  "DIRECTOR#christopher nolan": [
+    "FILM#f13",
+    "FILM#f14",
+    "FILM#f15"
+  ],
+  "ACTOR#joseph gordon-levitt": [
+    "FILM#f13"
+  ],
+  "ACTOR#elliot page": [
+    "FILM#f13"
+  ],
+  "ACTOR#tom hardy": [
+    "FILM#f13"
+  ],
+  "FILM#f14": {
+    "film_id": "f14",
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "actors": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine"
+    ]
+  },
+  "TITLE#the dark knight": [
+    "FILM#f14"
+  ],
+  "ACTOR#christian bale": [
+    "FILM#f14"
+  ],
+  "ACTOR#heath ledger": [
+    "FILM#f14"
+  ],
+  "ACTOR#aaron eckhart": [
+    "FILM#f14"
+  ],
+  "ACTOR#michael caine": [
+    "FILM#f14",
+    "FILM#f15"
+  ],
+  "FILM#f15": {
+    "film_id": "f15",
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "actors": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain",
+      "Michael Caine"
+    ]
+  },
+  "TITLE#interstellar": [
+    "FILM#f15"
+  ],
+  "ACTOR#matthew mcconaughey": [
+    "FILM#f15"
+  ],
+  "ACTOR#anne hathaway": [
+    "FILM#f15"
+  ],
+  "ACTOR#jessica chastain": [
+    "FILM#f15"
+  ],
+  "FILM#f16": {
+    "film_id": "f16",
+    "title": "Jurassic Park",
+    "director": "Steven Spielberg",
+    "genres": [
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "actors": [
+      "Sam Neill",
+      "Laura Dern",
+      "Jeff Goldblum"
+    ]
+  },
+  "TITLE#jurassic park": [
+    "FILM#f16"
+  ],
+  "DIRECTOR#steven spielberg": [
+    "FILM#f16",
+    "FILM#f17",
+    "FILM#f18"
+  ],
+  "ACTOR#sam neill": [
+    "FILM#f16"
+  ],
+  "ACTOR#laura dern": [
+    "FILM#f16"
+  ],
+  "ACTOR#jeff goldblum": [
+    "FILM#f16"
+  ],
+  "GENRE#adventure": [
+    "FILM#f16"
+  ],
+  "FILM#f17": {
+    "film_id": "f17",
+    "title": "Saving Private Ryan",
+    "director": "Steven Spielberg",
+    "genres": [
+      "War",
+      "Drama"
+    ],
+    "actors": [
+      "Tom Hanks",
+      "Matt Damon",
+      "Tom Sizemore"
+    ]
+  },
+  "TITLE#saving private ryan": [
+    "FILM#f17"
+  ],
+  "ACTOR#tom sizemore": [
+    "FILM#f17"
+  ],
+  "GENRE#war": [
+    "FILM#f17"
+  ],
+  "FILM#f18": {
+    "film_id": "f18",
+    "title": "Catch Me If You Can",
+    "director": "Steven Spielberg",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Comedy"
+    ],
+    "actors": [
+      "Leonardo DiCaprio",
+      "Tom Hanks",
+      "Christopher Walken"
+    ]
+  },
+  "TITLE#catch me if you can": [
+    "FILM#f18"
+  ],
+  "ACTOR#christopher walken": [
+    "FILM#f18"
+  ],
+  "GENRE#comedy": [
+    "FILM#f18"
+  ],
+  "FILM#f19": {
+    "film_id": "f19",
+    "title": "Terminator 2: Judgment Day",
+    "director": "James Cameron",
+    "genres": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "actors": [
+      "Arnold Schwarzenegger",
+      "Linda Hamilton",
+      "Edward Furlong"
+    ]
+  },
+  "TITLE#terminator 2: judgment day": [
+    "FILM#f19"
+  ],
+  "DIRECTOR#james cameron": [
+    "FILM#f19",
+    "FILM#f20"
+  ],
+  "ACTOR#arnold schwarzenegger": [
+    "FILM#f19"
+  ],
+  "ACTOR#linda hamilton": [
+    "FILM#f19"
+  ],
+  "ACTOR#edward furlong": [
+    "FILM#f19"
+  ],
+  "FILM#f20": {
+    "film_id": "f20",
+    "title": "Aliens",
+    "director": "James Cameron",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Horror"
+    ],
+    "actors": [
+      "Sigourney Weaver",
+      "Michael Biehn",
+      "Bill Paxton"
+    ]
+  },
+  "TITLE#aliens": [
+    "FILM#f20"
+  ],
+  "ACTOR#michael biehn": [
+    "FILM#f20"
+  ],
+  "ACTOR#bill paxton": [
+    "FILM#f20"
+  ]
+}
