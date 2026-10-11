@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VideotecaEF.Models;
@@ -19,10 +15,67 @@ namespace VideotecaEF.Controllers
         }
 
         // GET: Prestiti
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(String? searchText, int recordsPerPage = 20, int page = 1)
         {
-            var prestitiVideotecaWebFormContext = _context.Prestiti.Include(p => p.IdFilmNavigation).Include(p => p.MatricolaNavigation);
-            return View(await prestitiVideotecaWebFormContext.ToListAsync());
+            ViewData["Title"] = "Elenco Prestiti";
+            ViewData["recordsPerPage"] = recordsPerPage;
+            ViewData["pages"] = 0;
+            ViewData["searchText"] = searchText;
+
+            var ctxPrestiti = _context.Prestiti
+                .Include(p => p.IdFilmNavigation)
+                .Include(p => p.MatricolaNavigation)
+                .AsQueryable()
+                .Where(p => p.DataRestituzione == null)
+                ;
+                
+            // filtro
+            if (searchText != null)
+            {
+                ctxPrestiti = ctxPrestiti.Where(p => p.MatricolaNavigation.Nome.Contains(searchText)
+                    || p.MatricolaNavigation.Cognome.Contains(searchText)
+                    || p.IdFilmNavigation.Titolo.Contains(searchText));
+            }
+
+            if (recordsPerPage != 0)
+            {
+                ViewData["pages"] = (int)Math.Ceiling((double)ctxPrestiti.Count() / recordsPerPage);
+                ctxPrestiti = ctxPrestiti.Skip((page - 1) * recordsPerPage).Take(recordsPerPage);
+            }
+
+            return View(await ctxPrestiti.ToListAsync());
+        }
+
+        // GET: Prestiti
+        public async Task<IActionResult> Archivio(String? searchText, int recordsPerPage = 20, int page = 1)
+        {
+            ViewData["Title"] = "Elenco Prestiti";
+            ViewData["recordsPerPage"] = recordsPerPage;
+            ViewData["pages"] = 0;
+            ViewData["searchText"] = searchText;
+
+            var ctxPrestiti = _context.Prestiti
+                .Include(p => p.IdFilmNavigation)
+                .Include(p => p.MatricolaNavigation)
+                .AsQueryable()
+                .Where(p => p.DataRestituzione != null)
+                ;
+
+            // filtro
+            if (searchText != null)
+            {
+                ctxPrestiti = ctxPrestiti.Where(p => p.MatricolaNavigation.Nome.Contains(searchText)
+                    || p.MatricolaNavigation.Cognome.Contains(searchText)
+                    || p.IdFilmNavigation.Titolo.Contains(searchText));
+            }
+
+            if (recordsPerPage != 0)
+            {
+                ViewData["pages"] = (int)Math.Ceiling((double)ctxPrestiti.Count() / recordsPerPage);
+                ctxPrestiti = ctxPrestiti.Skip((page - 1) * recordsPerPage).Take(recordsPerPage);
+            }
+
+            return View("Index", await ctxPrestiti.ToListAsync());
         }
 
         // GET: Prestiti/Details/5

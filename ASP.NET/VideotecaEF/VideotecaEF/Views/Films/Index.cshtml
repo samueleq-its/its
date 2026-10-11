@@ -1,13 +1,21 @@
 ﻿@model IEnumerable<VideotecaEF.Models.Film>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Elenco Film";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<p>
+    <form>
+        Ricerca: <input type="text" name="searchText" value="@ViewBag.SearchText" />
+        <input type="hidden" name="recordsPerPage" value="@ViewBag.RecordsPerPage" />
+        <input type="submit" value="Cerca" />
+
+    </form>
 </p>
 <table class="table">
     <thead>
@@ -15,9 +23,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Titolo)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Supporto)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Regista)
             </th>
@@ -36,9 +44,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Titolo)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.Supporto)
-            </td>
+            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.Regista)
             </td>
@@ -49,11 +57,31 @@
                 @Html.DisplayFor(modelItem => item.Genere)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Codice">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Codice">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Codice">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Codice" class="btn btn-sm btn-primary">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Codice" class="btn btn-sm btn-secondary">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Codice" class="btn btn-sm btn-danger">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<form>
+    <p>
+        Elementi per pagina:
+        <select name="recordsPerPage" onchange="this.form.submit()">
+            @foreach (int n in new[] { 20, 50, 100, 0 })
+            {
+                <option value="@n" selected="@(n == (int?)ViewBag.RecordsPerPage)">@(n != 0 ? n : "Tutti")</option>
+            }
+        </select>
+        <input type="hidden" name="searchText" value="@ViewBag.SearchText" />
+    </p>
+</form>
+
+<p>
+    @for (int i = 1; i <= (int)ViewData["pages"]; i++)
+    {
+        <a href="/Films?page=@i&recordsPerPage=@ViewBag.RecordsPerPage&searchText=@ViewBag.SearchText">@i</a>
+    }
+</p>

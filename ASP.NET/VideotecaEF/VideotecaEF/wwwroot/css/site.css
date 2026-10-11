@@ -19,6 +19,8 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #121212;
+  color: #e6e6e6;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -28,4 +30,96 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+/* Ensure navbar positioning so brand can be centered */
+.navbar {
+  position: relative;
+}
+
+/* Center site title in navbar */
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  color: #fff !important;
+}
+
+/* Nav links color for dark navbar */
+.navbar-dark .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+/* Action links styled as buttons */
+.action-btn {
+  display: inline-block;
+  margin-right: 6px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.btn-action-primary {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+  border: 1px solid #0d6efd !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.btn-action-secondary {
+  color: #fff !important;
+  background-color: #6c757d !important;
+  border: 1px solid #6c757d !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Ensure links inside table cells don't look like plain links */
+table a.action-btn {
+  text-decoration: none !important;
+}
+
+/* Remove underline for any action links and force button-like appearance */
+a.action-btn {
+  text-decoration: none !important;
+}
+
+a.action-btn:hover {
+  opacity: 0.9;
+}
+
+/* Dark table styles - override Bootstrap white backgrounds */
+.table {
+  background-color: transparent !important;
+  color: #e6e6e6;
+  border-color: rgba(255,255,255,0.08);
+}
+.table th,
+.table td {
+  background-color: transparent !important;
+  border-top: 1px solid rgba(255,255,255,0.04) !important;
+}
+.table thead th {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255,255,255,0.02) !important;
+}
+.table.table-hover tbody tr:hover {
+  background-color: rgba(255,255,255,0.04) !important;
+}
+
+/* Force white text inside tables to ensure readability on dark background */
+.table th,
+.table td,
+.table thead th,
+.table tbody td {
+  color: #ffffff !important;
+}
+
+/* Links and buttons inside tables */
+.table a,
+.table a.btn,
+.table a.btn-sm {
+  color: #ffffff !important;
 }

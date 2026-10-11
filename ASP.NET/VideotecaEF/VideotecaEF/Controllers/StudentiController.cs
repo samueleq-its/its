@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VideotecaEF.Models;
 
@@ -19,17 +14,25 @@ namespace VideotecaEF.Controllers
         }
 
         // GET: Studenti
-        public async Task<IActionResult> Index(String? searchText)
+        public async Task<IActionResult> Index(String? searchText, int recordsPerPage = 20, int page = 1)
         {
+            ViewData["recordsPerPage"] = recordsPerPage;
+            ViewData["pages"] = 0;
+            ViewData["searchText"] = searchText;
+
             var studenti = _context.Studenti.AsQueryable();
 
-            // filtro per cognome
-            if(searchText != null)
+            // filtro
+            if (searchText != null)
             {
-                studenti = studenti.Where(s => s.Cognome.Contains(searchText) || s.Nome.Contains(searchText) || s.Email.Contains(searchText) || s.Classe.Contains(searchText));
+                studenti = studenti.Where(s => s.Cognome.Contains(searchText) || s.Nome.Contains(searchText) || s.Classe.Contains(searchText)); // || s.Email.Contains(searchText)
             }
 
-            ViewBag.searchText = searchText;
+            if (recordsPerPage != 0)
+            {
+                ViewData["pages"] = (int)Math.Ceiling((double)studenti.Count() / recordsPerPage);
+                studenti = studenti.Skip((page - 1) * recordsPerPage).Take(recordsPerPage);
+            }
 
             return View(await studenti.ToListAsync());
         }

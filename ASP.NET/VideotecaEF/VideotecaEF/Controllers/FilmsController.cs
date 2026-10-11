@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VideotecaEF.Models;
 
@@ -18,10 +13,30 @@ namespace VideotecaEF.Controllers
             _context = context;
         }
 
+        //ricerca per titolo, regista, attore
         // GET: Films
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(String? searchText, int recordsPerPage = 20, int page = 1)
         {
-            return View(await _context.Films.ToListAsync());
+
+            ViewData["recordsPerPage"] = recordsPerPage;
+            ViewData["pages"] = 0;
+            ViewData["searchText"] = searchText;
+
+            var films = _context.Films.AsQueryable();
+
+            // filtro
+            if (searchText != null)
+            {
+                films = films.Where(s => s.Titolo.Contains(searchText) || s.Regista.Contains(searchText) || s.Attori.Contains(searchText));
+            }
+
+            if (recordsPerPage != 0)
+            {
+                ViewData["pages"] = (int)Math.Ceiling((double)films.Count() / recordsPerPage);
+                films = films.Skip((page - 1) * recordsPerPage).Take(recordsPerPage);
+            }
+
+            return View(await films.ToListAsync());
         }
 
         // GET: Films/Details/5

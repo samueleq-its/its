@@ -1,13 +1,23 @@
 ﻿@model IEnumerable<VideotecaEF.Models.Prestito>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
+</p>
+<p>
+    @{
+        string action = ViewData["title"] == "Archivio" ? "Index" : "Archivio";
+        string label = ViewData["title"] == "Archivio" ? "Prestiti" : "Archivio";
+    }
+    <a asp-action="@action">@label</a>
+</p>
+<p>
+    <form>
+        Ricerca: <input type="text" name="searchText" value="@ViewBag.SearchText" />
+        <input type="hidden" name="recordsPerPage" value="@ViewBag.RecordsPerPage" />
+        <input type="submit" value="Cerca" />
+    </form>
 </p>
 <table class="table">
     <thead>
@@ -51,3 +61,23 @@
 }
     </tbody>
 </table>
+
+<form>
+    <p>
+        Elementi per pagina:
+        <select name="recordsPerPage" onchange="this.form.submit()">
+            @foreach (int n in new[] { 20, 50, 100, 0 })
+            {
+                <option value="@n" selected="@(n == (int?)ViewBag.RecordsPerPage)">@(n != 0 ? n : "Tutti")</option>
+            }
+        </select>
+        <input type="hidden" name="searchText" value="@ViewBag.SearchText" />
+    </p>
+</form>
+
+<p>
+    @for (int i = 1; i <= (int)ViewData["pages"]; i++)
+    {
+        <a href="/Prestiti?page=@i&recordsPerPage=@ViewBag.RecordsPerPage&searchText=@ViewBag.SearchText">@i</a>
+    }
+</p>
