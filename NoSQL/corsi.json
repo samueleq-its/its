@@ -1,122 +1,122 @@
 [
-  {
-    "corsoId": "C01",
-    "nomeCorso": "Basi di Dati",
-    "docente": "Prof. Rossi",
-    "crediti": 9
-  },
-  {
-    "corsoId": "C02",
-    "nomeCorso": "Programmazione 1",
-    "docente": "Prof. Bianchi",
-    "crediti": 12
-  },
-  {
-    "corsoId": "C03",
-    "nomeCorso": "Analisi Matematica",
-    "docente": "Prof. Verdi",
-    "crediti": 9
-  },
-  {
-    "corsoId": "C04",
-    "nomeCorso": "Fisica Generale",
-    "docente": "Prof. Neri",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C05",
-    "nomeCorso": "Sistemi Operativi",
-    "docente": "Prof. Ferrari",
-    "crediti": 9
-  },
-  {
-    "corsoId": "C06",
-    "nomeCorso": "Reti di Calcolatori",
-    "docente": "Prof. Russo",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C07",
-    "nomeCorso": "Algoritmi e Strutture Dati",
-    "docente": "Prof. Costa",
-    "crediti": 12
-  },
-  {
-    "corsoId": "C08",
-    "nomeCorso": "Ingegneria del Software",
-    "docente": "Prof. Romano",
-    "crediti": 9
-  },
-  {
-    "corsoId": "C09",
-    "nomeCorso": "Intelligenza Artificiale",
-    "docente": "Prof. Conti",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C10",
-    "nomeCorso": "Machine Learning",
-    "docente": "Prof. Esposito",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C11",
-    "nomeCorso": "Sicurezza Informatica",
-    "docente": "Prof. Ricci",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C12",
-    "nomeCorso": "Calcolo delle Probabilità",
-    "docente": "Prof. Bruno",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C13",
-    "nomeCorso": "Architettura dei Calcolatori",
-    "docente": "Prof. Moretti",
-    "crediti": 9
-  },
-  {
-    "corsoId": "C14",
-    "nomeCorso": "Interazione Uomo-Macchina",
-    "docente": "Prof. Marino",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C15",
-    "nomeCorso": "Sviluppo Web",
-    "docente": "Prof. Greco",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C16",
-    "nomeCorso": "Sviluppo Mobile",
-    "docente": "Prof. Barbieri",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C17",
-    "nomeCorso": "Economia Aziendale",
-    "docente": "Prof. Lombardi",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C18",
-    "nomeCorso": "Lingua Inglese B2",
-    "docente": "Prof. Giordano",
-    "crediti": 3
-  },
-  {
-    "corsoId": "C19",
-    "nomeCorso": "Data Mining",
-    "docente": "Prof. Galli",
-    "crediti": 6
-  },
-  {
-    "corsoId": "C20",
-    "nomeCorso": "Cloud Computing",
-    "docente": "Prof. Fontana",
-    "crediti": 6
-  }
+ {
+  "corsoId": "C01",
+  "nomeCorso": "Programmazione Python",
+  "docente": "Prof. Bianchi",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C02",
+  "nomeCorso": "Basi di dati relazionali",
+  "docente": "Prof. Ferrari",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C03",
+  "nomeCorso": "NoSQL e MongoDB",
+  "docente": "Prof. Ferrari",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C04",
+  "nomeCorso": "Reti di calcolatori",
+  "docente": "Prof. Moretti",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C05",
+  "nomeCorso": "Sistemi operativi",
+  "docente": "Prof. Moretti",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C06",
+  "nomeCorso": "Sviluppo Web Frontend",
+  "docente": "Prof.ssa Conti",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C07",
+  "nomeCorso": "Sviluppo Web Backend",
+  "docente": "Prof.ssa Conti",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C08",
+  "nomeCorso": "Cybersecurity",
+  "docente": "Prof. Greco",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C09",
+  "nomeCorso": "Cloud Computing",
+  "docente": "Prof. Greco",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C10",
+  "nomeCorso": "Machine Learning",
+  "docente": "Prof.ssa Ricci",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C11",
+  "nomeCorso": "Data Analysis",
+  "docente": "Prof.ssa Ricci",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C12",
+  "nomeCorso": "Project Management",
+  "docente": "Prof. Romano",
+  "crediti": 3
+ },
+ {
+  "corsoId": "C13",
+  "nomeCorso": "Inglese tecnico",
+  "docente": "Prof.ssa Marino",
+  "crediti": 3
+ },
+ {
+  "corsoId": "C14",
+  "nomeCorso": "Matematica discreta",
+  "docente": "Prof. Colombo",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C15",
+  "nomeCorso": "Algoritmi e strutture dati",
+  "docente": "Prof. Bianchi",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C16",
+  "nomeCorso": "DevOps e CI/CD",
+  "docente": "Prof. Gallo",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C17",
+  "nomeCorso": "Sviluppo App Mobile",
+  "docente": "Prof.ssa Costa",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C18",
+  "nomeCorso": "Ingegneria del software",
+  "docente": "Prof. Colombo",
+  "crediti": 9
+ },
+ {
+  "corsoId": "C19",
+  "nomeCorso": "Internet of Things",
+  "docente": "Prof. Gallo",
+  "crediti": 6
+ },
+ {
+  "corsoId": "C20",
+  "nomeCorso": "Business Intelligence",
+  "docente": "Prof.ssa Marino",
+  "crediti": 6
+ }
 ]
