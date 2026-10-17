@@ -1,0 +1,16 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "dependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.5.2"
+  }
+}
