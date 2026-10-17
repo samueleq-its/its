@@ -1,0 +1,130 @@
+﻿@model IEnumerable<ScuoleItaliane.Models.Scuola>
+
+@{
+    // ViewData["Title"] = "Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<form>
+    Cerca per Nome: <input type="text" name="nomeScuola" value="@ViewBag.NomeScuola" /> <br/>
+
+    Cerca per Regione: <select name="regione">
+    <option value="">----</option>
+        @foreach (string regione in ViewData["listaRegioni"] as List<string>){
+            <option value="@regione" selected="@(ViewBag.Regione == regione)">@regione</option>
+        }
+    </select>
+    <br />
+    
+    Cerca per Comune: <select name="comune">
+    <option value="">----</option>
+    @foreach (string comune in ViewData["listaComuni"] as List<string>)
+    {
+    <option value="@comune" selected="@(ViewBag.Comune == comune)">@comune</option>
+    }
+    </select>
+    <br />
+
+Solo comuni litoranei <input type="checkbox" name="onlyLitoranei" value="true" checked="@(ViewBag.OnlyLitoranei == true)" /> <br />
+
+    <input type="submit" value="Cerca" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Denominazione)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.SedeDirettiva)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Indirizzo)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Cap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SitoWeb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IstitutoOmniComprensivo)
+            </th> *@
+            @* <th>
+                @Html.DisplayNameFor(model => model.IdCaratteristicaScuolaNavigation)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.IdComuneNavigation)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.IdIstitutoRiferimentoNavigation)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipologiaScuolaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denominazione)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.SedeDirettiva)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Cap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SitoWeb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IstitutoOmniComprensivo)
+            </td> *@
+            @* <td>
+                @Html.DisplayFor(modelItem => item.IdCaratteristicaScuolaNavigation.Denominazione)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.IdComuneNavigation.Denominazione)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.IdIstitutoRiferimentoNavigation.CodiceIstituto)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipologiaScuolaNavigation.Denominazione)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.CodiceScuola">Dettagli</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<p>
+    @* TODO preservare parametri query *@
+    @for (int i = 1; i <= (int)ViewBag.PagesNumber; i++)
+    {
+        <a href="/Scuole?page=@i">@i</a>
+    }
+</p>

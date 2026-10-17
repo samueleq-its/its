@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ScuoleItaliane.Models.Regione>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Denominazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroScuole)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denominazione)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.NumeroScuole)
+            </td>
+            <td>
+                <a asp-controller="Scuole" asp-action="ScuoleRegione" asp-route-id="@item.Id">Dettagli</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -95,6 +95,42 @@ namespace SImD
 
             }
             #endregion
+
+            #region PARALLEL2_FIXED
+            {
+                float[] result = new float[ARRAY_SIZE];
+
+                var sw = System.Diagnostics.Stopwatch.StartNew();
+
+                if (Avx.IsSupported)
+                {
+                    int i = 0;
+                    const int vecSize = 8; // 256 bits / 32 bits (float) = 8 floats
+
+                    for (; i <= ARRAY_SIZE - vecSize; i += vecSize)
+                    {
+                        // Direct intrinsic vector load from array reference
+                        var va = Vector256.LoadUnsafe(ref a[i]);
+                        var vb = Vector256.LoadUnsafe(ref b[i]);
+
+                        var vr = Avx.Add(va, vb);
+
+                        // Direct intrinsic vector store to array reference
+                        vr.StoreUnsafe(ref result[i]);
+                    }
+
+                    // Remainder loop
+                    for (; i < ARRAY_SIZE; i++)
+                    {
+                        result[i] = a[i] + b[i];
+                    }
+                }
+
+                sw.Stop();
+                Console.WriteLine($"parallel2 (fixed): {sw.ElapsedTicks} ticks");
+            }
+            #endregion
+
         }
     }
 }
