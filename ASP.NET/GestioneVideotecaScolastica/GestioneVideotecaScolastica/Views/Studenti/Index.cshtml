@@ -1,0 +1,108 @@
+﻿@model IEnumerable<GestioneVideotecaScolastica.Models.Studente>
+
+@{
+    ViewData["Title"] = "Elenco Studenti";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<p>
+    <form>
+        Cerca per qualsiasi campo: <input type="text" name="searchText" value="@ViewBag.SearchText" />
+        <input type="submit" value="Cerca" />
+    </form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cognome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Classe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classe)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Matricola">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Matricola">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Matricola">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<form>
+<p>
+    Numero di record per pagina: <select name="numberRecords">
+            @if (ViewBag.NumberRecords==20){
+                <option selected value="20">20</option>
+            }else{
+                <option value="20">20</option>
+            }
+            @if (ViewBag.NumberRecords == 50)
+            {
+                <option selected value="50">50</option>
+            }
+            else
+            {
+                <option value="50">50</option>
+            }
+            @if (ViewBag.NumberRecords == 100)
+            {
+                <option selected value="100">100</option>
+            }
+            else
+            {
+                <option value="100">100</option>
+            }
+            @if (ViewBag.NumberRecords == 0)
+            {
+                <option selected value="0">Tutti</option>
+            }
+            else
+            {
+                <option value="0">Tutti</option>
+            }
+            
+    </select>
+    
+        <input type="submit" value="Invia" />
+    </p>
+</form>
+
+      <p>@{
+        int pageNumber = (ViewBag.NumberRecords!=0 ? ViewBag.TotalRecords / ViewBag.NumberRecords 
+                        + (ViewBag.TotalRecords % ViewBag.NumberRecords > 0 ? 1 : 0) : 0);
+        
+              for(int i=1; i<pageNumber;i++){
+                    <a href="/Studenti/Index?page=@i&numberRecords=@ViewBag.NumberRecords">@i</a>
+                    }
+           }
+                    
+                </p>
