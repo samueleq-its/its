@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>STOMP Socket Tester</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #17212b;
+			--muted: #687581;
+			--line: #d7dee4;
+			--paper: #f7f9fa;
+			--panel: #ffffff;
+			--accent: #d45d35;
+			--accent-dark: #9e3b20;
+			--success: #287c5b;
+			--danger: #b33a3a;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			background: linear-gradient(135deg, #f7f9fa 0%, #e8eef0 100%);
+			font-family: Georgia, "Times New Roman", serif;
+		}
+
+		main {
+			width: min(1120px, calc(100% - 32px));
+			margin: 0 auto;
+			padding: 42px 0 56px;
+		}
+
+		header {
+			margin-bottom: 28px;
+		}
+
+		h1 {
+			margin: 0 0 8px;
+			font-size: clamp(2rem, 5vw, 4rem);
+			line-height: .98;
+			letter-spacing: 0;
+		}
+
+		header p {
+			margin: 0;
+			color: var(--muted);
+			font: 1rem/1.5 system-ui, sans-serif;
+		}
+
+		.layout {
+			display: grid;
+			grid-template-columns: minmax(280px, .75fr) minmax(0, 1.25fr);
+			gap: 18px;
+		}
+
+		.panel {
+			padding: 22px;
+			background: var(--panel);
+			border: 1px solid var(--line);
+			box-shadow: 8px 8px 0 rgba(23, 33, 43, .06);
+		}
+
+		.panel h2 {
+			margin: 0 0 18px;
+			font-size: 1.3rem;
+		}
+
+		.field {
+			display: grid;
+			gap: 7px;
+			margin-bottom: 16px;
+		}
+
+		label {
+			color: var(--muted);
+			font: 700 .74rem/1 system-ui, sans-serif;
+			letter-spacing: .04em;
+			text-transform: uppercase;
+		}
+
+		input,
+		textarea,
+		button {
+			font: 15px/1.4 system-ui, sans-serif;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			padding: 10px 11px;
+			color: var(--ink);
+			background: #fbfcfc;
+			border: 1px solid var(--line);
+			border-radius: 3px;
+		}
+
+		textarea {
+			min-height: 120px;
+			resize: vertical;
+			font-family: Consolas, "Courier New", monospace;
+		}
+
+		input:focus,
+		textarea:focus {
+			outline: 2px solid rgba(212, 93, 53, .25);
+			border-color: var(--accent);
+		}
+
+		.actions {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 9px;
+		}
+
+		button {
+			padding: 10px 14px;
+			color: white;
+			background: var(--ink);
+			border: 0;
+			border-radius: 3px;
+			cursor: pointer;
+			font-weight: 700;
+		}
+
+		button:hover {
+			background: #30404d;
+		}
+
+		button.primary {
+			background: var(--accent);
+		}
+
+		button.primary:hover {
+			background: var(--accent-dark);
+		}
+
+		button:disabled {
+			opacity: .45;
+			cursor: not-allowed;
+		}
+
+		.status {
+			display: inline-flex;
+			align-items: center;
+			gap: 7px;
+			margin-top: 16px;
+			color: var(--muted);
+			font: 700 .85rem system-ui, sans-serif;
+		}
+
+		.status::before {
+			width: 9px;
+			height: 9px;
+			content: "";
+			display: inline-block;
+			background: var(--danger);
+			border-radius: 50%;
+		}
+
+		.status.connected {
+			color: var(--success);
+		}
+
+		.status.connected::before {
+			background: var(--success);
+		}
+
+		.log-wrap {
+			display: grid;
+			grid-template-rows: auto 1fr;
+			min-height: 520px;
+		}
+
+		.log {
+			min-height: 420px;
+			padding: 14px;
+			overflow: auto;
+			color: #dce7ec;
+			background: #17212b;
+			border-radius: 3px;
+			font: 13px/1.5 Consolas, "Courier New", monospace;
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		.entry {
+			margin: 0 0 12px;
+		}
+
+		.entry .time {
+			color: #91a2ae;
+		}
+
+		.entry.in {
+			color: #a7dfc2;
+		}
+
+		.entry.out {
+			color: #ffd19d;
+		}
+
+		.entry.info {
+			color: #b9c9d3;
+		}
+
+		.hint {
+			margin: 14px 0 0;
+			color: var(--muted);
+			font: .85rem/1.5 system-ui, sans-serif;
+		}
+
+		@media (max-width: 760px) {
+			main {
+				width: min(100% - 20px, 620px);
+				padding-top: 24px;
+			}
+
+			.layout {
+				grid-template-columns: 1fr;
+			}
+
+			.log-wrap {
+				min-height: 400px;
+			}
+
+			.log {
+				min-height: 300px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<header>
+			<h1>STOMP socket tester</h1>
+			<p>Connect, subscribe, send a frame, and inspect every message exchanged with the server.</p>
+		</header>
+
+		<div class="layout">
+			<section class="panel">
+				<h2>Connection</h2>
+				<div class="field">
+					<label for="endpoint">WebSocket endpoint</label>
+					<input id="endpoint" value="ws://localhost:8080/ws" spellcheck="false">
+				</div>
+				<div class="field">
+					<label for="subscription">Subscribe destination</label>
+					<input id="subscription" value="/topic/messages" spellcheck="false">
+				</div>
+				<div class="actions">
+					<button id="connect" class="primary">Connect</button>
+					<button id="disconnect" disabled>Disconnect</button>
+					<button id="clear">Clear log</button>
+				</div>
+				<div id="status" class="status">Disconnected</div>
+
+				<hr style="border:0;border-top:1px solid var(--line);margin:24px 0">
+
+				<h2>Send message</h2>
+				<div class="field">
+					<label for="destination">Send destination</label>
+					<input id="destination" value="/app/chat" spellcheck="false">
+				</div>
+				<div class="field">
+					<label for="payload">Payload</label>
+					<textarea id="payload" spellcheck="false">hello from the browser</textarea>
+				</div>
+				<button id="send" class="primary" disabled>Send STOMP message</button>
+				<p class="hint">For this project, subscribe to <code>/topic/messages</code> and send to <code>/app/chat</code>.
+				</p>
+			</section>
+
+			<section class="panel log-wrap">
+				<h2>Frames</h2>
+				<div id="log" class="log" aria-live="polite"></div>
+			</section>
+		</div>
+	</main>
+
+	<script>
+		let socket = null;
+		let frameBuffer = "";
+		let subscriptionId = "sub-0";
+
+		const endpoint = document.querySelector("#endpoint");
+		const subscription = document.querySelector("#subscription");
+		const destination = document.querySelector("#destination");
+		const payload = document.querySelector("#payload");
+		const connectButton = document.querySelector("#connect");
+		const disconnectButton = document.querySelector("#disconnect");
+		const sendButton = document.querySelector("#send");
+		const clearButton = document.querySelector("#clear");
+		const status = document.querySelector("#status");
+		const log = document.querySelector("#log");
+
+		function writeLog(text, direction) {
+			const entry = document.createElement("div");
+			entry.className = "entry " + direction;
+			const time = new Date().toLocaleTimeString();
+			entry.textContent = "[" + time + "] " + text;
+			log.appendChild(entry);
+			log.scrollTop = log.scrollHeight;
+		}
+
+		function frame(command, headers, body) {
+			const headerText = Object.entries(headers)
+				.map(([key, value]) => key + ":" + value)
+				.join("\n");
+			return command + "\n" + headerText + "\n\n" + (body || "") + "\0";
+		}
+
+		function sendFrame(command, headers, body) {
+			const value = frame(command, headers, body);
+			socket.send(value);
+			writeLog("OUT\n" + value.replace(/\0/g, "\\0"), "out");
+		}
+
+		function handleFrame(rawFrame) {
+			const frameText = rawFrame.replace(/^\n+/, "");
+			if (!frameText.trim()) return;
+			writeLog("IN\n" + frameText, "in");
+
+			const separator = frameText.indexOf("\n\n");
+			const headerBlock = separator >= 0 ? frameText.slice(0, separator) : frameText;
+			const body = separator >= 0 ? frameText.slice(separator + 2) : "";
+			const command = headerBlock.split("\n", 1)[0];
+
+			if (command === "CONNECTED") {
+				sendFrame("SUBSCRIBE", {
+					id: subscriptionId,
+					destination: subscription.value.trim()
+				});
+				return;
+			}
+			if (command === "ERROR") {
+				writeLog("The server returned a STOMP error. Check the destination and payload.", "info");
+			}
+		}
+
+		function receive(data) {
+			frameBuffer += data;
+			const frames = frameBuffer.split("\0");
+			frameBuffer = frames.pop();
+			frames.forEach(handleFrame);
+		}
+
+		function setConnected(connected) {
+			status.textContent = connected ? "Connected" : "Disconnected";
+			status.classList.toggle("connected", connected);
+			connectButton.disabled = connected;
+			disconnectButton.disabled = !connected;
+			sendButton.disabled = !connected;
+			endpoint.disabled = connected;
+		}
+
+		connectButton.addEventListener("click", () => {
+			if (!endpoint.value.trim()) return;
+			frameBuffer = "";
+			writeLog("Connecting to " + endpoint.value.trim(), "info");
+			socket = new WebSocket(endpoint.value.trim());
+
+			socket.addEventListener("open", () => {
+				setConnected(true);
+				sendFrame("CONNECT", {
+					"accept-version": "1.2",
+					host: new URL(endpoint.value.trim()).host,
+					"heart-beat": "0,0"
+				});
+			});
+			socket.addEventListener("message", event => receive(String(event.data)));
+			socket.addEventListener("error", () => writeLog("WebSocket error. Confirm the application is running and the URL uses ws://, not https://.", "info"));
+			socket.addEventListener("close", event => {
+				setConnected(false);
+				writeLog("Connection closed (code " + event.code + ")", "info");
+				socket = null;
+			});
+		});
+
+		disconnectButton.addEventListener("click", () => {
+			if (socket && socket.readyState === WebSocket.OPEN) {
+				socket.send("DISCONNECT\nreceipt:disconnect-0\n\n\0");
+				socket.close();
+			}
+		});
+
+		sendButton.addEventListener("click", () => {
+			if (!socket || socket.readyState !== WebSocket.OPEN) return;
+			sendFrame("SEND", {
+				destination: destination.value.trim(),
+				"content-type": "text/plain",
+				"content-length": new TextEncoder().encode(payload.value).length
+			}, payload.value);
+		});
+
+		clearButton.addEventListener("click", () => { log.textContent = ""; });
+		writeLog("Ready. Connect to ws://localhost:8080/ws to test the sample application.", "info");
+	</script>
+</body>
+
+</html>

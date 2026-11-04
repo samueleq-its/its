@@ -667,9 +667,151 @@
   }
 ]
 27. Per ogni corso calcolare la percentuale di iscritti che non ha ancora sostenuto l'esame, mostrando il nome del corso. Ordinare dalla percentuale più alta.
-
+[
+  {
+    $lookup: {
+      from: "iscrizioni",
+      localField: "corsoId",
+      foreignField: "corsoId",
+      as: "iscrizioni"
+    }
+  },
+  {
+    $unwind: {
+      path: "$iscrizioni"
+    }
+  },
+  {
+    $group: {
+      _id: "$corsoId",
+      iscritti: {
+        $sum: 1
+      },
+      esamiNonSostenuti: {
+        $sum: {
+          $cond: {
+            if: {
+              $eq: [
+                "$iscrizioni.votoFinale",
+                null
+              ]
+            },
+            then: 1,
+            else: 0
+          }
+        }
+      }
+    }
+  },
+  {
+    $project:
+      /**
+       * specifications: The fields to
+       *   include or exclude.
+       */
+      {
+        _id: 0,
+        nomeCorso: "$_id",
+        percEsamiNonSostenuti: {
+          $multiply: [
+            100,
+            {
+              $divide: [
+                "$esamiNonSostenuti",
+                "$iscritti"
+              ]
+            }
+          ]
+        }
+      }
+  },
+  {
+    $sort:
+      /**
+       * Provide any number of field/order pairs.
+       */
+      {
+        perEsamiNonSostenuti: 1
+      }
+  }
+]
 28. Assegnare a ogni esame sostenuto una fascia di voto (`"18-23"`, `"24-27"`, `"28-30"`) e contare quanti esami ricadono in ciascuna fascia.
-
+???
 29. Trovare quanti studenti non risultano iscritti a nessun corso.
-
+[
+  {
+    $lookup: {
+      from: "iscrizioni",
+      localField: "studenteId",
+      foreignField: "studenteId",
+      as: "iscrizioni"
+    }
+  },
+	{
+	  $match: {
+	    iscrizioni: {$size: 0}
+	  }
+	},
+  {
+    $group: {
+      _id: null,
+      studentiNonIscritti: {
+        $sum: 1
+      }
+    }
+  }
+]
 30. Per ogni corso trovare lo studente con il voto finale più alto, mostrando nome e cognome dello studente, nome del corso e voto.
+[
+  {
+    $sort: {
+      votoFinale: -1
+    }
+  },
+  {
+    $group: {
+      _id: "$corsoId",
+      votoMax: {
+        $first: "$votoFinale"
+      },
+      studenteId: {
+        $first: "$studenteId"
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: "corsi",
+      localField: "_id",
+      foreignField: "corsoId",
+      as: "corso"
+    }
+  },
+  {
+    $unwind: {
+      path: "$corso"
+    }
+  },
+  {
+    $lookup: {
+      from: "studenti",
+      localField: "studenteId",
+      foreignField: "studenteId",
+      as: "studente"
+    }
+  },
+  {
+    $unwind: {
+      path: "$studente"
+    }
+  },
+  {
+    $project: {
+      _id:0,
+      nome: "$studente.nome",
+      cognome: "$studente.cognome",
+      corso: "$corso.nomeCorso",
+      voto: "$votoMax"
+    }
+  }
+]

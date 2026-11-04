@@ -1,0 +1,84 @@
+﻿@model Parafarmacie.Data.Models.Parafarmacia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Parafarmacia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodiceIdentificativoSito)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodiceIdentificativoSito)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SitoLogistico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SitoLogistico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Indirizzo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PartitaIva)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PartitaIva)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cap)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cap)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdComune)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdComune)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataInizioValidita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataInizioValidita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataFineValidita)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataFineValidita)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Latitudine)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Latitudine)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Longitudine)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Longitudine)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Localizzazione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Localizzazione)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

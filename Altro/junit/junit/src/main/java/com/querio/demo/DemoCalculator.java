@@ -4,7 +4,10 @@ import java.security.InvalidParameterException;
 
 public class DemoCalculator {
 
-	public static int calculate(int a, String operator, int b) {
+	public static int calculate(int a, String operator, int b) throws Exception {
+		if (operator == null) {
+			throw new Exception();
+		}
 		Operation operation = Operation.fromOperator(operator);
 
 		return operation.calc(a, b);

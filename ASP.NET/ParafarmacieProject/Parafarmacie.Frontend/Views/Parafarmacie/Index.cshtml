@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Parafarmacie.Data.Models.Parafarmacia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodiceIdentificativoSito)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SitoLogistico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indirizzo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartitaIva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdComune)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInizioValidita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFineValidita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitudine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitudine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Localizzazione)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodiceIdentificativoSito)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SitoLogistico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartitaIva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdComune)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInizioValidita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFineValidita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitudine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitudine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Localizzazione)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

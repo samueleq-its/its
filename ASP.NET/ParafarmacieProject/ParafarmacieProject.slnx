@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Parafarmacie.Data/Parafarmacie.Data.csproj" />
+  <Project Path="Parafarmacie.Frontend/Parafarmacie.Frontend.csproj" />
+</Solution>

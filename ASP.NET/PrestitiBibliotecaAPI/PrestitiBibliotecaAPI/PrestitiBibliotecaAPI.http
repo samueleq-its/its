@@ -1,0 +1,6 @@
+@PrestitiBibliotecaAPI_HostAddress = http://localhost:5259
+
+GET {{PrestitiBibliotecaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
