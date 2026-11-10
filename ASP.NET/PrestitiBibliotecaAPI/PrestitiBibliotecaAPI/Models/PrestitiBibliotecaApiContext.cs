@@ -22,8 +22,13 @@ public partial class PrestitiBibliotecaApiContext : DbContext
     public virtual DbSet<Studente> Studentes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=localhost\\sqlexpress;Database=PrestitiBibliotecaAPI;Trusted_Connection=True;TrustServerCertificate=True;");
+    {
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -52,7 +57,7 @@ public partial class PrestitiBibliotecaApiContext : DbContext
             entity.Property(e => e.DataPrestito).HasColumnType("datetime");
             entity.Property(e => e.DataRestituzione).HasColumnType("datetime");
 
-            entity.HasOne(d => d.IdLibroNavigation).WithMany(p => p.Prestitos)
+            entity.HasOne(d => d.IdLibroNavigation).WithMany(p => p.Prestiti)
                 .HasForeignKey(d => d.IdLibro)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Prestito_Libro");

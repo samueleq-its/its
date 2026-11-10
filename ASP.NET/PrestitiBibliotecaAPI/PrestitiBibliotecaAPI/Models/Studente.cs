@@ -15,5 +15,7 @@ public partial class Studente
 
     public string Classe { get; set; } = null!;
 
+    public string Nominativo { get { return $"{Cognome} {Nome}"; }}
+
     public virtual ICollection<Prestito> Prestitos { get; set; } = new List<Prestito>();
 }

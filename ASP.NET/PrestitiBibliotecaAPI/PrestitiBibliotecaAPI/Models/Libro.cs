@@ -25,5 +25,5 @@ public partial class Libro
 
     public int? Copie { get; set; }
 
-    public virtual ICollection<Prestito> Prestitos { get; set; } = new List<Prestito>();
+    public virtual ICollection<Prestito> Prestiti { get; set; } = new List<Prestito>();
 }

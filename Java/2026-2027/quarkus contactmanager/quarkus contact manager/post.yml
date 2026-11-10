@@ -1,0 +1,29 @@
+info:
+  name: post
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/contacts
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "mauro",
+        "cognome": "bogliaccino",
+        "azienda": "ITS",
+        "telefono": "123456789",
+        "email": "mauro@bogliaccino.it"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+​
