@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BikeStores.Data/BikeStores.Data.csproj" />
+  <Project Path="BikeStores.Frontend/BikeStores.Frontend.csproj" />
+</Solution>
