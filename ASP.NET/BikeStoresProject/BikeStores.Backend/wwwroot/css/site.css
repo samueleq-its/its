@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #121212;
+  color: #e6e6e6;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #fff !important;
+}
+
+.navbar-dark .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.table {
+  background-color: transparent !important;
+  color: #e6e6e6;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.table th,
+.table td {
+  color: #fff !important;
+  background-color: transparent !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.table.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.table a,
+.table a.btn,
+.table a.btn-sm {
+  color: #fff !important;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}

@@ -18,6 +18,7 @@ namespace BikeStores.Frontend.Models
         public short ModelYear { get; set; }
         public int? Quantity { get; set; }
 
+
         public ProductViewModel(Product p)
         {
             ProductId = p.ProductId;

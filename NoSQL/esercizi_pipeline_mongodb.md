@@ -104,6 +104,7 @@
     }
   }
 ]
+
 7. Calcolare l'età media di tutti gli studenti.
 [
  {
@@ -115,6 +116,7 @@
    }
  }
 ]
+
 8. Contare gli studenti per classe, ordinando dalla classe più numerosa.
 [
   {
@@ -181,6 +183,7 @@
     }
   }
 ]
+
 13. Calcolare la media dei voti di ogni studente e mostrare i 10 migliori.
 [
   {
@@ -201,6 +204,7 @@
   },
   {$limit: 10}
 ]
+
 14. Calcolare la media dei voti per materia, il voto massimo e il numero di voti registrati. Ordinare per media decrescente.
 [
   {
@@ -489,6 +493,7 @@
       }
   }
 ]
+
 23. Per ogni docente contare quanti studenti distinti seguono i suoi corsi.
 [
   {
@@ -521,6 +526,7 @@
     }
   }
 ]
+
 24. Contare gli esami sostenuti per anno e mese, in ordine cronologico.
 [
   {
