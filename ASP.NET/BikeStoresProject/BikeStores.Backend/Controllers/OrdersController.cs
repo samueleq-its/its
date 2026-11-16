@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BikeStores.Backend.Controllers
 {
-    [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES,CUSTOMERS")]
+    [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES,CUSTOMERS")]
     public class OrdersController : Controller
     {
         private readonly BikeStoresContext _context;
@@ -83,7 +83,7 @@ namespace BikeStores.Backend.Controllers
         }
 
         // GET: Orders/Create
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public IActionResult Create()
         {
             ViewData["CustomerId"] = new SelectList(_context.Customers, "CustomerId", "Email");
@@ -98,7 +98,7 @@ namespace BikeStores.Backend.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> Create([Bind("OrderId,CustomerId,OrderStatusId,OrderDate,RequiredDate,ShippedDate,StoreId,StaffId")] Order order)
         {
             if (User.IsInRole("EMPLOYEES"))
@@ -126,7 +126,7 @@ namespace BikeStores.Backend.Controllers
         }
 
         // GET: Orders/Edit/5
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -151,7 +151,7 @@ namespace BikeStores.Backend.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> Edit(int id, [Bind("OrderId,CustomerId,OrderStatusId,OrderDate,RequiredDate,ShippedDate,StoreId,StaffId")] Order order)
         {
             if (id != order.OrderId)
@@ -222,7 +222,7 @@ namespace BikeStores.Backend.Controllers
         // POST: Orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var order = await AccessibleOrders().FirstOrDefaultAsync(o => o.OrderId == id);
@@ -251,7 +251,7 @@ namespace BikeStores.Backend.Controllers
                     .ThenInclude(item => item.Product)
                 .AsQueryable();
 
-            if (User.IsInRole("ADMINISTRATOR"))
+            if (User.IsInRole("ADMINISTRATORS"))
             {
                 return orders;
             }

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BikeStores.Backend.Controllers
 {
-    [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES,CUSTOMERS")]
+    [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES,CUSTOMERS")]
     public class CustomersController : Controller
     {
         private readonly BikeStoresContext _context;
@@ -52,7 +52,7 @@ namespace BikeStores.Backend.Controllers
         }
 
         // GET: Customers/Create
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public IActionResult Create()
         {
             return View();
@@ -63,7 +63,7 @@ namespace BikeStores.Backend.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> Create([Bind("CustomerId,FirstName,LastName,Phone,Email,Street,City,State,ZipCode")] Customer customer)
         {
             if (ModelState.IsValid)
@@ -102,7 +102,7 @@ namespace BikeStores.Backend.Controllers
             {
                 return NotFound();
             }
-            if (!User.IsInRole("ADMINISTRATOR") &&
+            if (!User.IsInRole("ADMINISTRATORS") &&
                 !User.IsInRole("EMPLOYEES") &&
                 !await AccessibleCustomers().AnyAsync(c => c.CustomerId == id))
             {
@@ -153,7 +153,7 @@ namespace BikeStores.Backend.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "ADMINISTRATOR,EMPLOYEES")]
+        [Authorize(Roles = "ADMINISTRATORS,EMPLOYEES")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var customer = await AccessibleCustomers().FirstOrDefaultAsync(c => c.CustomerId == id);
@@ -173,7 +173,7 @@ namespace BikeStores.Backend.Controllers
 
         private IQueryable<Customer> AccessibleCustomers()
         {
-            if (User.IsInRole("ADMINISTRATOR") || User.IsInRole("EMPLOYEES"))
+            if (User.IsInRole("ADMINISTRATORS") || User.IsInRole("EMPLOYEES"))
             {
                 return _context.Customers;
             }

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BikeStores.Backend.Controllers
 {
-    [Authorize(Roles = "ADMINISTRATOR")]
+    [Authorize(Roles = "ADMINISTRATORS")]
     public class StoresController : Controller
     {
         private readonly BikeStoresContext _context;

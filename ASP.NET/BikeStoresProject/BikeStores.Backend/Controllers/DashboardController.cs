@@ -29,11 +29,11 @@ namespace BikeStores.Backend.Controllers
             var name = staff?.FirstName ?? customer?.FirstName ?? User.FindFirstValue(ClaimTypes.GivenName) ?? email;
             var surname = staff?.LastName ?? customer?.LastName ?? User.FindFirstValue(ClaimTypes.Surname) ?? string.Empty;
             var allLogins = await _loginHistory.GetAllAsync();
-            var logins = User.IsInRole("ADMINISTRATOR")
+            var logins = User.IsInRole("ADMINISTRATORS")
                 ? allLogins
                 : allLogins.Where(login => login.Email.Equals(email, StringComparison.OrdinalIgnoreCase)).Take(10).ToList();
 
-            return View(new DashboardViewModel(name, surname, logins, User.IsInRole("ADMINISTRATOR")));
+            return View(new DashboardViewModel(name, surname, logins, User.IsInRole("ADMINISTRATORS")));
         }
     }
 

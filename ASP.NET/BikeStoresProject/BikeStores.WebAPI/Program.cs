@@ -1,34 +1,38 @@
+using BikeStores.Data.Models;
+using BikeStores.WebAPI.Security;
+using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
-namespace BikeStores.WebAPI
+namespace BikeStores.WebAPI;
+
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+        builder.Services.AddDbContext<BikeStoresContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("BikeStores")));
 
-            builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+        builder.Services.AddSingleton<ApiKeyProvider>();
+        builder.Services.AddControllers();
+        builder.Services.AddOpenApi(o => o.AddDocumentTransformer<ApiKeySecuritySchemeTransformer>());
 
-            var app = builder.Build();
+        var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
+        var key = app.Services.GetRequiredService<ApiKeyProvider>().SecretKey;
+        Console.WriteLine("=====================================================");
+        Console.WriteLine($" SECRET KEY (header {ApiKeyMiddleware.HeaderName}):");
+        Console.WriteLine($" {key}");
+        Console.WriteLine("=====================================================");
 
-            app.UseHttpsRedirection();
+        app.MapOpenApi();
+        app.MapScalarApiReference();   // https://localhost:5002/scalar/v1
 
-            app.UseAuthorization();
+        app.UseHttpsRedirection();
+        app.UseMiddleware<ApiKeyMiddleware>();
+        app.MapControllers();
 
-
-            app.MapControllers();
-
-            app.Run();
-        }
+        app.Run();
     }
 }

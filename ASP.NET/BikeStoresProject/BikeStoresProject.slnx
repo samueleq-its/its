@@ -5,4 +5,5 @@
   <Project Path="BikeStores.Backend/BikeStores.Backend.csproj" Id="b5ad778d-6099-45e7-aad7-0ed8dd554148" />
   <Project Path="BikeStores.Data/BikeStores.Data.csproj" />
   <Project Path="BikeStores.Frontend/BikeStores.Frontend.csproj" />
+  <Project Path="BikeStores.WebAPI/BikeStores.WebAPI.csproj" Id="8d2649ae-3079-49bb-98e9-dbdf9cd9fd67" />
 </Solution>

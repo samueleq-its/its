@@ -23,7 +23,7 @@
     <input type="hidden" name="pageSize" value="@ViewBag.PageSize" />
     <button type="submit" class="btn btn-sm btn-primary">Search</button>
 </form>
-@if (User.IsInRole("ADMINISTRATOR") || User.IsInRole("EMPLOYEES"))
+@if (User.IsInRole("ADMINISTRATORS") || User.IsInRole("EMPLOYEES"))
 {
     <p><a asp-action="Create" class="btn btn-sm btn-primary">Create New</a></p>
 }
@@ -79,7 +79,7 @@
                 @Html.DisplayFor(modelItem => item.Store.StoreName)
             </td>
             <td>
-                @if (User.IsInRole("ADMINISTRATOR") || User.IsInRole("EMPLOYEES"))
+                @if (User.IsInRole("ADMINISTRATORS") || User.IsInRole("EMPLOYEES"))
                 {
                     <a asp-action="Edit" asp-route-id="@item.OrderId" class="btn btn-sm btn-secondary">Edit</a>
                     <a asp-action="Delete" asp-route-id="@item.OrderId" class="btn btn-sm btn-danger">Delete</a>
