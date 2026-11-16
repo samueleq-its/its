@@ -2,6 +2,7 @@ using BikeStores.Backend.Data;
 using BikeStores.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using BikeStores.Backend.Services;
 
 namespace BikeStores.Backend
 {
@@ -22,7 +23,9 @@ namespace BikeStores.Backend
                     options.UseSqlServer(connectionString));
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddSingleton<LoginHistoryStore>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

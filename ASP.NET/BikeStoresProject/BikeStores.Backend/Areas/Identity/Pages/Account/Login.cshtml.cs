@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using BikeStores.Backend.Services;
 
 namespace BikeStores.Backend.Areas.Identity.Pages.Account
 {
@@ -11,17 +12,20 @@ namespace BikeStores.Backend.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly LoginHistoryStore _loginHistory;
 
         private const string DefaultPassword = "@Bike-2026";
 
         public LoginModel(
             SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
-            ILogger<LoginModel> logger)
+            ILogger<LoginModel> logger,
+            LoginHistoryStore loginHistory)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
+            _loginHistory = loginHistory;
         }
 
         [BindProperty]
@@ -70,6 +74,7 @@ namespace BikeStores.Backend.Areas.Identity.Pages.Account
             if (result.Succeeded)
             {
                 _logger.LogInformation("User logged in.");
+                await _loginHistory.AddAsync(Input.Email);
                 return LocalRedirect(returnUrl ?? Url.Content("~/")!);
             }
 
@@ -98,7 +103,7 @@ namespace BikeStores.Backend.Areas.Identity.Pages.Account
                 _logger.LogInformation("The password for {Email} was reset after a failed login.", Input.Email);
             }
 
-            ModelState.AddModelError(string.Empty, "Invalid login attempt. The password was reset to the school default.");
+            ModelState.AddModelError(string.Empty, "Invalid login attempt. The password was reset to the default.");
             return Page();
         }
     }

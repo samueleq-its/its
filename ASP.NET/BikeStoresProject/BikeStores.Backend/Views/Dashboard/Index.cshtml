@@ -1,0 +1,21 @@
+﻿@model BikeStores.Backend.Controllers.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Dashboard</h1>
+<p>Welcome @Model.Name @Model.Surname</p>
+
+<h2>Login history</h2>
+<table class="table">
+    <thead>
+        <tr><th>Email</th><th>Logged in at</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var login in Model.Logins)
+    {
+        <tr><td>@login.Email</td><td>@login.LoggedInAt.ToLocalTime()</td></tr>
+    }
+    </tbody>
+</table>

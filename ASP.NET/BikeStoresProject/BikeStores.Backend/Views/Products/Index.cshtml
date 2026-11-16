@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BikeStores.Data.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Products</h1>
+
+<form method="get" class="mb-3">
+    <label for="stockFilter">Stock:</label>
+    <select id="stockFilter" name="stockFilter">
+        <option value="">All</option>
+        <option value="0" selected="@(ViewBag.StockFilter == 0)">No products left</option>
+        @for (var stock = 1; stock <= 9; stock++)
+        {
+            <option value="@stock" selected="@(ViewBag.StockFilter == stock)">@stock</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-sm btn-primary">Filter</button>
+</form>
+<p><a asp-action="Create" class="btn btn-sm btn-primary">Create New</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>@item.Stocks.Sum(s => s.Quantity ?? 0)</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-sm btn-secondary">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-sm btn-secondary">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
