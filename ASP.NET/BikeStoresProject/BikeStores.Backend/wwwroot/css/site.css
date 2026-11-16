@@ -23,6 +23,11 @@ body {
   color: #e6e6e6;
 }
 
+.footer,
+.footer a {
+  color: #fff !important;
+}
+
 .navbar {
   position: relative;
 }

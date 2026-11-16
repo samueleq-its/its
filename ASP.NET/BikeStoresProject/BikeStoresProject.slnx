@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Elementi di soluzione/">
+    <File Path="Utilizzo AI.md" />
+  </Folder>
   <Project Path="BikeStores.Backend/BikeStores.Backend.csproj" Id="b5ad778d-6099-45e7-aad7-0ed8dd554148" />
   <Project Path="BikeStores.Data/BikeStores.Data.csproj" />
   <Project Path="BikeStores.Frontend/BikeStores.Frontend.csproj" />

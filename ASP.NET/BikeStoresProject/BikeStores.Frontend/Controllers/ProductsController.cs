@@ -2,6 +2,7 @@
 using BikeStores.Frontend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.WebRequestMethods;
 
 namespace BikeStores.Frontend.Controllers
 {
@@ -16,10 +17,56 @@ namespace BikeStores.Frontend.Controllers
 
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(
+            string? searchText,
+            string orderBy = "name",
+            int recordsPerPage = 20,
+            int page = 1)
         {
-            var bikeStoresContext = _context.Products.Include(p => p.Brand).Include(p => p.Category).OrderBy(p => p.ProductName).Select(p => new ProductViewModel(p));
-            return View(await bikeStoresContext.ToListAsync());
+            ViewData["recordsPerPage"] = recordsPerPage;
+            ViewData["pages"] = 0;
+            ViewBag.SearchText = searchText;
+            orderBy = orderBy switch
+            {
+                "brand" => "brand",
+                "category" => "category",
+                "price" => "price",
+                _ => "name"
+            };
+            ViewBag.OrderBy = orderBy;
+
+            IQueryable<Product> bikeStoresContext = _context.Products
+                    .Include(p => p.Brand)
+                    .Include(p => p.Category)
+                    ;
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                bikeStoresContext = bikeStoresContext.Where(p =>
+                    p.ProductName.Contains(searchText) ||
+                    p.Brand.BrandName.Contains(searchText) ||
+                    p.Category.CategoryName.Contains(searchText));
+            }
+
+            bikeStoresContext = orderBy switch
+            {
+                "brand" => bikeStoresContext.OrderBy(p => p.Brand.BrandName).ThenBy(p => p.ProductName),
+                "category" => bikeStoresContext.OrderBy(p => p.Category.CategoryName).ThenBy(p => p.ProductName),
+                "price" => bikeStoresContext.OrderBy(p => p.ListPrice).ThenBy(p => p.ProductName),
+                _ => bikeStoresContext.OrderBy(p => p.ProductName)
+            };
+
+            var products = bikeStoresContext.Select(p => new ProductViewModel(p));
+
+            if (recordsPerPage != 0)
+            {
+                ViewData["pages"] = (int)Math.Ceiling((double)products.Count() / recordsPerPage);
+                products = products
+                        .Skip((page - 1) * recordsPerPage)
+                        .Take(recordsPerPage);
+            }
+
+            return View(await products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -30,18 +77,18 @@ namespace BikeStores.Frontend.Controllers
                 return NotFound();
             }
 
-            var stock = await _context.Stocks
-                .Include(s => s.Product)
-                .ThenInclude(p => p.Brand)
-                .Include(s => s.Product)
-                .ThenInclude(p => p.Category)
+            var product = await _context.Products
+                .Include(s => s.Brand)
+                .Include(s => s.Category)
+                .Include(p => p.Stocks)
+                .ThenInclude(s => s.Store)
                 .FirstOrDefaultAsync(m => m.ProductId == id);
-            if (stock == null)
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(new ProductViewModel(stock));
+            return View(new ProductViewModel(product));
         }
     }
 }

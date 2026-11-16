@@ -47,6 +47,32 @@
             @Html.DisplayFor(model => model.Quantity)
         </dd>
     </dl>
+
+    <h4>Stock by store</h4>
+    @if (Model.StoresQuantity.Count == 0)
+    {
+        <p>No stock information is available for this product.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Store</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var storeStock in Model.StoresQuantity)
+                {
+                    <tr>
+                        <td>@storeStock.Key</td>
+                        <td>@storeStock.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 </div>
 <div>
     <a asp-action="Index" class="btn btn-sm btn-secondary">Back to List</a>

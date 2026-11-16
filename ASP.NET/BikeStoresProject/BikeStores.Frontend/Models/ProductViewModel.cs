@@ -17,6 +17,7 @@ namespace BikeStores.Frontend.Models
         [DisplayName("Production year")]
         public short ModelYear { get; set; }
         public int? Quantity { get; set; }
+        public Dictionary<String, int> StoresQuantity { get; set; }
 
 
         public ProductViewModel(Product p)
@@ -27,11 +28,10 @@ namespace BikeStores.Frontend.Models
             CategoryName = p.Category.CategoryName;
             ListPrice = p.ListPrice;
             ModelYear = p.ModelYear;
-        }
-
-        public ProductViewModel(Stock s) : this(s.Product)
-        {
-            Quantity = s.Quantity;
+            Quantity = p.Stocks.Aggregate(0, (acc, s) => acc + s.Quantity ?? 0);
+            StoresQuantity = p.Stocks.ToDictionary(
+                s => s.Store.StoreName,
+                s => s.Quantity ?? 0);
         }
     }
 }

@@ -3,8 +3,22 @@
 @{
     ViewData["Title"] = "Products list";
 }
-
 <h1>Products list</h1>
+
+<form>
+    Ricerca: <input type="text" name="searchText" value="@ViewBag.SearchText" />
+    <label for="orderBy">Ordina per:</label>
+    <select id="orderBy" name="orderBy">
+        <option value="name" selected="@(ViewBag.OrderBy == "name")">Nome</option>
+        <option value="brand" selected="@(ViewBag.OrderBy == "brand")">Marca</option>
+        <option value="category" selected="@(ViewBag.OrderBy == "category")">Categoria</option>
+        <option value="price" selected="@(ViewBag.OrderBy == "price")">Prezzo</option>
+    </select>
+    <input type="hidden" name="recordsPerPage" value="@ViewBag.RecordsPerPage" />
+    <input type="hidden" name="page" value="1" />
+    <input type="submit" value="Cerca" />
+
+</form>
 
 <table class="table">
     <thead>
@@ -46,3 +60,28 @@
 }
     </tbody>
 </table>
+
+<form>
+    <p>
+        Elementi per pagina:
+        <select name="recordsPerPage" onchange="this.form.submit()">
+            @foreach (int n in new[] { 10, 25, 50, 100, 0 })
+            {
+                <option value="@n" selected="@(n == (int?)ViewBag.RecordsPerPage)">@(n != 0 ? n : "Tutti")</option>
+            }
+        </select>
+        <input type="hidden" name="searchText" value="@ViewBag.SearchText" />
+        <input type="hidden" name="orderBy" value="@ViewBag.OrderBy" />
+    </p>
+</form>
+
+<p>
+    @for (int i = 1; i <= (int)ViewData["pages"]; i++)
+    {
+        <a asp-action="Index"
+           asp-route-page="@i"
+           asp-route-recordsPerPage="@ViewBag.RecordsPerPage"
+           asp-route-searchText="@ViewBag.SearchText"
+           asp-route-orderBy="@ViewBag.OrderBy">@i</a>
+    }
+</p>
